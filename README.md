@@ -78,7 +78,7 @@ https://whimsical.com/pitch-in-AfeBJLMAZtWD929ytsod92
 
 #### Component Hierarchy
 
-
+``hierarchy
 back-end
 
 |__ controllers/
@@ -111,10 +111,10 @@ front-end
       |__ auth
       |__ orgs
       |__ opportunities
-
+``
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
+``
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
@@ -129,7 +129,7 @@ front-end
 | Set up Add Form     |    H     |     2 hrs      |               |             |
 | Styling             |    H     |     8 hrs      |               |             |
 | TOTAL               |          |     43 hrs     |               |             |
-
+``
 <br>
 
 
