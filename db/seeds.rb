@@ -45,3 +45,69 @@ puts "#{User.count} users created"
   org_link: 'https://www.wildanimalsanctuary.org/',
   org_phone: '303-536-0118',
   org_image: 'https://static.wixstatic.com/media/a16ed6_1b0a4b9aafe84b7a94918d3d3d319581~mv2.png/v1/fill/w_261,h_80,al_c,q_85,usm_0.66_1.00_0.01/NEW-LOGO-with-URL.webp')
+
+@construction_opp=Opportunity.create!(
+  org_name: 'Habitat for Humanity',
+  opp_name: 'Construction Volunteer',
+  opp_description: `Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!`,
+  opp_image: ''
+)
+@restore=Opportunity.create!(
+  org_name: 'Habitat for Humanity',
+  opp_name: 'Restore Volunteer',
+  opp_description: `Habitat ReStores support the mission by providing valuable funding to the programs.  It's retail with a mission!`,
+  opp_image: ''
+)
+@basic=Opportunity.create!(
+  org_name: 'Saint Francis Center',
+  opp_name: 'Basic Services Volunteer',
+  opp_description: `Provide hands-on caring by participating in many critical on-site services like distributing mail, messages and hygiene items, sort and organize donations.`
+  opp_image: ''
+)
+@employment=Opportunity.create!(
+  org_name: 'Saint Francis Center'
+  opp_name: 'Employment Services Client Navigator',
+  opp_description: `Help men and women develop skills, gain work experience and connect with full-time employment.  Help end the cycle of poverty and promote economic self-sufficiency.`
+  opp_image: ''
+)
+@intake=Opportunity.create!(
+  org_name: 'Saint Francis Center',
+  opp_name: 'Intake Office Volunteer',
+  opp_description: `As the first point of contact for guests new to SFC, guide them through the sometimes confusing paperwork.`,
+  opp_image: ''
+)
+@volunteer=Opportunity.create!(
+  org_name: 'Extreme Community Makeover',
+  opp_name: 'Volunteer',
+  opp_description: `Work on exterior home and neighborhood improvement projects.  Adopt a block project or alley clean-up/graffiti removal project.`,
+  opp_image: ''
+)
+@general_volunteer=Opportunity.create!(
+  org_name: 'Denver Dumb Friends League',
+  opp_name: 'General Volunteer',
+  opp_description: `Help with adoptions and animal care`,
+  opp_image: ''
+)
+@equine=Opportunity.create!(
+  org_name: 'Denver Dumb Friends League',
+  opp_name: 'Equine Volunteer',
+  opp_description: `Work with horses and other equines, mucking stalls and providing enrichment to the animals`
+  opp_image: ''
+)
+@foster=Opportunity.create!(
+  org_name: 'Denver Dumb Friends League',
+  opp_name: 'Foster Volunteer',
+  opp_description: `Bring pets from the shelter into your home on a temporary basis to prepare them for adoption.`
+  opp_image: ''
+)
+@animal_care=Opportunity.create!(
+  org_name: 'Luvin Arms Animal Sanctuary',
+  opp_name: 'Animal Care Volunteer',
+  opp_description: `Animal care shifts include cleaning resident living areas, replenishing feed and water, helping to keep other areas of the sanctuary clean and organized, and giving the animals some love and attention. Each task directly contributes to the absolute best quality of care for our residents!`,
+  opp_image: ''
+)
+@wild_animal=Opportunity.create!(
+  org_name: 'Wild Animal Sanctuary'
+  opp_name: 'General Volunteer',
+  opp_description: `Opportunities include cleaning the facility, office work and educational duties, fence building and habitat construction, fundraising working with animals, and always going on - or managing our cross-country rescue schedule.`
+)
