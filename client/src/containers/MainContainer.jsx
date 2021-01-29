@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { Route, Switch, useHistory } from "react-router-dom";
 import CreateOrganization from "../screens/CreateOrganization";
-import EditOrganization from "../screens/EditOrganization";
+import CreateOpportunity from "../screens/CreateOpportunity"
+import EditOrganization from "../screens/EditOpportunity";
 import Opportunities from "../screens/Opportunities";
-import Organizations from "../screensOrganizations";
-import { getAllOpportunities } from "../services/opportunities";
-import { deleteOrganization, getAllOrganizations, postOrganization } from '../servicesOrganizations';
+import Organizations from "../screens/Organizations";
+import { getAllOrganizations, postOrganization } from '../services/organizations';
+import { getAllOpportunities, postOpportunity } from '../services/opportunities';
 
 export default function MainContainer() {
   const [organizations, setOrganizations] = useState([]);
@@ -21,22 +22,17 @@ export default function MainContainer() {
   }, []);
 
   useEffect(() => {
-    const fetchOpportunities = async () => {
+    const fetchOpportunity = async () => {
       const opportunityData = await getAllOpportunities();
-      setOpportunity(opportunityData);
+      setOpportunities(opportunityData);
     }
     fetchOpportunity();
   }, []);
 
-  const handleCreate = async (OrganizationData) => {
-    const newOrganization = await (postOrganizationData);
+  const handleCreate = async (organizationData) => {
+    const newOrganization = await (organizationData);
     setOrganizations(prevState=>[ ...prevState, newOrganization])
     history.push('Organizations')
-  }
-
-  const handleDelete = async () => {
-    await deleteOrganization(id);
-    setOrganizations(prevState=> prevState.filter(OrganizationItem => OrganizationItem.id !== id))
   }
 
   return (
@@ -56,26 +52,15 @@ export default function MainContainer() {
           handleCreate={handleCreate}
         />
       </Route>
-      <Route path='/organizations'>
-        <Organizations
-        organizations={organizations}
-          handleDelete={handleDelete}
-        />
-      </Route>
+
       <Route path='/opportunities/:id/edit'>
         <EditOrganization
         opportunities={opportunities}
           />
       </Route>
       <Route path='/opportunities/new'>
-        <CreateOpportunities
+        <CreateOpportunity
           handleCreate={handleCreate}
-        />
-      </Route>
-      <Route path='/opportunities'>
-      <Opportunities
-      opportunities={opportunities}
-          handleDelete={handleDelete}
         />
       </Route>
     </Switch>
