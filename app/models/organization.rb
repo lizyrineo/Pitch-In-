@@ -1,4 +1,3 @@
 class Organization < ApplicationRecord
-  belongs_to :user
-  has_many :opportunities
+  has_many :users, through: :opportunities
 end

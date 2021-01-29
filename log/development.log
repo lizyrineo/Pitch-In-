@@ -51,3 +51,1354 @@ Migrating to OpportunityAddColumn (20210128211414)
   [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2984288589273181575)[0m
   [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2984288589273181575)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2984288589273181575)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-01-28 15:26:56 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as */*
+  Parameters: {"user"=>{"username"=>"Admin", "email"=>"admin@email.com", "password"=>"[FILTERED]"}, "welcome"=>{"user"=>{"username"=>"Admin", "email"=>"admin@email.com", "password"=>"[FILTERED]"}}}
+  Rendering /Users/lizyrineo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/lizyrineo/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.9ms | Allocations: 406)
+Completed 200 OK in 28ms (Views: 19.7ms | ActiveRecord: 0.0ms | Allocations: 2346)
+
+
+Started GET "/organization" for ::1 at 2021-01-28 15:30:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/organization"):
+  
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (2.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "admin"], ["last_name", "admin"], ["email", "admin@email.com"], ["password_digest", "123456"], ["created_at", "2021-01-28 22:41:12.341497"], ["updated_at", "2021-01-28 22:41:12.341497"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (17.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (15.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "admin"], ["last_name", "admin"], ["email", "admin@email.com"], ["password_digest", "123456"], ["created_at", "2021-01-28 22:42:03.920994"], ["updated_at", "2021-01-28 22:42:03.920994"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2984288589273181575)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddOrgIdToOpportunity (20210128230015)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (24.4ms)[0m  [1m[35mALTER TABLE "opportunities" ADD "org_id" bigint NOT NULL[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_org_id" ON "opportunities" ("org_id")[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_169cfc40bd"
+FOREIGN KEY ("org_id")
+  REFERENCES "orgs" ("id")
+[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2984288589273181575)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2984288589273181575)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddOrgIdToOpportunity (20210128230141)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "opportunities" ADD "organization_id" bigint NOT NULL[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (6.8ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[36mActiveRecord::SchemaMigration Create (14.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210128230141"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2984288589273181575)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2984288589273181575)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserIdToOpportunity (20210128230413)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "opportunities" ADD "user_id" bigint NOT NULL[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210128230413"]]
+  [1m[36mTRANSACTION (16.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2984288589273181575)[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (70.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__development"[0m
+  [1m[35m (49.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__test"[0m
+  [1m[35m (204.1ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__development" ENCODING = 'unicode'[0m
+  [1m[35m (93.3ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "org_name" character varying, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (20.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.9ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210128230413)[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141);
+
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (13.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-28 23:13:27.145863"], ["updated_at", "2021-01-28 23:13:27.145863"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c28609630bb9e8b772a05ca29a93a80ab1733181"], ["created_at", "2021-01-28 23:13:27.168498"], ["updated_at", "2021-01-28 23:13:27.168498"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "org_name" character varying, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210128230413)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141);
+
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-28 23:13:27.272493"], ["updated_at", "2021-01-28 23:13:27.272493"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-01-28 23:13:27.277427"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c28609630bb9e8b772a05ca29a93a80ab1733181"], ["created_at", "2021-01-28 23:13:27.284759"], ["updated_at", "2021-01-28 23:13:27.284759"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (73.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__development"[0m
+  [1m[35m (47.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__test"[0m
+  [1m[35m (105.4ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__development" ENCODING = 'unicode'[0m
+  [1m[35m (96.4ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (22.7ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "org_name" character varying, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210128230413)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141);
+
+[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-28 23:13:48.422390"], ["updated_at", "2021-01-28 23:13:48.422390"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c28609630bb9e8b772a05ca29a93a80ab1733181"], ["created_at", "2021-01-28 23:13:48.430727"], ["updated_at", "2021-01-28 23:13:48.430727"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "org_name" character varying, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (18.4ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210128230413)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141);
+
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-28 23:13:48.527298"], ["updated_at", "2021-01-28 23:13:48.527298"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-01-28 23:13:48.533469"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c28609630bb9e8b772a05ca29a93a80ab1733181"], ["created_at", "2021-01-28 23:13:48.538211"], ["updated_at", "2021-01-28 23:13:48.538211"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (16.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (55.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__development"[0m
+  [1m[35m (46.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__test"[0m
+  [1m[35m (99.5ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__development" ENCODING = 'unicode'[0m
+  [1m[35m (103.0ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "org_name" character varying, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (20.4ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210128230413)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141);
+
+[0m
+  [1m[35m (18.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-28 23:14:25.619539"], ["updated_at", "2021-01-28 23:14:25.619539"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c28609630bb9e8b772a05ca29a93a80ab1733181"], ["created_at", "2021-01-28 23:14:25.627269"], ["updated_at", "2021-01-28 23:14:25.627269"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "org_name" character varying, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (19.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210128230413)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141);
+
+[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-28 23:14:25.724692"], ["updated_at", "2021-01-28 23:14:25.724692"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-01-28 23:14:25.730742"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c28609630bb9e8b772a05ca29a93a80ab1733181"], ["created_at", "2021-01-28 23:14:25.737861"], ["updated_at", "2021-01-28 23:14:25.737861"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "admin"], ["last_name", "admin"], ["email", "admin@email.com"], ["password_digest", "123456"], ["created_at", "2021-01-28 23:14:25.827454"], ["updated_at", "2021-01-28 23:14:25.827454"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mTRANSACTION (16.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.5ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Habitat for Humanity"], ["org_link", "https://www.habitatmetrodenver.org/"], ["org_phone", 303], ["org_image", "https://www.habitatmetrodenver.org/static/image/logo-white.png?185013110417"], ["created_at", "2021-01-28 23:14:25.844487"], ["updated_at", "2021-01-28 23:14:25.844487"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Saint Francis Center"], ["org_link", "http://www.sfcdenver.org/"], ["org_phone", 303], ["org_image", "http://www.sfcdenver.org/wp-content/uploads/2017/02/stfrancis_logo.png"], ["created_at", "2021-01-28 23:14:25.864741"], ["updated_at", "2021-01-28 23:14:25.864741"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.3ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Extreme Community Makeover"], ["org_link", "https://www.extremecommunitymakeover.org/"], ["org_phone", 720], ["org_image", "https://extremecommunitymakeover.org/wp-content/uploads/2015/08/ECMLogoWebsite.gif"], ["created_at", "2021-01-28 23:14:25.868386"], ["updated_at", "2021-01-28 23:14:25.868386"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.3ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Denver Dumb Friends League"], ["org_link", "https://www.ddfl.org/"], ["org_phone", 303], ["org_image", "https://www.ddfl.org/wp-content/themes/ddfl/img/DFL-logo-w.png"], ["created_at", "2021-01-28 23:14:25.872350"], ["updated_at", "2021-01-28 23:14:25.872350"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Luvin Arms Animal Sanctuary"], ["org_link", "https://www.luvinarms.org/"], ["org_phone", 720], ["org_image", "https://www.luvinarms.org/wp-content/uploads/2021/01/Circle-Ahimsa-Final.png"], ["created_at", "2021-01-28 23:14:25.876184"], ["updated_at", "2021-01-28 23:14:25.876184"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Colorado Pet Pantry"], ["org_link", "https://www.coloradopetpantry.org/"], ["org_phone", 720], ["org_image", "https://www.coloradopetpantry.org/wp-content/uploads/2017/06/colorado-pet-pantry-logo-1.png"], ["created_at", "2021-01-28 23:14:25.879914"], ["updated_at", "2021-01-28 23:14:25.879914"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "The Wild Animal Sanctuary"], ["org_link", "https://www.wildanimalsanctuary.org/"], ["org_phone", 303], ["org_image", "https://static.wixstatic.com/media/a16ed6_1b0a4b9aafe84b7a94918d3d3d319581~mv2.png/v1/fill/w_261,h_80,al_c,q_85,usm_0.66_1.00_0.01/NEW-LOGO-with-URL.webp"], ["created_at", "2021-01-28 23:14:25.883767"], ["updated_at", "2021-01-28 23:14:25.883767"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (17.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (49.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__development"[0m
+  [1m[35m (31.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__test"[0m
+  [1m[35m (101.2ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__development" ENCODING = 'unicode'[0m
+  [1m[35m (97.5ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "org_name" character varying, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210128230413)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141);
+
+[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-28 23:20:29.642762"], ["updated_at", "2021-01-28 23:20:29.642762"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (15.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c28609630bb9e8b772a05ca29a93a80ab1733181"], ["created_at", "2021-01-28 23:20:29.651758"], ["updated_at", "2021-01-28 23:20:29.651758"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "org_name" character varying, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (15.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210128230413)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141);
+
+[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-28 23:20:29.744206"], ["updated_at", "2021-01-28 23:20:29.744206"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (16.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-01-28 23:20:29.750511"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c28609630bb9e8b772a05ca29a93a80ab1733181"], ["created_at", "2021-01-28 23:20:29.771910"], ["updated_at", "2021-01-28 23:20:29.771910"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "admin"], ["last_name", "admin"], ["email", "admin@email.com"], ["password_digest", "123456"], ["created_at", "2021-01-28 23:20:29.843246"], ["updated_at", "2021-01-28 23:20:29.843246"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.5ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Habitat for Humanity"], ["org_link", "https://www.habitatmetrodenver.org/"], ["org_phone", 303], ["org_image", "https://www.habitatmetrodenver.org/static/image/logo-white.png?185013110417"], ["created_at", "2021-01-28 23:20:29.875018"], ["updated_at", "2021-01-28 23:20:29.875018"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.3ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Saint Francis Center"], ["org_link", "http://www.sfcdenver.org/"], ["org_phone", 303], ["org_image", "http://www.sfcdenver.org/wp-content/uploads/2017/02/stfrancis_logo.png"], ["created_at", "2021-01-28 23:20:29.879064"], ["updated_at", "2021-01-28 23:20:29.879064"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Extreme Community Makeover"], ["org_link", "https://www.extremecommunitymakeover.org/"], ["org_phone", 720], ["org_image", "https://extremecommunitymakeover.org/wp-content/uploads/2015/08/ECMLogoWebsite.gif"], ["created_at", "2021-01-28 23:20:29.882860"], ["updated_at", "2021-01-28 23:20:29.882860"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Denver Dumb Friends League"], ["org_link", "https://www.ddfl.org/"], ["org_phone", 303], ["org_image", "https://www.ddfl.org/wp-content/themes/ddfl/img/DFL-logo-w.png"], ["created_at", "2021-01-28 23:20:29.886121"], ["updated_at", "2021-01-28 23:20:29.886121"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.3ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Luvin Arms Animal Sanctuary"], ["org_link", "https://www.luvinarms.org/"], ["org_phone", 720], ["org_image", "https://www.luvinarms.org/wp-content/uploads/2021/01/Circle-Ahimsa-Final.png"], ["created_at", "2021-01-28 23:20:29.889407"], ["updated_at", "2021-01-28 23:20:29.889407"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.3ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Colorado Pet Pantry"], ["org_link", "https://www.coloradopetpantry.org/"], ["org_phone", 720], ["org_image", "https://www.coloradopetpantry.org/wp-content/uploads/2017/06/colorado-pet-pantry-logo-1.png"], ["created_at", "2021-01-28 23:20:29.893044"], ["updated_at", "2021-01-28 23:20:29.893044"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "The Wild Animal Sanctuary"], ["org_link", "https://www.wildanimalsanctuary.org/"], ["org_phone", 303], ["org_image", "https://static.wixstatic.com/media/a16ed6_1b0a4b9aafe84b7a94918d3d3d319581~mv2.png/v1/fill/w_261,h_80,al_c,q_85,usm_0.66_1.00_0.01/NEW-LOGO-with-URL.webp"], ["created_at", "2021-01-28 23:20:29.897224"], ["updated_at", "2021-01-28 23:20:29.897224"]]
+  [1m[36mTRANSACTION (17.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (74.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__development"[0m
+  [1m[35m (46.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__test"[0m
+  [1m[35m (98.4ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__development" ENCODING = 'unicode'[0m
+  [1m[35m (102.4ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (23.5ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "org_name" character varying, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210128230413)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141);
+
+[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-28 23:21:18.039662"], ["updated_at", "2021-01-28 23:21:18.039662"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c28609630bb9e8b772a05ca29a93a80ab1733181"], ["created_at", "2021-01-28 23:21:18.050100"], ["updated_at", "2021-01-28 23:21:18.050100"]]
+  [1m[36mTRANSACTION (16.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "org_name" character varying, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (20.6ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210128230413)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141);
+
+[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-28 23:21:18.148842"], ["updated_at", "2021-01-28 23:21:18.148842"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-01-28 23:21:18.170537"], ["key", "environment"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c28609630bb9e8b772a05ca29a93a80ab1733181"], ["created_at", "2021-01-28 23:21:18.176116"], ["updated_at", "2021-01-28 23:21:18.176116"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "admin"], ["last_name", "admin"], ["email", "admin@email.com"], ["password_digest", "123456"], ["created_at", "2021-01-28 23:21:18.242512"], ["updated_at", "2021-01-28 23:21:18.242512"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.5ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Habitat for Humanity"], ["org_link", "https://www.habitatmetrodenver.org/"], ["org_phone", 303], ["org_image", "https://www.habitatmetrodenver.org/static/image/logo-white.png?185013110417"], ["created_at", "2021-01-28 23:21:18.274809"], ["updated_at", "2021-01-28 23:21:18.274809"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.3ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Saint Francis Center"], ["org_link", "http://www.sfcdenver.org/"], ["org_phone", 303], ["org_image", "http://www.sfcdenver.org/wp-content/uploads/2017/02/stfrancis_logo.png"], ["created_at", "2021-01-28 23:21:18.279089"], ["updated_at", "2021-01-28 23:21:18.279089"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Extreme Community Makeover"], ["org_link", "https://www.extremecommunitymakeover.org/"], ["org_phone", 720], ["org_image", "https://extremecommunitymakeover.org/wp-content/uploads/2015/08/ECMLogoWebsite.gif"], ["created_at", "2021-01-28 23:21:18.282962"], ["updated_at", "2021-01-28 23:21:18.282962"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Denver Dumb Friends League"], ["org_link", "https://www.ddfl.org/"], ["org_phone", 303], ["org_image", "https://www.ddfl.org/wp-content/themes/ddfl/img/DFL-logo-w.png"], ["created_at", "2021-01-28 23:21:18.286558"], ["updated_at", "2021-01-28 23:21:18.286558"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.3ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Luvin Arms Animal Sanctuary"], ["org_link", "https://www.luvinarms.org/"], ["org_phone", 720], ["org_image", "https://www.luvinarms.org/wp-content/uploads/2021/01/Circle-Ahimsa-Final.png"], ["created_at", "2021-01-28 23:21:18.290122"], ["updated_at", "2021-01-28 23:21:18.290122"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.3ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Colorado Pet Pantry"], ["org_link", "https://www.coloradopetpantry.org/"], ["org_phone", 720], ["org_image", "https://www.coloradopetpantry.org/wp-content/uploads/2017/06/colorado-pet-pantry-logo-1.png"], ["created_at", "2021-01-28 23:21:18.294522"], ["updated_at", "2021-01-28 23:21:18.294522"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (16.8ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "The Wild Animal Sanctuary"], ["org_link", "https://www.wildanimalsanctuary.org/"], ["org_phone", 303], ["org_image", "https://static.wixstatic.com/media/a16ed6_1b0a4b9aafe84b7a94918d3d3d319581~mv2.png/v1/fill/w_261,h_80,al_c,q_85,usm_0.66_1.00_0.01/NEW-LOGO-with-URL.webp"], ["created_at", "2021-01-28 23:21:18.300522"], ["updated_at", "2021-01-28 23:21:18.300522"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (12.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.9ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Construction Volunteer"], ["opp_description", ""], ["opp_image", ""], ["created_at", "2021-01-28 23:21:18.371621"], ["updated_at", "2021-01-28 23:21:18.371621"], ["org_name", "Habitat for Humanity"], ["organization_id", 1], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.4ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Restore Volunteer"], ["opp_description", ""], ["opp_image", ""], ["created_at", "2021-01-28 23:21:18.385115"], ["updated_at", "2021-01-28 23:21:18.385115"], ["org_name", "Habitat for Humanity"], ["organization_id", 1], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (16.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (57.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__development"[0m
+  [1m[35m (50.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__test"[0m
+  [1m[35m (231.2ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__development" ENCODING = 'unicode'[0m
+  [1m[35m (96.3ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "org_name" character varying, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (18.6ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210128230413)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141);
+
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-28 23:25:16.400920"], ["updated_at", "2021-01-28 23:25:16.400920"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c28609630bb9e8b772a05ca29a93a80ab1733181"], ["created_at", "2021-01-28 23:25:16.426596"], ["updated_at", "2021-01-28 23:25:16.426596"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (27.2ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "org_name" character varying, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.3ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210128230413)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141);
+
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-28 23:25:16.536781"], ["updated_at", "2021-01-28 23:25:16.536781"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-01-28 23:25:16.542222"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c28609630bb9e8b772a05ca29a93a80ab1733181"], ["created_at", "2021-01-28 23:25:16.550007"], ["updated_at", "2021-01-28 23:25:16.550007"]]
+  [1m[36mTRANSACTION (18.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "admin"], ["last_name", "admin"], ["email", "admin@email.com"], ["password_digest", "123456"], ["created_at", "2021-01-28 23:25:16.649965"], ["updated_at", "2021-01-28 23:25:16.649965"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.6ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Habitat for Humanity"], ["org_link", "https://www.habitatmetrodenver.org/"], ["org_phone", 303], ["org_image", "https://www.habitatmetrodenver.org/static/image/logo-white.png?185013110417"], ["created_at", "2021-01-28 23:25:16.680258"], ["updated_at", "2021-01-28 23:25:16.680258"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Saint Francis Center"], ["org_link", "http://www.sfcdenver.org/"], ["org_phone", 303], ["org_image", "http://www.sfcdenver.org/wp-content/uploads/2017/02/stfrancis_logo.png"], ["created_at", "2021-01-28 23:25:16.685453"], ["updated_at", "2021-01-28 23:25:16.685453"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Extreme Community Makeover"], ["org_link", "https://www.extremecommunitymakeover.org/"], ["org_phone", 720], ["org_image", "https://extremecommunitymakeover.org/wp-content/uploads/2015/08/ECMLogoWebsite.gif"], ["created_at", "2021-01-28 23:25:16.689127"], ["updated_at", "2021-01-28 23:25:16.689127"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.3ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Denver Dumb Friends League"], ["org_link", "https://www.ddfl.org/"], ["org_phone", 303], ["org_image", "https://www.ddfl.org/wp-content/themes/ddfl/img/DFL-logo-w.png"], ["created_at", "2021-01-28 23:25:16.692430"], ["updated_at", "2021-01-28 23:25:16.692430"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Luvin Arms Animal Sanctuary"], ["org_link", "https://www.luvinarms.org/"], ["org_phone", 720], ["org_image", "https://www.luvinarms.org/wp-content/uploads/2021/01/Circle-Ahimsa-Final.png"], ["created_at", "2021-01-28 23:25:16.695933"], ["updated_at", "2021-01-28 23:25:16.695933"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.3ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Colorado Pet Pantry"], ["org_link", "https://www.coloradopetpantry.org/"], ["org_phone", 720], ["org_image", "https://www.coloradopetpantry.org/wp-content/uploads/2017/06/colorado-pet-pantry-logo-1.png"], ["created_at", "2021-01-28 23:25:16.699521"], ["updated_at", "2021-01-28 23:25:16.699521"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.6ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "The Wild Animal Sanctuary"], ["org_link", "https://www.wildanimalsanctuary.org/"], ["org_phone", 303], ["org_image", "https://static.wixstatic.com/media/a16ed6_1b0a4b9aafe84b7a94918d3d3d319581~mv2.png/v1/fill/w_261,h_80,al_c,q_85,usm_0.66_1.00_0.01/NEW-LOGO-with-URL.webp"], ["created_at", "2021-01-28 23:25:16.703841"], ["updated_at", "2021-01-28 23:25:16.703841"]]
+  [1m[36mTRANSACTION (15.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (17.7ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Construction Volunteer"], ["opp_description", ""], ["opp_image", ""], ["created_at", "2021-01-28 23:25:16.755435"], ["updated_at", "2021-01-28 23:25:16.755435"], ["org_name", "Habitat for Humanity"], ["organization_id", 1], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.4ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Restore Volunteer"], ["opp_description", ""], ["opp_image", ""], ["created_at", "2021-01-28 23:25:16.788157"], ["updated_at", "2021-01-28 23:25:16.788157"], ["org_name", "Habitat for Humanity"], ["organization_id", 1], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.5ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Basic Services Volunteer"], ["opp_description", "Provide hands-on caring by participating in many critical on-site services like distributing mail, messages and hygiene items, sort and organize donations."], ["opp_image", ""], ["created_at", "2021-01-28 23:25:16.796617"], ["updated_at", "2021-01-28 23:25:16.796617"], ["org_name", "Saint Francis Center"], ["organization_id", 3], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (73.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__development"[0m
+  [1m[35m (50.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__test"[0m
+  [1m[35m (125.4ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__development" ENCODING = 'unicode'[0m
+  [1m[35m (107.3ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "org_name" character varying, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (17.4ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210128230413)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141);
+
+[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-28 23:25:51.184900"], ["updated_at", "2021-01-28 23:25:51.184900"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c28609630bb9e8b772a05ca29a93a80ab1733181"], ["created_at", "2021-01-28 23:25:51.193335"], ["updated_at", "2021-01-28 23:25:51.193335"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (10.2ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "org_name" character varying, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (16.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210128230413)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141);
+
+[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-28 23:25:51.297636"], ["updated_at", "2021-01-28 23:25:51.297636"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (16.9ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-01-28 23:25:51.305061"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c28609630bb9e8b772a05ca29a93a80ab1733181"], ["created_at", "2021-01-28 23:25:51.327287"], ["updated_at", "2021-01-28 23:25:51.327287"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "admin"], ["last_name", "admin"], ["email", "admin@email.com"], ["password_digest", "123456"], ["created_at", "2021-01-28 23:25:51.401272"], ["updated_at", "2021-01-28 23:25:51.401272"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (1.1ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Habitat for Humanity"], ["org_link", "https://www.habitatmetrodenver.org/"], ["org_phone", 303], ["org_image", "https://www.habitatmetrodenver.org/static/image/logo-white.png?185013110417"], ["created_at", "2021-01-28 23:25:51.431380"], ["updated_at", "2021-01-28 23:25:51.431380"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.3ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Saint Francis Center"], ["org_link", "http://www.sfcdenver.org/"], ["org_phone", 303], ["org_image", "http://www.sfcdenver.org/wp-content/uploads/2017/02/stfrancis_logo.png"], ["created_at", "2021-01-28 23:25:51.436710"], ["updated_at", "2021-01-28 23:25:51.436710"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Extreme Community Makeover"], ["org_link", "https://www.extremecommunitymakeover.org/"], ["org_phone", 720], ["org_image", "https://extremecommunitymakeover.org/wp-content/uploads/2015/08/ECMLogoWebsite.gif"], ["created_at", "2021-01-28 23:25:51.440000"], ["updated_at", "2021-01-28 23:25:51.440000"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Denver Dumb Friends League"], ["org_link", "https://www.ddfl.org/"], ["org_phone", 303], ["org_image", "https://www.ddfl.org/wp-content/themes/ddfl/img/DFL-logo-w.png"], ["created_at", "2021-01-28 23:25:51.443332"], ["updated_at", "2021-01-28 23:25:51.443332"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.3ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Luvin Arms Animal Sanctuary"], ["org_link", "https://www.luvinarms.org/"], ["org_phone", 720], ["org_image", "https://www.luvinarms.org/wp-content/uploads/2021/01/Circle-Ahimsa-Final.png"], ["created_at", "2021-01-28 23:25:51.447030"], ["updated_at", "2021-01-28 23:25:51.447030"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.3ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Colorado Pet Pantry"], ["org_link", "https://www.coloradopetpantry.org/"], ["org_phone", 720], ["org_image", "https://www.coloradopetpantry.org/wp-content/uploads/2017/06/colorado-pet-pantry-logo-1.png"], ["created_at", "2021-01-28 23:25:51.452218"], ["updated_at", "2021-01-28 23:25:51.452218"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (15.9ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "The Wild Animal Sanctuary"], ["org_link", "https://www.wildanimalsanctuary.org/"], ["org_phone", 303], ["org_image", "https://static.wixstatic.com/media/a16ed6_1b0a4b9aafe84b7a94918d3d3d319581~mv2.png/v1/fill/w_261,h_80,al_c,q_85,usm_0.66_1.00_0.01/NEW-LOGO-with-URL.webp"], ["created_at", "2021-01-28 23:25:51.456526"], ["updated_at", "2021-01-28 23:25:51.456526"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (1.1ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Construction Volunteer"], ["opp_description", ""], ["opp_image", ""], ["created_at", "2021-01-28 23:25:51.504266"], ["updated_at", "2021-01-28 23:25:51.504266"], ["org_name", "Habitat for Humanity"], ["organization_id", 1], ["user_id", 1]]
+  [1m[36mTRANSACTION (16.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.5ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Restore Volunteer"], ["opp_description", ""], ["opp_image", ""], ["created_at", "2021-01-28 23:25:51.536289"], ["updated_at", "2021-01-28 23:25:51.536289"], ["org_name", "Habitat for Humanity"], ["organization_id", 1], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.6ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Basic Services Volunteer"], ["opp_description", "Provide hands-on caring by participating in many critical on-site services like distributing mail, messages and hygiene items, sort and organize donations."], ["opp_image", ""], ["created_at", "2021-01-28 23:25:51.543526"], ["updated_at", "2021-01-28 23:25:51.543526"], ["org_name", "Saint Francis Center"], ["organization_id", 3], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (16.5ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Employment Services Client Navigator"], ["opp_description", "Help men and women develop skills, gain work experience and connect with full-time employment.  Help end the cycle of poverty and promote economic self-sufficiency."], ["opp_image", ""], ["created_at", "2021-01-28 23:25:51.556978"], ["updated_at", "2021-01-28 23:25:51.556978"], ["org_name", "Saint Francis Center"], ["organization_id", 3], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.4ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Intake Office Volunteer"], ["opp_description", ""], ["opp_image", ""], ["created_at", "2021-01-28 23:25:51.895765"], ["updated_at", "2021-01-28 23:25:51.895765"], ["org_name", "Saint Francis Center"], ["organization_id", 3], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (17.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (59.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__development"[0m
+  [1m[35m (48.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__test"[0m
+  [1m[35m (105.6ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__development" ENCODING = 'unicode'[0m
+  [1m[35m (104.7ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (24.4ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "org_name" character varying, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (16.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210128230413)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141);
+
+[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-28 23:26:19.842880"], ["updated_at", "2021-01-28 23:26:19.842880"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c28609630bb9e8b772a05ca29a93a80ab1733181"], ["created_at", "2021-01-28 23:26:19.851364"], ["updated_at", "2021-01-28 23:26:19.851364"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "org_name" character varying, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (19.9ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210128230413)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141);
+
+[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-28 23:26:19.955181"], ["updated_at", "2021-01-28 23:26:19.955181"]]
+  [1m[36mTRANSACTION (16.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-01-28 23:26:19.976865"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c28609630bb9e8b772a05ca29a93a80ab1733181"], ["created_at", "2021-01-28 23:26:19.981491"], ["updated_at", "2021-01-28 23:26:19.981491"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "admin"], ["last_name", "admin"], ["email", "admin@email.com"], ["password_digest", "123456"], ["created_at", "2021-01-28 23:26:20.052347"], ["updated_at", "2021-01-28 23:26:20.052347"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (16.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.6ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Habitat for Humanity"], ["org_link", "https://www.habitatmetrodenver.org/"], ["org_phone", 303], ["org_image", "https://www.habitatmetrodenver.org/static/image/logo-white.png?185013110417"], ["created_at", "2021-01-28 23:26:20.084154"], ["updated_at", "2021-01-28 23:26:20.084154"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Saint Francis Center"], ["org_link", "http://www.sfcdenver.org/"], ["org_phone", 303], ["org_image", "http://www.sfcdenver.org/wp-content/uploads/2017/02/stfrancis_logo.png"], ["created_at", "2021-01-28 23:26:20.088422"], ["updated_at", "2021-01-28 23:26:20.088422"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Extreme Community Makeover"], ["org_link", "https://www.extremecommunitymakeover.org/"], ["org_phone", 720], ["org_image", "https://extremecommunitymakeover.org/wp-content/uploads/2015/08/ECMLogoWebsite.gif"], ["created_at", "2021-01-28 23:26:20.091608"], ["updated_at", "2021-01-28 23:26:20.091608"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.4ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Denver Dumb Friends League"], ["org_link", "https://www.ddfl.org/"], ["org_phone", 303], ["org_image", "https://www.ddfl.org/wp-content/themes/ddfl/img/DFL-logo-w.png"], ["created_at", "2021-01-28 23:26:20.095447"], ["updated_at", "2021-01-28 23:26:20.095447"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.3ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Luvin Arms Animal Sanctuary"], ["org_link", "https://www.luvinarms.org/"], ["org_phone", 720], ["org_image", "https://www.luvinarms.org/wp-content/uploads/2021/01/Circle-Ahimsa-Final.png"], ["created_at", "2021-01-28 23:26:20.100343"], ["updated_at", "2021-01-28 23:26:20.100343"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Colorado Pet Pantry"], ["org_link", "https://www.coloradopetpantry.org/"], ["org_phone", 720], ["org_image", "https://www.coloradopetpantry.org/wp-content/uploads/2017/06/colorado-pet-pantry-logo-1.png"], ["created_at", "2021-01-28 23:26:20.105283"], ["updated_at", "2021-01-28 23:26:20.105283"]]
+  [1m[36mTRANSACTION (16.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "The Wild Animal Sanctuary"], ["org_link", "https://www.wildanimalsanctuary.org/"], ["org_phone", 303], ["org_image", "https://static.wixstatic.com/media/a16ed6_1b0a4b9aafe84b7a94918d3d3d319581~mv2.png/v1/fill/w_261,h_80,al_c,q_85,usm_0.66_1.00_0.01/NEW-LOGO-with-URL.webp"], ["created_at", "2021-01-28 23:26:20.125387"], ["updated_at", "2021-01-28 23:26:20.125387"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (17.8ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Construction Volunteer"], ["opp_description", ""], ["opp_image", ""], ["created_at", "2021-01-28 23:26:20.156749"], ["updated_at", "2021-01-28 23:26:20.156749"], ["org_name", "Habitat for Humanity"], ["organization_id", 1], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.3ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Restore Volunteer"], ["opp_description", ""], ["opp_image", ""], ["created_at", "2021-01-28 23:26:20.189097"], ["updated_at", "2021-01-28 23:26:20.189097"], ["org_name", "Habitat for Humanity"], ["organization_id", 1], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.6ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Basic Services Volunteer"], ["opp_description", "Provide hands-on caring by participating in many critical on-site services like distributing mail, messages and hygiene items, sort and organize donations."], ["opp_image", ""], ["created_at", "2021-01-28 23:26:20.196258"], ["updated_at", "2021-01-28 23:26:20.196258"], ["org_name", "Saint Francis Center"], ["organization_id", 3], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (15.8ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Employment Services Client Navigator"], ["opp_description", "Help men and women develop skills, gain work experience and connect with full-time employment.  Help end the cycle of poverty and promote economic self-sufficiency."], ["opp_image", ""], ["created_at", "2021-01-28 23:26:20.208712"], ["updated_at", "2021-01-28 23:26:20.208712"], ["org_name", "Saint Francis Center"], ["organization_id", 3], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.6ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Intake Office Volunteer"], ["opp_description", "As the first point of contact for guests new to SFC, guide them through the sometimes confusing paperwork."], ["opp_image", ""], ["created_at", "2021-01-28 23:26:20.231856"], ["updated_at", "2021-01-28 23:26:20.231856"], ["org_name", "Saint Francis Center"], ["organization_id", 3], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.3ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Volunteer"], ["opp_description", "Work on exterior home and neighborhood improvement projects.  Adopt a block project or alley clean-up/graffiti removal project."], ["opp_image", ""], ["created_at", "2021-01-28 23:26:20.239258"], ["updated_at", "2021-01-28 23:26:20.239258"], ["org_name", "Extreme Community Makeover"], ["organization_id", 2], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.3ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "General Volunteer"], ["opp_description", "Help with adoptions and animal care"], ["opp_image", ""], ["created_at", "2021-01-28 23:26:20.245082"], ["updated_at", "2021-01-28 23:26:20.245082"], ["org_name", "Denver Dumb Friends League"], ["organization_id", 4], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.4ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Equine Volunteer"], ["opp_description", "Work with horses and other equines, mucking stalls and providing enrichment to the animals"], ["opp_image", ""], ["created_at", "2021-01-28 23:26:20.251812"], ["updated_at", "2021-01-28 23:26:20.251812"], ["org_name", "Denver Dumb Friends League"], ["organization_id", 4], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (14.3ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Foster Volunteer"], ["opp_description", "Bring pets from the shelter into your home on a temporary basis to prepare them for adoption."], ["opp_image", ""], ["created_at", "2021-01-28 23:26:20.259250"], ["updated_at", "2021-01-28 23:26:20.259250"], ["org_name", "Denver Dumb Friends League"], ["organization_id", 4], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.4ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Animal Care Volunteer"], ["opp_description", "Animal care shifts include cleaning resident living areas, replenishing feed and water, helping to keep other areas of the sanctuary clean and organized, and giving the animals some love and attention. Each task directly contributes to the absolute best quality of care for our residents!"], ["opp_image", ""], ["created_at", "2021-01-28 23:26:20.283515"], ["updated_at", "2021-01-28 23:26:20.283515"], ["org_name", "Luvin Arms Animal Sanctuary"], ["organization_id", 5], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.3ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "General Volunteer"], ["opp_description", "Opportunities include cleaning the facility, office work and educational duties, fence building and habitat construction, fundraising working with animals, and always going on - or managing our cross-country rescue schedule."], ["opp_image", ""], ["created_at", "2021-01-28 23:26:20.292837"], ["updated_at", "2021-01-28 23:26:20.292837"], ["org_name", "Wild Animal Sanctuary"], ["organization_id", 5], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (78.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__development"[0m
+  [1m[35m (53.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__test"[0m
+  [1m[35m (104.1ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__development" ENCODING = 'unicode'[0m
+  [1m[35m (102.0ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "org_name" character varying, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (19.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210128230413)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141);
+
+[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (16.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-28 23:27:25.307175"], ["updated_at", "2021-01-28 23:27:25.307175"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c28609630bb9e8b772a05ca29a93a80ab1733181"], ["created_at", "2021-01-28 23:27:25.333438"], ["updated_at", "2021-01-28 23:27:25.333438"]]
+  [1m[36mTRANSACTION (10.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (48.6ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "org_name" character varying, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (21.9ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (9.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.9ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (24.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210128230413)[0m
+  [1m[35m (9.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141);
+
+[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-28 23:27:25.547848"], ["updated_at", "2021-01-28 23:27:25.547848"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-01-28 23:27:25.555606"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (15.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c28609630bb9e8b772a05ca29a93a80ab1733181"], ["created_at", "2021-01-28 23:27:25.576499"], ["updated_at", "2021-01-28 23:27:25.576499"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (72.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__development"[0m
+  [1m[35m (47.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__test"[0m
+  [1m[35m (191.9ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__development" ENCODING = 'unicode'[0m
+  [1m[35m (67.9ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "org_name" character varying, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (9.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210128230413)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141);
+
+[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (7.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-29 00:36:04.316157"], ["updated_at", "2021-01-29 00:36:04.316157"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c28609630bb9e8b772a05ca29a93a80ab1733181"], ["created_at", "2021-01-29 00:36:04.331538"], ["updated_at", "2021-01-29 00:36:04.331538"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (16.7ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "org_name" character varying, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210128230413)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141);
+
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-29 00:36:04.407802"], ["updated_at", "2021-01-29 00:36:04.407802"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (9.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-01-29 00:36:04.413756"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c28609630bb9e8b772a05ca29a93a80ab1733181"], ["created_at", "2021-01-29 00:36:04.429108"], ["updated_at", "2021-01-29 00:36:04.429108"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "admin"], ["last_name", "admin"], ["email", "admin@email.com"], ["password_digest", "123456"], ["created_at", "2021-01-29 00:36:04.498696"], ["updated_at", "2021-01-29 00:36:04.498696"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (10.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Habitat for Humanity"], ["org_link", "https://www.habitatmetrodenver.org/"], ["org_phone", 303], ["org_image", "https://www.habitatmetrodenver.org/static/image/logo-white.png?185013110417"], ["created_at", "2021-01-29 00:36:04.513392"], ["updated_at", "2021-01-29 00:36:04.513392"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Saint Francis Center"], ["org_link", "http://www.sfcdenver.org/"], ["org_phone", 303], ["org_image", "http://www.sfcdenver.org/wp-content/uploads/2017/02/stfrancis_logo.png"], ["created_at", "2021-01-29 00:36:04.527245"], ["updated_at", "2021-01-29 00:36:04.527245"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Extreme Community Makeover"], ["org_link", "https://www.extremecommunitymakeover.org/"], ["org_phone", 720], ["org_image", "https://extremecommunitymakeover.org/wp-content/uploads/2015/08/ECMLogoWebsite.gif"], ["created_at", "2021-01-29 00:36:04.530579"], ["updated_at", "2021-01-29 00:36:04.530579"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Denver Dumb Friends League"], ["org_link", "https://www.ddfl.org/"], ["org_phone", 303], ["org_image", "https://www.ddfl.org/wp-content/themes/ddfl/img/DFL-logo-w.png"], ["created_at", "2021-01-29 00:36:04.533730"], ["updated_at", "2021-01-29 00:36:04.533730"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.3ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Luvin Arms Animal Sanctuary"], ["org_link", "https://www.luvinarms.org/"], ["org_phone", 720], ["org_image", "https://www.luvinarms.org/wp-content/uploads/2021/01/Circle-Ahimsa-Final.png"], ["created_at", "2021-01-29 00:36:04.536966"], ["updated_at", "2021-01-29 00:36:04.536966"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Colorado Pet Pantry"], ["org_link", "https://www.coloradopetpantry.org/"], ["org_phone", 720], ["org_image", "https://www.coloradopetpantry.org/wp-content/uploads/2017/06/colorado-pet-pantry-logo-1.png"], ["created_at", "2021-01-29 00:36:04.540491"], ["updated_at", "2021-01-29 00:36:04.540491"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "The Wild Animal Sanctuary"], ["org_link", "https://www.wildanimalsanctuary.org/"], ["org_phone", 303], ["org_image", "https://static.wixstatic.com/media/a16ed6_1b0a4b9aafe84b7a94918d3d3d319581~mv2.png/v1/fill/w_261,h_80,al_c,q_85,usm_0.66_1.00_0.01/NEW-LOGO-with-URL.webp"], ["created_at", "2021-01-29 00:36:04.543890"], ["updated_at", "2021-01-29 00:36:04.543890"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.9ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Construction Volunteer"], ["opp_description", "Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!"], ["opp_image", ""], ["created_at", "2021-01-29 00:36:04.576161"], ["updated_at", "2021-01-29 00:36:04.576161"], ["org_name", "Habitat for Humanity"], ["organization_id", 1], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.3ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Restore Volunteer"], ["opp_description", "Habitat ReStores support the mission by providing valuable funding to the programs.  It's retail with a mission!"], ["opp_image", ""], ["created_at", "2021-01-29 00:36:04.582235"], ["updated_at", "2021-01-29 00:36:04.582235"], ["org_name", "Habitat for Humanity"], ["organization_id", 1], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.4ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Basic Services Volunteer"], ["opp_description", "Provide hands-on caring by participating in many critical on-site services like distributing mail, messages and hygiene items, sort and organize donations."], ["opp_image", ""], ["created_at", "2021-01-29 00:36:04.589309"], ["updated_at", "2021-01-29 00:36:04.589309"], ["org_name", "Saint Francis Center"], ["organization_id", 3], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.3ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Employment Services Client Navigator"], ["opp_description", "Help men and women develop skills, gain work experience and connect with full-time employment.  Help end the cycle of poverty and promote economic self-sufficiency."], ["opp_image", ""], ["created_at", "2021-01-29 00:36:04.598409"], ["updated_at", "2021-01-29 00:36:04.598409"], ["org_name", "Saint Francis Center"], ["organization_id", 3], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.3ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Intake Office Volunteer"], ["opp_description", "As the first point of contact for guests new to SFC, guide them through the sometimes confusing paperwork."], ["opp_image", ""], ["created_at", "2021-01-29 00:36:04.603879"], ["updated_at", "2021-01-29 00:36:04.603879"], ["org_name", "Saint Francis Center"], ["organization_id", 3], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.3ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Volunteer"], ["opp_description", "Work on exterior home and neighborhood improvement projects.  Adopt a block project or alley clean-up/graffiti removal project."], ["opp_image", ""], ["created_at", "2021-01-29 00:36:04.610285"], ["updated_at", "2021-01-29 00:36:04.610285"], ["org_name", "Extreme Community Makeover"], ["organization_id", 2], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (10.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.3ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "General Volunteer"], ["opp_description", "Help with adoptions and animal care"], ["opp_image", ""], ["created_at", "2021-01-29 00:36:04.625922"], ["updated_at", "2021-01-29 00:36:04.625922"], ["org_name", "Denver Dumb Friends League"], ["organization_id", 4], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.3ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Equine Volunteer"], ["opp_description", "Work with horses and other equines, mucking stalls and providing enrichment to the animals"], ["opp_image", ""], ["created_at", "2021-01-29 00:36:04.631157"], ["updated_at", "2021-01-29 00:36:04.631157"], ["org_name", "Denver Dumb Friends League"], ["organization_id", 4], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.2ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Foster Volunteer"], ["opp_description", "Bring pets from the shelter into your home on a temporary basis to prepare them for adoption."], ["opp_image", ""], ["created_at", "2021-01-29 00:36:04.637348"], ["updated_at", "2021-01-29 00:36:04.637348"], ["org_name", "Denver Dumb Friends League"], ["organization_id", 4], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.3ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Animal Care Volunteer"], ["opp_description", "Animal care shifts include cleaning resident living areas, replenishing feed and water, helping to keep other areas of the sanctuary clean and organized, and giving the animals some love and attention. Each task directly contributes to the absolute best quality of care for our residents!"], ["opp_image", ""], ["created_at", "2021-01-29 00:36:04.646950"], ["updated_at", "2021-01-29 00:36:04.646950"], ["org_name", "Luvin Arms Animal Sanctuary"], ["organization_id", 5], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.4ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "General Volunteer"], ["opp_description", "Opportunities include cleaning the facility, office work and educational duties, fence building and habitat construction, fundraising working with animals, and always going on - or managing our cross-country rescue schedule."], ["opp_image", ""], ["created_at", "2021-01-29 00:36:04.656189"], ["updated_at", "2021-01-29 00:36:04.656189"], ["org_name", "Wild Animal Sanctuary"], ["organization_id", 5], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "admin"], ["last_name", "admin"], ["email", "admin@email.com"], ["password_digest", "123456"], ["created_at", "2021-01-29 00:36:59.340372"], ["updated_at", "2021-01-29 00:36:59.340372"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.5ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Habitat for Humanity"], ["org_link", "https://www.habitatmetrodenver.org/"], ["org_phone", 303], ["org_image", "https://www.habitatmetrodenver.org/static/image/logo-white.png?185013110417"], ["created_at", "2021-01-29 00:36:59.355042"], ["updated_at", "2021-01-29 00:36:59.355042"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Saint Francis Center"], ["org_link", "http://www.sfcdenver.org/"], ["org_phone", 303], ["org_image", "http://www.sfcdenver.org/wp-content/uploads/2017/02/stfrancis_logo.png"], ["created_at", "2021-01-29 00:36:59.359272"], ["updated_at", "2021-01-29 00:36:59.359272"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (16.9ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Extreme Community Makeover"], ["org_link", "https://www.extremecommunitymakeover.org/"], ["org_phone", 720], ["org_image", "https://extremecommunitymakeover.org/wp-content/uploads/2015/08/ECMLogoWebsite.gif"], ["created_at", "2021-01-29 00:36:59.363143"], ["updated_at", "2021-01-29 00:36:59.363143"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.3ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Denver Dumb Friends League"], ["org_link", "https://www.ddfl.org/"], ["org_phone", 303], ["org_image", "https://www.ddfl.org/wp-content/themes/ddfl/img/DFL-logo-w.png"], ["created_at", "2021-01-29 00:36:59.384129"], ["updated_at", "2021-01-29 00:36:59.384129"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.3ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Luvin Arms Animal Sanctuary"], ["org_link", "https://www.luvinarms.org/"], ["org_phone", 720], ["org_image", "https://www.luvinarms.org/wp-content/uploads/2021/01/Circle-Ahimsa-Final.png"], ["created_at", "2021-01-29 00:36:59.388384"], ["updated_at", "2021-01-29 00:36:59.388384"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Colorado Pet Pantry"], ["org_link", "https://www.coloradopetpantry.org/"], ["org_phone", 720], ["org_image", "https://www.coloradopetpantry.org/wp-content/uploads/2017/06/colorado-pet-pantry-logo-1.png"], ["created_at", "2021-01-29 00:36:59.398057"], ["updated_at", "2021-01-29 00:36:59.398057"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "The Wild Animal Sanctuary"], ["org_link", "https://www.wildanimalsanctuary.org/"], ["org_phone", 303], ["org_image", "https://static.wixstatic.com/media/a16ed6_1b0a4b9aafe84b7a94918d3d3d319581~mv2.png/v1/fill/w_261,h_80,al_c,q_85,usm_0.66_1.00_0.01/NEW-LOGO-with-URL.webp"], ["created_at", "2021-01-29 00:36:59.401676"], ["updated_at", "2021-01-29 00:36:59.401676"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (13.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.7ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Construction Volunteer"], ["opp_description", "Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!"], ["opp_image", ""], ["created_at", "2021-01-29 00:36:59.434940"], ["updated_at", "2021-01-29 00:36:59.434940"], ["org_name", "Habitat for Humanity"], ["organization_id", 1], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.3ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Restore Volunteer"], ["opp_description", "Habitat ReStores support the mission by providing valuable funding to the programs.  It's retail with a mission!"], ["opp_image", ""], ["created_at", "2021-01-29 00:36:59.441155"], ["updated_at", "2021-01-29 00:36:59.441155"], ["org_name", "Habitat for Humanity"], ["organization_id", 1], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.3ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Basic Services Volunteer"], ["opp_description", "Provide hands-on caring by participating in many critical on-site services like distributing mail, messages and hygiene items, sort and organize donations."], ["opp_image", ""], ["created_at", "2021-01-29 00:36:59.445827"], ["updated_at", "2021-01-29 00:36:59.445827"], ["org_name", "Saint Francis Center"], ["organization_id", 3], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.3ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Employment Services Client Navigator"], ["opp_description", "Help men and women develop skills, gain work experience and connect with full-time employment.  Help end the cycle of poverty and promote economic self-sufficiency."], ["opp_image", ""], ["created_at", "2021-01-29 00:36:59.450394"], ["updated_at", "2021-01-29 00:36:59.450394"], ["org_name", "Saint Francis Center"], ["organization_id", 3], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.3ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Intake Office Volunteer"], ["opp_description", "As the first point of contact for guests new to SFC, guide them through the sometimes confusing paperwork."], ["opp_image", ""], ["created_at", "2021-01-29 00:36:59.455194"], ["updated_at", "2021-01-29 00:36:59.455194"], ["org_name", "Saint Francis Center"], ["organization_id", 3], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.5ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Volunteer"], ["opp_description", "Work on exterior home and neighborhood improvement projects.  Adopt a block project or alley clean-up/graffiti removal project."], ["opp_image", ""], ["created_at", "2021-01-29 00:36:59.460960"], ["updated_at", "2021-01-29 00:36:59.460960"], ["org_name", "Extreme Community Makeover"], ["organization_id", 2], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (15.9ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.4ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "General Volunteer"], ["opp_description", "Help with adoptions and animal care"], ["opp_image", ""], ["created_at", "2021-01-29 00:36:59.483063"], ["updated_at", "2021-01-29 00:36:59.483063"], ["org_name", "Denver Dumb Friends League"], ["organization_id", 4], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.3ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Equine Volunteer"], ["opp_description", "Work with horses and other equines, mucking stalls and providing enrichment to the animals"], ["opp_image", ""], ["created_at", "2021-01-29 00:36:59.489289"], ["updated_at", "2021-01-29 00:36:59.489289"], ["org_name", "Denver Dumb Friends League"], ["organization_id", 4], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.3ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Foster Volunteer"], ["opp_description", "Bring pets from the shelter into your home on a temporary basis to prepare them for adoption."], ["opp_image", ""], ["created_at", "2021-01-29 00:36:59.494190"], ["updated_at", "2021-01-29 00:36:59.494190"], ["org_name", "Denver Dumb Friends League"], ["organization_id", 4], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.4ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "Animal Care Volunteer"], ["opp_description", "Animal care shifts include cleaning resident living areas, replenishing feed and water, helping to keep other areas of the sanctuary clean and organized, and giving the animals some love and attention. Each task directly contributes to the absolute best quality of care for our residents!"], ["opp_image", ""], ["created_at", "2021-01-29 00:36:59.503267"], ["updated_at", "2021-01-29 00:36:59.503267"], ["org_name", "Luvin Arms Animal Sanctuary"], ["organization_id", 5], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.3ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "General Volunteer"], ["opp_description", "Opportunities include cleaning the facility, office work and educational duties, fence building and habitat construction, fundraising working with animals, and always going on - or managing our cross-country rescue schedule."], ["opp_image", ""], ["created_at", "2021-01-29 00:36:59.508404"], ["updated_at", "2021-01-29 00:36:59.508404"], ["org_name", "Wild Animal Sanctuary"], ["organization_id", 5], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m

@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-@admin = User.create!(username: 'admin', email: 'admin@email.com', password: '123456')
+@admin = User.create!(first_name: 'admin', last_name: 'admin', email: 'admin@email.com', password_digest: '123456')
 
 puts "#{User.count} users created"
 
@@ -22,7 +22,7 @@ puts "#{User.count} users created"
   org_image: 'http://www.sfcdenver.org/wp-content/uploads/2017/02/stfrancis_logo.png')
 @extreme_community_makeover=Organization.create!(
   org_name: 'Extreme Community Makeover', 
-  org_link: 'https://www.extremecommunitymakeover.org/'
+  org_link: 'https://www.extremecommunitymakeover.org/',
   org_phone: '720-235-8847', 
   org_image: 'https://extremecommunitymakeover.org/wp-content/uploads/2015/08/ECMLogoWebsite.gif')
 @ddfl=Organization.create!(
@@ -49,65 +49,88 @@ puts "#{User.count} users created"
 @construction_opp=Opportunity.create!(
   org_name: 'Habitat for Humanity',
   opp_name: 'Construction Volunteer',
-  opp_description: `Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!`,
-  opp_image: ''
+  opp_description: 'Whether you\'re a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!',
+  opp_image: '',
+  user_id: 1,
+  organization_id: 1,
 )
 @restore=Opportunity.create!(
   org_name: 'Habitat for Humanity',
   opp_name: 'Restore Volunteer',
-  opp_description: `Habitat ReStores support the mission by providing valuable funding to the programs.  It's retail with a mission!`,
-  opp_image: ''
+  opp_description: 'Habitat ReStores support the mission by providing valuable funding to the programs.  It\'s retail with a mission!',
+  opp_image: '',
+  user_id: 1,
+  organization_id: 1,
 )
 @basic=Opportunity.create!(
   org_name: 'Saint Francis Center',
   opp_name: 'Basic Services Volunteer',
-  opp_description: `Provide hands-on caring by participating in many critical on-site services like distributing mail, messages and hygiene items, sort and organize donations.`
-  opp_image: ''
+  opp_description: 'Provide hands-on caring by participating in many critical on-site services like distributing mail, messages and hygiene items, sort and organize donations.',
+  opp_image: '',
+  user_id: 1,
+  organization_id: 3,
 )
 @employment=Opportunity.create!(
-  org_name: 'Saint Francis Center'
+  org_name: 'Saint Francis Center',
   opp_name: 'Employment Services Client Navigator',
-  opp_description: `Help men and women develop skills, gain work experience and connect with full-time employment.  Help end the cycle of poverty and promote economic self-sufficiency.`
-  opp_image: ''
+  opp_description: 'Help men and women develop skills, gain work experience and connect with full-time employment.  Help end the cycle of poverty and promote economic self-sufficiency.',
+  opp_image: '',
+  user_id: 1,
+  organization_id: 3,
 )
 @intake=Opportunity.create!(
   org_name: 'Saint Francis Center',
   opp_name: 'Intake Office Volunteer',
-  opp_description: `As the first point of contact for guests new to SFC, guide them through the sometimes confusing paperwork.`,
-  opp_image: ''
+  opp_description: 'As the first point of contact for guests new to SFC, guide them through the sometimes confusing paperwork.',
+  opp_image: '',
+  user_id: 1,
+  organization_id: 3,
 )
 @volunteer=Opportunity.create!(
   org_name: 'Extreme Community Makeover',
   opp_name: 'Volunteer',
-  opp_description: `Work on exterior home and neighborhood improvement projects.  Adopt a block project or alley clean-up/graffiti removal project.`,
-  opp_image: ''
+  opp_description: 'Work on exterior home and neighborhood improvement projects.  Adopt a block project or alley clean-up/graffiti removal project.',
+  opp_image: '',
+  user_id: 1,
+  organization_id: 2,
 )
 @general_volunteer=Opportunity.create!(
   org_name: 'Denver Dumb Friends League',
   opp_name: 'General Volunteer',
-  opp_description: `Help with adoptions and animal care`,
-  opp_image: ''
+  opp_description: 'Help with adoptions and animal care',
+  opp_image: '',
+  user_id: 1,
+  organization_id: 4,
 )
 @equine=Opportunity.create!(
   org_name: 'Denver Dumb Friends League',
   opp_name: 'Equine Volunteer',
-  opp_description: `Work with horses and other equines, mucking stalls and providing enrichment to the animals`
-  opp_image: ''
+  opp_description: 'Work with horses and other equines, mucking stalls and providing enrichment to the animals',
+  opp_image: '',
+  user_id: 1,
+  organization_id: 4,
 )
 @foster=Opportunity.create!(
   org_name: 'Denver Dumb Friends League',
   opp_name: 'Foster Volunteer',
-  opp_description: `Bring pets from the shelter into your home on a temporary basis to prepare them for adoption.`
-  opp_image: ''
+  opp_description: 'Bring pets from the shelter into your home on a temporary basis to prepare them for adoption.',
+  opp_image: '',
+  user_id: 1,
+  organization_id: 4,
 )
 @animal_care=Opportunity.create!(
   org_name: 'Luvin Arms Animal Sanctuary',
   opp_name: 'Animal Care Volunteer',
-  opp_description: `Animal care shifts include cleaning resident living areas, replenishing feed and water, helping to keep other areas of the sanctuary clean and organized, and giving the animals some love and attention. Each task directly contributes to the absolute best quality of care for our residents!`,
-  opp_image: ''
+  opp_description: 'Animal care shifts include cleaning resident living areas, replenishing feed and water, helping to keep other areas of the sanctuary clean and organized, and giving the animals some love and attention. Each task directly contributes to the absolute best quality of care for our residents!',
+  opp_image: '',
+  user_id: 1,
+  organization_id: 5,
 )
 @wild_animal=Opportunity.create!(
-  org_name: 'Wild Animal Sanctuary'
+  org_name: 'Wild Animal Sanctuary',
   opp_name: 'General Volunteer',
-  opp_description: `Opportunities include cleaning the facility, office work and educational duties, fence building and habitat construction, fundraising working with animals, and always going on - or managing our cross-country rescue schedule.`
+  opp_description: 'Opportunities include cleaning the facility, office work and educational duties, fence building and habitat construction, fundraising working with animals, and always going on - or managing our cross-country rescue schedule.',
+  opp_image: '',
+  user_id: 1,
+  organization_id: 5,
 )

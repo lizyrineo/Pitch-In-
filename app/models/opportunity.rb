@@ -1,3 +1,3 @@
 class Opportunity < ApplicationRecord
-  belongs_to :organizations
+  belongs_to :organization
 end
