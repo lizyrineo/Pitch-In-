@@ -1,0 +1,21 @@
+.all-nav {
+  background-color: #f5824c;
+  height: 4.5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  border-bottom: 2px solid rgba(235, 92, 16, 0.3);
+}
+
+.logo {
+  text-align: left;
+}
+.login {
+  text-align: right;
+}
+.register {
+  text-align: right;
+}

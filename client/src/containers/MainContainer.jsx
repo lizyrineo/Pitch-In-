@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { Route, Switch, useHistory } from "react-router-dom";
-import CreateOrganization from "../screens/CreateOrganization";
-import CreateOpportunity from "../screens/CreateOpportunity"
-import EditOrganization from "../screens/EditOpportunity";
-import Opportunities from "../screens/Opportunities";
-import Organizations from "../screens/Organizations";
-import { getAllOrganizations, postOrganization } from '../services/organizations';
-import { getAllOpportunities, postOpportunity } from '../services/opportunities';
+import CreateOrganization from "../screens/CreateOrganization/CreateOrganization";
+import CreateOpportunity from "../screens/CreateOpportunity/CreateOpportunity"
+import EditOrganization from "../screens/EditOpportunity/EditOpportunity";
+import Opportunities from "../screens/Opportunities/Opportunities";
+import Organizations from "../screens/Organizations/Organizations";
+import { getAllOrganizations } from '../services/organizations';
+import { getAllOpportunities } from '../services/opportunities';
 
 export default function MainContainer() {
   const [organizations, setOrganizations] = useState([]);
@@ -52,7 +52,9 @@ export default function MainContainer() {
           handleCreate={handleCreate}
         />
       </Route>
-
+      <Route path='/organizations'>
+        <Organizations organizations={ organizations}/>
+      </Route>
       <Route path='/opportunities/:id/edit'>
         <EditOrganization
         opportunities={opportunities}

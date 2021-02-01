@@ -1402,3 +1402,2450 @@ FOREIGN KEY ("user_id")
   [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
   [1m[36mOpportunity Create (0.3ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "org_name", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["opp_name", "General Volunteer"], ["opp_description", "Opportunities include cleaning the facility, office work and educational duties, fence building and habitat construction, fundraising working with animals, and always going on - or managing our cross-country rescue schedule."], ["opp_image", ""], ["created_at", "2021-01-29 00:36:59.508404"], ["updated_at", "2021-01-29 00:36:59.508404"], ["org_name", "Wild Animal Sanctuary"], ["organization_id", 5], ["user_id", 1]]
   [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/opportunities" for ::1 at 2021-01-29 12:11:55 -0700
+Started GET "/organizations" for ::1 at 2021-01-29 12:11:55 -0700
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OpportunitiesController#index as HTML
+Processing by OrganizationsController#index as HTML
+  [1m[36mOpportunity Load (9.3ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+  [1m[36mOrganization Load (1.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 40ms (Views: 10.9ms | ActiveRecord: 17.1ms | Allocations: 15271)
+
+
+Completed 200 OK in 37ms (Views: 13.8ms | ActiveRecord: 19.5ms | Allocations: 16447)
+
+
+Started POST "/users/" for ::1 at 2021-01-29 12:12:11 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"liz", "last_name"=>"yrineo", "email"=>"lizyrineo@yahoo.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :password[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (3.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."first_name" = $1 LIMIT $2[0m  [["first_name", "liz"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."last_name" = $1 LIMIT $2[0m  [["last_name", "yrineo"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lizyrineo@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 422 Unprocessable Entity in 24ms (Views: 4.1ms | ActiveRecord: 7.1ms | Allocations: 9081)
+
+
+Started POST "/users/" for ::1 at 2021-01-29 12:16:24 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"liz", "last_name"=>"yrieo", "email"=>"lizyrineo@yahoo.com", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."first_name" = $1 LIMIT $2[0m  [["first_name", "liz"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."last_name" = $1 LIMIT $2[0m  [["last_name", "yrieo"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lizyrineo@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (5.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "liz"], ["last_name", "yrieo"], ["email", "lizyrineo@yahoo.com"], ["password_digest", "$2a$12$T0Mm/xpTmtX1rC5gdTF8A.yTZtWO6FpbLTGyAyvS9ejz8K.BmT4TC"], ["created_at", "2021-01-29 19:16:24.600563"], ["updated_at", "2021-01-29 19:16:24.600563"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 286ms (Views: 0.7ms | ActiveRecord: 12.7ms | Allocations: 7594)
+
+
+Started GET "/organizations" for ::1 at 2021-01-29 12:16:24 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-01-29 12:16:24 -0700
+Processing by OpportunitiesController#index as HTML
+  [1m[36mOrganization Load (2.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+  [1m[36mOpportunity Load (0.2ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 35ms (Views: 12.3ms | ActiveRecord: 20.1ms | Allocations: 7585)
+
+
+Completed 200 OK in 39ms (Views: 27.5ms | ActiveRecord: 9.7ms | Allocations: 12807)
+
+
+Started GET "/organizations" for ::1 at 2021-01-29 13:54:19 -0700
+Started GET "/opportunities" for ::1 at 2021-01-29 13:54:19 -0700
+Started GET "/auth/verify" for ::1 at 2021-01-29 13:54:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Processing by OpportunitiesController#index as HTML
+Processing by OrganizationsController#index as HTML
+  [1m[36mOrganization Load (0.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  [1m[36mOpportunity Load (1.0ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 168ms (Views: 167.5ms | ActiveRecord: 100.1ms | Allocations: 35715)
+
+
+Completed 200 OK in 175ms (Views: 173.5ms | ActiveRecord: 100.6ms | Allocations: 38910)
+
+
+Started GET "/organizations" for ::1 at 2021-01-29 13:57:46 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-01-29 13:57:46 -0700
+Started GET "/auth/verify" for ::1 at 2021-01-29 13:57:46 -0700
+Processing by OpportunitiesController#index as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+  [1m[36mOrganization Load (1.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 1.8ms | Allocations: 9101)
+
+
+  [1m[36mOpportunity Load (6.2ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 29ms (Views: 21.3ms | ActiveRecord: 6.2ms | Allocations: 12187)
+
+
+Started GET "/organizations" for ::1 at 2021-01-29 13:57:47 -0700
+Started GET "/auth/verify" for ::1 at 2021-01-29 13:57:47 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-01-29 13:57:47 -0700
+Processing by OpportunitiesController#index as HTML
+  [1m[36mOrganization Load (1.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 1.8ms | Allocations: 3147)
+
+
+  [1m[36mOpportunity Load (0.8ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.8ms | Allocations: 6181)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-29 14:10:23 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Started GET "/opportunities" for ::1 at 2021-01-29 14:10:23 -0700
+Started GET "/organizations" for ::1 at 2021-01-29 14:10:23 -0700
+Processing by OpportunitiesController#index as HTML
+Processing by OrganizationsController#index as HTML
+  [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+  [1m[36mOpportunity Load (1.2ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 85ms (Views: 84.6ms | ActiveRecord: 30.9ms | Allocations: 20927)
+
+
+Completed 200 OK in 92ms (Views: 91.5ms | ActiveRecord: 32.2ms | Allocations: 24514)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-29 14:19:27 -0700
+Started GET "/organizations" for ::1 at 2021-01-29 14:19:27 -0700
+Started GET "/opportunities" for ::1 at 2021-01-29 14:19:27 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Processing by OpportunitiesController#index as HTML
+Processing by OrganizationsController#index as HTML
+  [1m[36mOrganization Load (0.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 52ms (Views: 51.5ms | ActiveRecord: 11.2ms | Allocations: 20083)
+
+
+  [1m[36mOpportunity Load (0.8ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 64ms (Views: 63.8ms | ActiveRecord: 19.5ms | Allocations: 25167)
+
+
+Started GET "/organizations" for ::1 at 2021-01-29 14:19:32 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-01-29 14:19:32 -0700
+Started GET "/auth/verify" for ::1 at 2021-01-29 14:19:32 -0700
+Processing by OpportunitiesController#index as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+  [1m[36mOrganization Load (16.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+  [1m[36mOpportunity Load (1.6ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+Completed 200 OK in 22ms (Views: 5.2ms | ActiveRecord: 16.5ms | Allocations: 16138)
+
+
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 24ms (Views: 21.6ms | ActiveRecord: 1.6ms | Allocations: 19221)
+
+
+Started GET "/organizations" for ::1 at 2021-01-29 14:20:15 -0700
+Started GET "/opportunities" for ::1 at 2021-01-29 14:20:15 -0700
+Processing by OrganizationsController#index as HTML
+Processing by OpportunitiesController#index as HTML
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  [1m[36mOpportunity Load (0.3ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.3ms | Allocations: 2646)
+
+
+Completed 200 OK in 24ms (Views: 23.8ms | ActiveRecord: 0.3ms | Allocations: 5346)
+
+
+Started GET "/organizations" for ::1 at 2021-01-29 14:20:28 -0700
+Started GET "/opportunities" for ::1 at 2021-01-29 14:20:28 -0700
+Processing by OrganizationsController#index as HTML
+Processing by OpportunitiesController#index as HTML
+  [1m[36mOpportunity Load (0.3ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 15.1ms | ActiveRecord: 0.3ms | Allocations: 3767)
+
+
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.2ms | Allocations: 5431)
+
+
+Started GET "/organizations" for ::1 at 2021-01-29 14:20:37 -0700
+Started GET "/opportunities" for ::1 at 2021-01-29 14:20:37 -0700
+Processing by OrganizationsController#index as HTML
+Processing by OpportunitiesController#index as HTML
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.3ms | Allocations: 2219)
+
+
+  [1m[36mOpportunity Load (2.9ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 2.9ms | Allocations: 5568)
+
+
+Started GET "/organizations" for ::1 at 2021-01-29 14:21:53 -0700
+Started GET "/opportunities" for ::1 at 2021-01-29 14:21:53 -0700
+Processing by OrganizationsController#index as HTML
+Processing by OpportunitiesController#index as HTML
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  [1m[36mOpportunity Load (0.2ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.3ms | Allocations: 2813)
+
+
+Completed 200 OK in 14ms (Views: 14.1ms | ActiveRecord: 0.2ms | Allocations: 5346)
+
+
+Started GET "/organizations" for ::1 at 2021-01-29 14:22:13 -0700
+Started GET "/opportunities" for ::1 at 2021-01-29 14:22:13 -0700
+Processing by OrganizationsController#index as HTML
+Processing by OpportunitiesController#index as HTML
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+  [1m[36mOpportunity Load (0.6ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 2234)
+
+
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.6ms | Allocations: 5566)
+
+
+Started GET "/organizations" for ::1 at 2021-01-29 14:22:34 -0700
+Started GET "/opportunities" for ::1 at 2021-01-29 14:22:34 -0700
+Processing by OrganizationsController#index as HTML
+Processing by OpportunitiesController#index as HTML
+  [1m[36mOpportunity Load (0.2ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.2ms | Allocations: 3338)
+
+
+  [1m[36mOrganization Load (4.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 6.5ms | ActiveRecord: 4.6ms | Allocations: 5647)
+
+
+Started GET "/opportunities" for ::1 at 2021-01-29 14:22:44 -0700
+Processing by OpportunitiesController#index as HTML
+Started GET "/organizations" for ::1 at 2021-01-29 14:22:44 -0700
+Processing by OrganizationsController#index as HTML
+  [1m[36mOpportunity Load (0.3ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.3ms | Allocations: 3599)
+
+
+  [1m[36mOrganization Load (4.9ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 5.2ms | ActiveRecord: 4.9ms | Allocations: 5566)
+
+
+Started GET "/organizations" for ::1 at 2021-01-29 14:22:53 -0700
+Started GET "/opportunities" for ::1 at 2021-01-29 14:22:53 -0700
+Processing by OrganizationsController#index as HTML
+Processing by OpportunitiesController#index as HTML
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.3ms | Allocations: 2381)
+
+
+  [1m[36mOpportunity Load (2.8ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 2.8ms | Allocations: 5566)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-29 14:23:34 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Started GET "/auth/verify" for ::1 at 2021-01-29 14:24:56 -0700
+Started GET "/organizations" for ::1 at 2021-01-29 14:24:56 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Started GET "/opportunities" for ::1 at 2021-01-29 14:24:56 -0700
+Processing by OrganizationsController#index as HTML
+Processing by OpportunitiesController#index as HTML
+  [1m[36mOrganization Load (0.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  [1m[36mOpportunity Load (0.7ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.6ms | Allocations: 3415)
+
+
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.7ms | Allocations: 5975)
+
+
+Started GET "/opportunities" for ::1 at 2021-01-29 14:33:35 -0700
+Started GET "/organizations" for ::1 at 2021-01-29 14:33:35 -0700
+Started GET "/auth/verify" for ::1 at 2021-01-29 14:33:35 -0700
+Processing by OpportunitiesController#index as HTML
+Processing by OrganizationsController#index as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+  [1m[36mOpportunity Load (0.6ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  [1m[36mOrganization Load (0.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 79ms (Views: 78.9ms | ActiveRecord: 52.5ms | Allocations: 29303)
+
+
+Completed 200 OK in 78ms (Views: 77.3ms | ActiveRecord: 52.9ms | Allocations: 30432)
+
+
+Started GET "/organizations" for ::1 at 2021-01-29 14:36:02 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-29 14:36:02 -0700
+Started GET "/opportunities" for ::1 at 2021-01-29 14:36:02 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Processing by OpportunitiesController#index as HTML
+  [1m[36mOrganization Load (10.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 4.7ms | ActiveRecord: 10.5ms | Allocations: 8853)
+
+
+  [1m[36mOpportunity Load (2.7ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 2.7ms | Allocations: 5970)
+
+
+Started GET "/organizations" for ::1 at 2021-01-29 14:36:33 -0700
+Started GET "/auth/verify" for ::1 at 2021-01-29 14:36:33 -0700
+Started GET "/opportunities" for ::1 at 2021-01-29 14:36:33 -0700
+Processing by OrganizationsController#index as HTML
+Processing by OpportunitiesController#index as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+  [1m[36mOrganization Load (9.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+  [1m[36mOpportunity Load (0.8ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+Completed 200 OK in 14ms (Views: 4.3ms | ActiveRecord: 9.5ms | Allocations: 8589)
+
+
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.8ms | Allocations: 11931)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-29 14:38:10 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Started GET "/auth/verify" for ::1 at 2021-01-29 14:38:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Started GET "/auth/verify" for ::1 at 2021-01-29 14:38:18 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Started GET "/auth/verify" for ::1 at 2021-01-29 14:38:22 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Started GET "/auth/verify" for ::1 at 2021-01-29 14:38:23 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Started GET "/auth/verify" for ::1 at 2021-01-29 14:38:25 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Started GET "/auth/verify" for ::1 at 2021-01-29 14:38:28 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Started GET "/auth/verify" for ::1 at 2021-01-29 14:38:33 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Started GET "/auth/verify" for ::1 at 2021-01-29 14:38:37 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Started GET "/auth/verify" for ::1 at 2021-01-29 14:38:48 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Started GET "/auth/verify" for ::1 at 2021-01-29 14:40:58 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Started GET "/auth/verify" for ::1 at 2021-01-29 14:41:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Started GET "/auth/verify" for ::1 at 2021-01-29 14:41:41 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Started GET "/auth/verify" for ::1 at 2021-01-29 14:41:44 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Started GET "/auth/verify" for ::1 at 2021-01-29 14:41:48 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Started GET "/auth/verify" for ::1 at 2021-01-29 14:41:59 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Started GET "/auth/verify" for ::1 at 2021-01-29 14:42:07 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Started GET "/auth/verify" for ::1 at 2021-01-29 14:42:39 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Started GET "/auth/verify" for ::1 at 2021-01-29 14:42:40 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Started GET "/auth/verify" for ::1 at 2021-01-29 15:56:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Started GET "/auth/verify" for ::1 at 2021-01-30 06:17:36 -0700
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Started GET "/auth/verify" for ::1 at 2021-01-30 06:17:55 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Started GET "/auth/verify" for ::1 at 2021-01-30 06:38:23 -0700
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Started GET "/auth/verify" for ::1 at 2021-01-30 11:48:47 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/auth/verify"):
+  
+Started GET "/auth/verify" for ::1 at 2021-01-30 12:10:54 -0700
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/lizyrineo/General_Assembly/SEI/Unit_4/P4/project-4/Pitch-In-/app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input
+app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input
+app/controllers/authentication_controller.rb:1:in `<main>'
+Started GET "/auth/verify" for ::1 at 2021-01-30 12:12:01 -0700
+  
+SyntaxError (/Users/lizyrineo/General_Assembly/SEI/Unit_4/P4/project-4/Pitch-In-/app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input
+app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input
+app/controllers/authentication_controller.rb:1:in `<main>'
+Started GET "/auth/verify" for ::1 at 2021-01-30 12:24:39 -0700
+  
+SyntaxError (/Users/lizyrineo/General_Assembly/SEI/Unit_4/P4/project-4/Pitch-In-/app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input
+app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input
+app/controllers/authentication_controller.rb:1:in `<main>'
+Started GET "/auth/verify" for ::1 at 2021-01-30 12:24:41 -0700
+  
+SyntaxError (/Users/lizyrineo/General_Assembly/SEI/Unit_4/P4/project-4/Pitch-In-/app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input
+app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input
+app/controllers/authentication_controller.rb:1:in `<main>'
+Started GET "/auth/verify" for ::1 at 2021-01-30 12:24:47 -0700
+  
+SyntaxError (/Users/lizyrineo/General_Assembly/SEI/Unit_4/P4/project-4/Pitch-In-/app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input
+app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input
+app/controllers/authentication_controller.rb:1:in `<main>'
+Started GET "/auth/verify" for ::1 at 2021-01-30 12:24:50 -0700
+  
+SyntaxError (/Users/lizyrineo/General_Assembly/SEI/Unit_4/P4/project-4/Pitch-In-/app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input
+app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input
+app/controllers/authentication_controller.rb:1:in `<main>'
+Started GET "/auth/verify" for ::1 at 2021-01-30 12:28:48 -0700
+  
+SyntaxError (/Users/lizyrineo/General_Assembly/SEI/Unit_4/P4/project-4/Pitch-In-/app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input
+app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input
+app/controllers/authentication_controller.rb:1:in `<main>'
+Started GET "/auth/verify" for ::1 at 2021-01-30 12:29:09 -0700
+  
+SyntaxError (/Users/lizyrineo/General_Assembly/SEI/Unit_4/P4/project-4/Pitch-In-/app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input
+app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input
+app/controllers/authentication_controller.rb:1:in `<main>'
+Started GET "/auth/verify" for ::1 at 2021-01-30 12:32:35 -0700
+  
+SyntaxError (/Users/lizyrineo/General_Assembly/SEI/Unit_4/P4/project-4/Pitch-In-/app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input
+app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input
+app/controllers/authentication_controller.rb:1:in `<main>'
+Started GET "/auth/verify" for ::1 at 2021-01-30 12:32:57 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.2ms | Allocations: 170)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-30 12:55:50 -0700
+  
+SyntaxError (/Users/lizyrineo/General_Assembly/SEI/Unit_4/P4/project-4/Pitch-In-/app/controllers/application_controller.rb:28: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/application_controller.rb:28: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/application_controller.rb:28: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/authentication_controller.rb:1:in `<main>'
+Started GET "/auth/verify" for ::1 at 2021-01-30 12:56:42 -0700
+  
+SyntaxError (/Users/lizyrineo/General_Assembly/SEI/Unit_4/P4/project-4/Pitch-In-/app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input
+app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input
+app/controllers/authentication_controller.rb:1:in `<main>'
+Started GET "/auth/verify" for ::1 at 2021-01-30 12:57:55 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/lizyrineo/General_Assembly/SEI/Unit_4/P4/project-4/Pitch-In-/app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input
+app/controllers/application_controller.rb:28: syntax error, unexpected `end', expecting end-of-input
+app/controllers/authentication_controller.rb:1:in `<main>'
+Started GET "/auth/verify" for ::1 at 2021-01-30 13:00:03 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 180)
+
+
+Started GET "/opportunities" for ::1 at 2021-01-30 13:16:48 -0700
+Started GET "/organizations" for ::1 at 2021-01-30 13:16:48 -0700
+Processing by OpportunitiesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-30 13:16:48 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | Allocations: 139)
+
+
+Processing by OrganizationsController#index as HTML
+  [1m[36mOrganization Load (18.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+  [1m[36mOpportunity Load (19.2ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 130ms (Views: 123.0ms | ActiveRecord: 96.1ms | Allocations: 11993)
+
+
+Completed 200 OK in 170ms (Views: 155.5ms | ActiveRecord: 105.5ms | Allocations: 21775)
+
+
+Started GET "/organizations" for ::1 at 2021-01-30 13:16:56 -0700
+Started GET "/opportunities" for ::1 at 2021-01-30 13:16:56 -0700
+Processing by OrganizationsController#index as HTML
+Processing by OpportunitiesController#index as HTML
+  [1m[36mOrganization Load (0.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.6ms | Allocations: 2549)
+
+
+  [1m[36mOpportunity Load (4.8ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 34ms (Views: 29.0ms | ActiveRecord: 4.8ms | Allocations: 5874)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-30 13:16:56 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 113)
+
+
+Started GET "/organizations" for ::1 at 2021-01-30 13:18:58 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-01-30 13:18:58 -0700
+Processing by OpportunitiesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-30 13:18:58 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 113)
+
+
+  [1m[36mOpportunity Load (1.6ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.3ms | Allocations: 3743)
+
+
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 1.6ms | Allocations: 6269)
+
+
+Started GET "/opportunities" for ::1 at 2021-01-30 13:19:56 -0700
+Processing by OpportunitiesController#index as HTML
+Started GET "/organizations" for ::1 at 2021-01-30 13:19:56 -0700
+Started GET "/auth/verify" for ::1 at 2021-01-30 13:19:56 -0700
+Processing by OrganizationsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mOpportunity Load (4.8ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 200 OK in 15ms (Views: 10.0ms | ActiveRecord: 4.8ms | Allocations: 4345)
+
+
+Completed 401 Unauthorized in 8ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 3346)
+
+
+  [1m[36mOrganization Load (1.0ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 1.0ms | Allocations: 6059)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-30 13:20:00 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 113)
+
+
+Started GET "/organizations" for ::1 at 2021-01-30 13:20:20 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-30 13:20:20 -0700
+  [1m[36mOrganization Load (2.0ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 8.4ms | ActiveRecord: 2.0ms | Allocations: 2911)
+
+
+Started GET "/opportunities" for ::1 at 2021-01-30 13:20:20 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 328)
+
+
+Processing by OpportunitiesController#index as HTML
+  [1m[36mOpportunity Load (0.6ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.6ms | Allocations: 3298)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-30 13:20:50 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 113)
+
+
+Started GET "/organizations" for ::1 at 2021-01-30 13:20:52 -0700
+Started GET "/opportunities" for ::1 at 2021-01-30 13:20:52 -0700
+Processing by OpportunitiesController#index as HTML
+Processing by OrganizationsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-30 13:20:52 -0700
+  [1m[36mOpportunity Load (1.3ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  [1m[36mOrganization Load (1.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.6ms | Allocations: 2970)
+
+
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Filter chain halted as :authorize_request rendered or redirected
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 1.3ms | Allocations: 6208)
+
+
+Completed 401 Unauthorized in 9ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 3127)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-30 13:20:58 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 113)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-30 13:21:11 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 113)
+
+
+Started GET "/organizations" for ::1 at 2021-01-30 13:21:27 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-01-30 13:21:27 -0700
+Processing by OpportunitiesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-30 13:21:27 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 113)
+
+
+  [1m[36mOpportunity Load (0.6ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  [1m[36mOrganization Load (0.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.6ms | Allocations: 4834)
+
+
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.6ms | Allocations: 7031)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-30 13:22:25 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 113)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-30 13:24:50 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 113)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-30 13:26:44 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 113)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-30 13:29:17 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | Allocations: 113)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-30 13:29:43 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | Allocations: 113)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-30 13:30:00 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | Allocations: 113)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-30 13:30:25 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | Allocations: 113)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-30 13:30:31 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | Allocations: 113)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-30 13:32:53 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | Allocations: 113)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-30 13:33:02 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | Allocations: 113)
+
+
+Started POST "/auth/login" for ::1 at 2021-01-30 13:38:14 -0700
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"email"=>"lizyrineo@yahoo.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :email[0m
+Completed 500 Internal Server Error in 101ms (ActiveRecord: 14.5ms | Allocations: 5346)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column users.username does not exist
+LINE 1: SELECT "users".* FROM "users" WHERE "users"."username" IS NU...
+                                            ^
+):
+  
+app/controllers/authentication_controller.rb:5:in `login'
+Started GET "/auth/verify" for ::1 at 2021-01-30 13:40:21 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 139)
+
+
+Started POST "/auth/login" for ::1 at 2021-01-30 13:40:29 -0700
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"email"=>"lizyrineo@yahoo.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (8.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lizyrineo@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 283ms (Views: 0.4ms | ActiveRecord: 12.7ms | Allocations: 5427)
+
+
+Started GET "/organizations" for ::1 at 2021-01-30 13:40:29 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-01-30 13:40:29 -0700
+Processing by OpportunitiesController#index as HTML
+  [1m[36mOrganization Load (0.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 33ms (Views: 24.5ms | ActiveRecord: 4.7ms | Allocations: 7468)
+
+
+  [1m[36mOpportunity Load (2.2ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 70ms (Views: 27.4ms | ActiveRecord: 41.1ms | Allocations: 15087)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:02:54 -0700
+Started GET "/organizations" for ::1 at 2021-01-31 09:02:54 -0700
+Started GET "/opportunities" for ::1 at 2021-01-31 09:02:54 -0700
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#verify as HTML
+Processing by OpportunitiesController#index as HTML
+Processing by OrganizationsController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 64ms (Views: 0.4ms | ActiveRecord: 42.5ms | Allocations: 12215)
+
+
+  [1m[36mOrganization Load (1.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+  [1m[36mOpportunity Load (25.1ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 82ms (Views: 35.7ms | ActiveRecord: 44.2ms | Allocations: 15636)
+
+
+Completed 200 OK in 114ms (Views: 23.9ms | ActiveRecord: 76.5ms | Allocations: 26169)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 09:05:26 -0700
+Started GET "/opportunities" for ::1 at 2021-01-31 09:05:26 -0700
+Processing by OrganizationsController#index as HTML
+Processing by OpportunitiesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:05:26 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mOrganization Load (3.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 13ms (Views: 0.5ms | ActiveRecord: 6.3ms | Allocations: 2839)
+
+
+Completed 200 OK in 16ms (Views: 10.9ms | ActiveRecord: 3.8ms | Allocations: 3123)
+
+
+  [1m[36mOpportunity Load (12.4ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 26ms (Views: 13.4ms | ActiveRecord: 12.4ms | Allocations: 7187)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 09:08:41 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-01-31 09:08:41 -0700
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:08:41 -0700
+  [1m[36mOrganization Load (1.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Processing by OpportunitiesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 1.4ms | Allocations: 3082)
+
+
+  [1m[36mOpportunity Load (0.9ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.9ms | Allocations: 3724)
+
+
+  [1m[36mUser Load (7.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 12ms (Views: 0.5ms | ActiveRecord: 7.8ms | Allocations: 4456)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 09:09:36 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-01-31 09:09:36 -0700
+Processing by OpportunitiesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:09:36 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mOrganization Load (1.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  [1m[36mOpportunity Load (1.1ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 1.3ms | Allocations: 3945)
+
+
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 1.1ms | Allocations: 6253)
+
+
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 30ms (Views: 0.3ms | ActiveRecord: 6.7ms | Allocations: 6502)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 09:13:21 -0700
+Processing by OrganizationsController#index as HTML
+  [1m[36mOrganization Load (0.9ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:13:21 -0700
+Started GET "/opportunities" for ::1 at 2021-01-31 09:13:21 -0700
+Processing by AuthenticationController#verify as HTML
+Processing by OpportunitiesController#index as HTML
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.9ms | Allocations: 3346)
+
+
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 14ms (Views: 0.5ms | ActiveRecord: 3.0ms | Allocations: 2835)
+
+
+  [1m[36mOpportunity Load (2.3ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 58ms (Views: 49.2ms | ActiveRecord: 2.3ms | Allocations: 5959)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 09:13:53 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-01-31 09:13:53 -0700
+Processing by OpportunitiesController#index as HTML
+  [1m[36mOrganization Load (1.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 1.7ms | Allocations: 2727)
+
+
+  [1m[36mOpportunity Load (0.7ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:13:53 -0700
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.7ms | Allocations: 5890)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 759)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 09:15:25 -0700
+Started GET "/opportunities" for ::1 at 2021-01-31 09:15:25 -0700
+Processing by OrganizationsController#index as HTML
+Processing by OpportunitiesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:15:25 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mOpportunity Load (0.7ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.7ms | Allocations: 4132)
+
+
+  [1m[36mOrganization Load (7.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 21ms (Views: 13.3ms | ActiveRecord: 7.4ms | Allocations: 6460)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 109ms (Views: 0.3ms | ActiveRecord: 34.1ms | Allocations: 8559)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:17:42 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 716)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 09:20:54 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-01-31 09:20:54 -0700
+Processing by OpportunitiesController#index as HTML
+  [1m[36mOrganization Load (2.9ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 2.9ms | Allocations: 3046)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:20:54 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mOpportunity Load (16.1ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 28ms (Views: 11.9ms | ActiveRecord: 16.1ms | Allocations: 6620)
+
+
+Completed 200 OK in 21ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 3928)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 09:21:04 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-01-31 09:21:04 -0700
+Processing by OpportunitiesController#index as HTML
+  [1m[36mOrganization Load (1.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:21:04 -0700
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 1.6ms | Allocations: 2713)
+
+
+  [1m[36mOpportunity Load (1.3ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 41ms (Views: 39.1ms | ActiveRecord: 1.3ms | Allocations: 6283)
+
+
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 49ms (Views: 0.4ms | ActiveRecord: 8.6ms | Allocations: 6515)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 09:21:31 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-01-31 09:21:31 -0700
+  [1m[36mOrganization Load (1.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Processing by OpportunitiesController#index as HTML
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 1.1ms | Allocations: 2841)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:21:31 -0700
+  [1m[36mOpportunity Load (0.9ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.9ms | Allocations: 3958)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 946)
+
+
+Started GET "/opportunities" for ::1 at 2021-01-31 09:22:07 -0700
+Processing by OpportunitiesController#index as HTML
+Started GET "/organizations" for ::1 at 2021-01-31 09:22:07 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:22:07 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mOrganization Load (16.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 25ms (Views: 8.6ms | ActiveRecord: 16.3ms | Allocations: 2937)
+
+
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOpportunity Load (23.6ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 38ms (Views: 12.2ms | ActiveRecord: 23.6ms | Allocations: 7570)
+
+
+Completed 200 OK in 23ms (Views: 0.3ms | ActiveRecord: 4.2ms | Allocations: 3379)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 09:22:17 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-01-31 09:22:17 -0700
+  [1m[36mOrganization Load (1.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+Processing by OpportunitiesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:22:17 -0700
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 1.1ms | Allocations: 2974)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mOpportunity Load (5.0ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 1330)
+
+
+Completed 200 OK in 24ms (Views: 19.1ms | ActiveRecord: 5.0ms | Allocations: 6057)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 09:25:05 -0700
+Started GET "/opportunities" for ::1 at 2021-01-31 09:25:05 -0700
+Processing by OrganizationsController#index as HTML
+Processing by OpportunitiesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:25:05 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mOrganization Load (1.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 1.5ms | Allocations: 2916)
+
+
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mOpportunity Load (1.1ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 23ms (Views: 0.4ms | ActiveRecord: 8.6ms | Allocations: 3459)
+
+
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 1.1ms | Allocations: 6860)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 09:25:07 -0700
+Started GET "/opportunities" for ::1 at 2021-01-31 09:25:07 -0700
+Processing by OrganizationsController#index as HTML
+Processing by OpportunitiesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:25:07 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mOrganization Load (2.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+  [1m[36mOpportunity Load (4.9ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 22ms (Views: 0.4ms | ActiveRecord: 2.4ms | Allocations: 5936)
+
+
+Completed 200 OK in 24ms (Views: 18.9ms | ActiveRecord: 4.9ms | Allocations: 6230)
+
+
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 2.8ms | Allocations: 2830)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 09:26:17 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-01-31 09:26:17 -0700
+Processing by OpportunitiesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:26:17 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mOrganization Load (1.0ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+  [1m[36mOpportunity Load (1.6ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 1.0ms | Allocations: 3634)
+
+
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 1.6ms | Allocations: 6608)
+
+
+Completed 200 OK in 22ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 6191)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 09:26:19 -0700
+Processing by OrganizationsController#index as HTML
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+Started GET "/opportunities" for ::1 at 2021-01-31 09:26:19 -0700
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.4ms | Allocations: 2587)
+
+
+Processing by OpportunitiesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:26:19 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mOpportunity Load (17.3ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 9.9ms | ActiveRecord: 17.3ms | Allocations: 4086)
+
+
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 24ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 4105)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 09:26:31 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-01-31 09:26:31 -0700
+Processing by OpportunitiesController#index as HTML
+  [1m[36mOrganization Load (1.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 1.1ms | Allocations: 3014)
+
+
+  [1m[36mOpportunity Load (4.2ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 9.0ms | ActiveRecord: 4.2ms | Allocations: 5644)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:26:31 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 716)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 09:28:23 -0700
+Started GET "/opportunities" for ::1 at 2021-01-31 09:28:23 -0700
+Processing by OrganizationsController#index as HTML
+Processing by OpportunitiesController#index as HTML
+  [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+  [1m[36mOpportunity Load (1.1ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.5ms | Allocations: 2356)
+
+
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 1.1ms | Allocations: 5775)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:28:23 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 716)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 09:28:23 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:28:23 -0700
+Started GET "/opportunities" for ::1 at 2021-01-31 09:28:23 -0700
+Processing by AuthenticationController#verify as HTML
+Processing by OpportunitiesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mOrganization Load (3.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 15.9ms | ActiveRecord: 3.8ms | Allocations: 3689)
+
+
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 915)
+
+
+  [1m[36mOpportunity Load (3.1ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 25ms (Views: 21.2ms | ActiveRecord: 3.1ms | Allocations: 6426)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 09:29:38 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-01-31 09:29:38 -0700
+Processing by OpportunitiesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:29:38 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mOpportunity Load (10.0ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 21ms (Views: 11.0ms | ActiveRecord: 10.0ms | Allocations: 3977)
+
+
+  [1m[36mOrganization Load (25.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 33ms (Views: 7.1ms | ActiveRecord: 25.1ms | Allocations: 7098)
+
+
+  [1m[36mUser Load (10.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 31ms (Views: 0.3ms | ActiveRecord: 10.7ms | Allocations: 6397)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 09:31:03 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-01-31 09:31:03 -0700
+Processing by OpportunitiesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:31:03 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 812)
+
+
+  [1m[36mOpportunity Load (3.2ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+  [1m[36mOrganization Load (3.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+Completed 200 OK in 21ms (Views: 15.5ms | ActiveRecord: 3.2ms | Allocations: 4705)
+
+
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 35ms (Views: 31.5ms | ActiveRecord: 3.1ms | Allocations: 7885)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 09:37:39 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-01-31 09:37:39 -0700
+Processing by OpportunitiesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:37:39 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mOpportunity Load (2.2ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 121ms (Views: 120.5ms | ActiveRecord: 96.6ms | Allocations: 8693)
+
+
+  [1m[36mOrganization Load (0.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 136ms (Views: 135.8ms | ActiveRecord: 109.7ms | Allocations: 13297)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 129ms (Views: 0.3ms | ActiveRecord: 106.8ms | Allocations: 12194)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 09:38:13 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-01-31 09:38:13 -0700
+Processing by OpportunitiesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:38:13 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mOrganization Load (21.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+  [1m[36mOpportunity Load (20.6ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+Completed 200 OK in 31ms (Views: 9.1ms | ActiveRecord: 21.8ms | Allocations: 3328)
+
+
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 29ms (Views: 0.3ms | ActiveRecord: 6.0ms | Allocations: 3487)
+
+
+Completed 200 OK in 39ms (Views: 18.2ms | ActiveRecord: 20.6ms | Allocations: 6939)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:39:45 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 742)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:41:55 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 716)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:42:11 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 2.8ms | Allocations: 716)
+
+
+Started GET "/foods" for ::1 at 2021-01-31 09:45:47 -0700
+Started GET "/flavors" for ::1 at 2021-01-31 09:45:47 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/foods"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/flavors"):
+  
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:48:17 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 62ms (Views: 0.4ms | ActiveRecord: 45.6ms | Allocations: 2957)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:53:03 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 716)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:54:31 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 17ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 717)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-31 09:55:38 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 716)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-31 10:25:01 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (11.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 84ms (Views: 2.0ms | ActiveRecord: 37.9ms | Allocations: 2798)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-31 10:34:42 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 90ms (Views: 0.5ms | ActiveRecord: 32.3ms | Allocations: 2799)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 10:36:39 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-01-31 10:36:39 -0700
+Processing by OpportunitiesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-31 10:36:39 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mOrganization Load (31.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 55ms (Views: 18.2ms | ActiveRecord: 31.5ms | Allocations: 3732)
+
+
+  [1m[36mOpportunity Load (1.5ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 102ms (Views: 34.0ms | ActiveRecord: 66.2ms | Allocations: 10041)
+
+
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 100ms (Views: 0.4ms | ActiveRecord: 35.2ms | Allocations: 10343)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-31 10:39:32 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.9ms | ActiveRecord: 0.3ms | Allocations: 716)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-31 10:43:39 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 716)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-31 10:43:50 -0700
+Processing by AuthenticationController#verify as HTML
+Started GET "/organizations" for ::1 at 2021-01-31 10:43:50 -0700
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Processing by OrganizationsController#index as HTML
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 20ms (Views: 0.7ms | ActiveRecord: 2.1ms | Allocations: 1734)
+
+
+Started GET "/opportunities" for ::1 at 2021-01-31 10:43:50 -0700
+Processing by OpportunitiesController#index as HTML
+  [1m[36mOpportunity Load (2.6ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 34ms (Views: 30.7ms | ActiveRecord: 2.6ms | Allocations: 3302)
+
+
+  [1m[36mOrganization Load (0.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 110ms (Views: 60.9ms | ActiveRecord: 48.2ms | Allocations: 8612)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-31 10:44:01 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.5ms | Allocations: 742)
+
+
+Started GET "/opportunities" for ::1 at 2021-01-31 10:44:06 -0700
+Started GET "/organizations" for ::1 at 2021-01-31 10:44:06 -0700
+Started GET "/auth/verify" for ::1 at 2021-01-31 10:44:06 -0700
+Processing by OrganizationsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by OpportunitiesController#index as HTML
+  [1m[36mOrganization Load (19.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 34ms (Views: 14.4ms | ActiveRecord: 19.1ms | Allocations: 2778)
+
+
+  [1m[36mOpportunity Load (1.1ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 43ms (Views: 41.8ms | ActiveRecord: 1.1ms | Allocations: 5873)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 85ms (Views: 0.2ms | ActiveRecord: 41.1ms | Allocations: 8639)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-31 10:44:09 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 716)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-31 10:44:18 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 0.4ms | Allocations: 716)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-31 10:44:20 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 12ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 716)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-31 10:44:30 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 13ms (Views: 0.5ms | ActiveRecord: 1.0ms | Allocations: 716)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-31 10:45:02 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 716)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 10:45:03 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-01-31 10:45:03 -0700
+Processing by OpportunitiesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-31 10:45:03 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mOpportunity Load (1.5ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  [1m[36mOrganization Load (5.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 1.5ms | Allocations: 4220)
+
+
+Completed 200 OK in 29ms (Views: 23.5ms | ActiveRecord: 5.4ms | Allocations: 6356)
+
+
+  [1m[36mUser Load (15.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 36ms (Views: 0.3ms | ActiveRecord: 15.0ms | Allocations: 6360)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 10:45:54 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-01-31 10:45:54 -0700
+Started GET "/auth/verify" for ::1 at 2021-01-31 10:45:54 -0700
+  [1m[36mOrganization Load (5.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+Processing by OpportunitiesController#index as HTML
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 33ms (Views: 27.1ms | ActiveRecord: 5.6ms | Allocations: 3152)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mOpportunity Load (2.9ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+Completed 200 OK in 8ms (Views: 0.9ms | ActiveRecord: 0.3ms | Allocations: 1002)
+
+
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 74ms (Views: 70.6ms | ActiveRecord: 2.9ms | Allocations: 6051)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 10:47:33 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-31 10:47:33 -0700
+Processing by AuthenticationController#verify as HTML
+Started GET "/opportunities" for ::1 at 2021-01-31 10:47:33 -0700
+Processing by OpportunitiesController#index as HTML
+  [1m[36mOrganization Load (17.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 40ms (Views: 20.8ms | ActiveRecord: 17.3ms | Allocations: 3391)
+
+
+  [1m[36mOpportunity Load (17.8ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  [1m[36mUser Load (19.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 55ms (Views: 0.3ms | ActiveRecord: 19.3ms | Allocations: 6646)
+
+
+Completed 200 OK in 51ms (Views: 32.7ms | ActiveRecord: 17.8ms | Allocations: 5907)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 10:48:03 -0700
+Started GET "/opportunities" for ::1 at 2021-01-31 10:48:03 -0700
+Processing by OrganizationsController#index as HTML
+Processing by OpportunitiesController#index as HTML
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+  [1m[36mOpportunity Load (0.7ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.3ms | Allocations: 2401)
+
+
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.7ms | Allocations: 5533)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 10:48:12 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-01-31 10:48:12 -0700
+Processing by OpportunitiesController#index as HTML
+  [1m[36mOpportunity Load (0.3ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+  [1m[36mOrganization Load (0.9ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.3ms | Allocations: 3355)
+
+
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.9ms | Allocations: 6053)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 10:48:17 -0700
+Started GET "/opportunities" for ::1 at 2021-01-31 10:48:17 -0700
+Processing by OrganizationsController#index as HTML
+Processing by OpportunitiesController#index as HTML
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  [1m[36mOpportunity Load (0.4ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.4ms | Allocations: 2822)
+
+
+Completed 200 OK in 15ms (Views: 14.8ms | ActiveRecord: 0.4ms | Allocations: 5346)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 10:48:36 -0700
+Started GET "/opportunities" for ::1 at 2021-01-31 10:48:36 -0700
+Processing by OrganizationsController#index as HTML
+Processing by OpportunitiesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-31 10:48:36 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mOrganization Load (2.0ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOpportunity Load (7.6ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 34ms (Views: 31.0ms | ActiveRecord: 2.0ms | Allocations: 4096)
+
+
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 25ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 1649)
+
+
+Completed 200 OK in 43ms (Views: 34.0ms | ActiveRecord: 7.6ms | Allocations: 6974)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 11:37:13 -0700
+Started GET "/opportunities" for ::1 at 2021-01-31 11:37:13 -0700
+Processing by OpportunitiesController#index as HTML
+Processing by OrganizationsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-31 11:37:13 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mOrganization Load (0.9ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 60ms (Views: 59.6ms | ActiveRecord: 29.3ms | Allocations: 8511)
+
+
+  [1m[36mOpportunity Load (14.6ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 81ms (Views: 81.0ms | ActiveRecord: 43.8ms | Allocations: 12571)
+
+
+  [1m[36mUser Load (12.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 73ms (Views: 0.3ms | ActiveRecord: 43.2ms | Allocations: 12213)
+
+
+Started GET "/opportunities" for ::1 at 2021-01-31 11:41:02 -0700
+Started GET "/organizations" for ::1 at 2021-01-31 11:41:02 -0700
+Processing by OpportunitiesController#index as HTML
+Processing by OrganizationsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-31 11:41:02 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mOpportunity Load (1.9ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOrganization Load (1.9ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 1675)
+
+
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 1.9ms | Allocations: 3740)
+
+
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 1.9ms | Allocations: 6793)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 11:42:07 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-01-31 11:42:07 -0700
+Processing by OpportunitiesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-31 11:42:07 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mOpportunity Load (0.4ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  [1m[36mOrganization Load (0.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.7ms | Allocations: 6783)
+
+
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.4ms | Allocations: 4148)
+
+
+Completed 200 OK in 25ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 6038)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 11:43:20 -0700
+Started GET "/opportunities" for ::1 at 2021-01-31 11:43:20 -0700
+Processing by OrganizationsController#index as HTML
+Processing by OpportunitiesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-31 11:43:20 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mOpportunity Load (0.8ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mOrganization Load (2.9ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.8ms | Allocations: 4662)
+
+
+Completed 200 OK in 28ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 4437)
+
+
+Completed 200 OK in 34ms (Views: 30.5ms | ActiveRecord: 2.9ms | Allocations: 6593)
+
+
+Started GET "/opportunities" for ::1 at 2021-01-31 11:51:10 -0700
+Started GET "/organizations" for ::1 at 2021-01-31 11:51:10 -0700
+Processing by OpportunitiesController#index as HTML
+Processing by OrganizationsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-31 11:51:10 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mOrganization Load (0.9ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 37ms (Views: 37.2ms | ActiveRecord: 19.9ms | Allocations: 8546)
+
+
+  [1m[36mOpportunity Load (4.4ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 50ms (Views: 49.3ms | ActiveRecord: 23.3ms | Allocations: 12609)
+
+
+  [1m[36mUser Load (16.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 54ms (Views: 1.0ms | ActiveRecord: 35.8ms | Allocations: 12214)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 11:51:15 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-01-31 11:51:15 -0700
+Processing by OpportunitiesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-01-31 11:51:15 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mOpportunity Load (0.3ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.3ms | Allocations: 3943)
+
+
+  [1m[36mOrganization Load (1.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 1.7ms | Allocations: 6284)
+
+
+  [1m[36mUser Load (8.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 24ms (Views: 0.4ms | ActiveRecord: 8.4ms | Allocations: 6523)
+
+
+Started GET "/organizations" for ::1 at 2021-01-31 11:55:32 -0700
+Started GET "/opportunities" for ::1 at 2021-01-31 11:55:32 -0700
+Processing by OrganizationsController#index as HTML
+Processing by OpportunitiesController#index as HTML
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+  [1m[36mOpportunity Load (0.7ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.2ms | Allocations: 2234)
+
+
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.7ms | Allocations: 5346)
+
+
+Started GET "/opportunities" for ::1 at 2021-01-31 11:57:59 -0700
+Processing by OpportunitiesController#index as HTML
+Started GET "/organizations" for ::1 at 2021-01-31 11:57:59 -0700
+Started GET "/auth/verify" for ::1 at 2021-01-31 11:57:59 -0700
+Processing by OrganizationsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mOpportunity Load (25.9ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+  [1m[36mOrganization Load (26.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+Completed 200 OK in 50ms (Views: 24.1ms | ActiveRecord: 25.9ms | Allocations: 4811)
+
+
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 48ms (Views: 20.6ms | ActiveRecord: 26.6ms | Allocations: 5947)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 95ms (Views: 0.4ms | ActiveRecord: 40.6ms | Allocations: 8558)
+
+
+Started GET "/opportunities" for ::1 at 2021-01-31 11:58:34 -0700
+Started GET "/organizations" for ::1 at 2021-01-31 11:58:34 -0700
+Processing by OpportunitiesController#index as HTML
+Processing by OrganizationsController#index as HTML
+  [1m[36mOpportunity Load (1.6ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  [1m[36mOrganization Load (1.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 1.2ms | Allocations: 2522)
+
+
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 1.6ms | Allocations: 5596)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-31 12:13:32 -0700
+  [1m[35m (18.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 61ms (Views: 0.4ms | ActiveRecord: 29.1ms | Allocations: 9139)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-31 12:16:20 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 738)
+
+
+Started GET "/auth/verify" for ::1 at 2021-01-31 12:25:23 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 17ms (Views: 0.3ms | ActiveRecord: 8.5ms | Allocations: 2847)
+
+
+Started GET "/organizations/1/opportunities" for ::1 at 2021-01-31 13:52:07 -0700
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OpportunitiesController#index as */*
+  Parameters: {"organization"=>{"org_name"=>"Habitat for Humanity", "org_link"=>"https://www.habitatmetrodenver.org/", "org_phone"=>"303-534-2929", "org_image"=>"https://www.habitatmetrodenver.org/static/image/logo-white.png?185013110417"}, "organization_id"=>"1", "opportunity"=>{}}
+  [1m[36mOpportunity Load (15.8ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 55ms (Views: 13.9ms | ActiveRecord: 23.1ms | Allocations: 9815)
+
+
+Started GET "/organizations/1/opportunities" for ::1 at 2021-01-31 13:54:36 -0700
+Processing by OpportunitiesController#index as */*
+  Parameters: {"organization"=>{"org_name"=>"Habitat for Humanity", "org_link"=>"https://www.habitatmetrodenver.org/", "org_phone"=>"303-534-2929", "org_image"=>"https://www.habitatmetrodenver.org/static/image/logo-white.png?185013110417"}, "organization_id"=>"1", "opportunity"=>{}}
+  [1m[36mOpportunity Load (0.3ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities"[0m
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 11.3ms | ActiveRecord: 22.4ms | Allocations: 6718)
+
+
+Started GET "/organizations/1/opportunities" for ::1 at 2021-01-31 13:56:05 -0700
+Processing by OpportunitiesController#index as */*
+  Parameters: {"organization"=>{"org_name"=>"Habitat for Humanity", "org_link"=>"https://www.habitatmetrodenver.org/", "org_phone"=>"303-534-2929", "org_image"=>"https://www.habitatmetrodenver.org/static/image/logo-white.png?185013110417"}, "organization_id"=>"1", "opportunity"=>{}}
+  [1m[36mOrganization Load (1.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:7:in `index'
+Completed 404 Not Found in 16ms (ActiveRecord: 6.5ms | Allocations: 2389)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Organization with 'id'={"org_name"=>"Habitat for Humanity", "org_link"=>"https://www.habitatmetrodenver.org/", "org_phone"=>"303-534-2929", "org_image"=>"https://www.habitatmetrodenver.org/static/image/logo-white.png?185013110417"}):
+  
+app/controllers/opportunities_controller.rb:7:in `index'
+Started GET "/organizations/1/opportunities" for ::1 at 2021-01-31 13:56:40 -0700
+Processing by OpportunitiesController#index as */*
+  Parameters: {"organization"=>{"org_name"=>"Habitat for Humanity", "org_link"=>"https://www.habitatmetrodenver.org/", "org_phone"=>"303-534-2929", "org_image"=>"https://www.habitatmetrodenver.org/static/image/logo-white.png?185013110417"}, "organization_id"=>"1", "opportunity"=>{}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 1.4ms | Allocations: 1472)
+
+
+  
+NoMethodError (undefined method `id' for #<ActionController::Parameters:0x00007fe91e2d32c8>):
+  
+app/controllers/opportunities_controller.rb:7:in `index'
+Started GET "/organizations/1/opportunities" for ::1 at 2021-01-31 13:57:04 -0700
+Processing by OpportunitiesController#index as */*
+  Parameters: {"organization"=>{"org_name"=>"Habitat for Humanity", "org_link"=>"https://www.habitatmetrodenver.org/", "org_phone"=>"303-534-2929", "org_image"=>"https://www.habitatmetrodenver.org/static/image/logo-white.png?185013110417"}, "organization_id"=>"1", "opportunity"=>{}}
+Completed 404 Not Found in 6ms (ActiveRecord: 4.3ms | Allocations: 837)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Organization without an ID):
+  
+app/controllers/opportunities_controller.rb:7:in `index'
+Started GET "/organizations/1/opportunities" for ::1 at 2021-01-31 13:58:22 -0700
+Processing by OpportunitiesController#index as */*
+  Parameters: {"organization"=>{"org_name"=>"Habitat for Humanity", "org_link"=>"https://www.habitatmetrodenver.org/", "org_phone"=>"303-534-2929", "org_image"=>"https://www.habitatmetrodenver.org/static/image/logo-white.png?185013110417"}, "organization_id"=>"1", "opportunity"=>{}}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:7:in `index'
+Completed 404 Not Found in 8ms (ActiveRecord: 5.3ms | Allocations: 1751)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Organization with 'id'={"org_name"=>"Habitat for Humanity", "org_link"=>"https://www.habitatmetrodenver.org/", "org_phone"=>"303-534-2929", "org_image"=>"https://www.habitatmetrodenver.org/static/image/logo-white.png?185013110417"}):
+  
+app/controllers/opportunities_controller.rb:7:in `index'
+Started GET "/organizations/1/opportunities" for ::1 at 2021-01-31 13:59:08 -0700
+Processing by OpportunitiesController#index as */*
+  Parameters: {"organization"=>{"org_name"=>"Habitat for Humanity", "org_link"=>"https://www.habitatmetrodenver.org/", "org_phone"=>"303-534-2929", "org_image"=>"https://www.habitatmetrodenver.org/static/image/logo-white.png?185013110417"}, "organization_id"=>"1", "opportunity"=>{}}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 2.3ms | Allocations: 4165)
+
+
+  
+NoMethodError (undefined method `[]' for #<Class:0x00007fe92126a338>):
+  
+app/controllers/opportunities_controller.rb:9:in `index'
+Started GET "/organizations/1/opportunities" for ::1 at 2021-01-31 14:00:10 -0700
+Processing by OpportunitiesController#index as */*
+  Parameters: {"organization"=>{"org_name"=>"Habitat for Humanity", "org_link"=>"https://www.habitatmetrodenver.org/", "org_phone"=>"303-534-2929", "org_image"=>"https://www.habitatmetrodenver.org/static/image/logo-white.png?185013110417"}, "organization_id"=>"1", "opportunity"=>{}}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:7:in `index'
+Completed 404 Not Found in 20ms (ActiveRecord: 17.7ms | Allocations: 1749)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Organization with 'id'={"org_name"=>"Habitat for Humanity", "org_link"=>"https://www.habitatmetrodenver.org/", "org_phone"=>"303-534-2929", "org_image"=>"https://www.habitatmetrodenver.org/static/image/logo-white.png?185013110417"}):
+  
+app/controllers/opportunities_controller.rb:7:in `index'
+Started GET "/organizations/1/opportunities" for ::1 at 2021-01-31 14:02:49 -0700
+Processing by OpportunitiesController#index as */*
+  Parameters: {"organization"=>{"org_name"=>"Habitat for Humanity", "org_link"=>"https://www.habitatmetrodenver.org/", "org_phone"=>"303-534-2929", "org_image"=>"https://www.habitatmetrodenver.org/static/image/logo-white.png?185013110417"}, "organization_id"=>"1", "opportunity"=>{}}
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:7:in `index'
+Completed 404 Not Found in 9ms (ActiveRecord: 6.0ms | Allocations: 1743)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Organization with 'id'={"org_name"=>"Habitat for Humanity", "org_link"=>"https://www.habitatmetrodenver.org/", "org_phone"=>"303-534-2929", "org_image"=>"https://www.habitatmetrodenver.org/static/image/logo-white.png?185013110417"}):
+  
+app/controllers/opportunities_controller.rb:7:in `index'
+Started GET "/organizations/1/opportunities" for ::1 at 2021-01-31 14:05:09 -0700
+Processing by OpportunitiesController#index as */*
+  Parameters: {"organization"=>{"org_name"=>"Habitat for Humanity", "org_link"=>"https://www.habitatmetrodenver.org/", "org_phone"=>"303-534-2929", "org_image"=>"https://www.habitatmetrodenver.org/static/image/logo-white.png?185013110417"}, "organization_id"=>"1", "opportunity"=>{}}
+  [1m[36mOrganization Load (1.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:7:in `index'
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 22.3ms | Allocations: 6199)
+
+
+  
+NoMethodError (undefined method `organization_opportunities' for #<OpportunitiesController:0x0000000000c170>
+Did you mean?  organization_opportunities_url
+               organization_opportunities_path
+               organization_opportunity_url
+               organization_opportunity_path):
+  
+app/controllers/opportunities_controller.rb:10:in `index'
+Started GET "/organizations/1/opportunities" for ::1 at 2021-01-31 14:05:56 -0700
+Processing by OpportunitiesController#index as */*
+  Parameters: {"organization"=>{"org_name"=>"Habitat for Humanity", "org_link"=>"https://www.habitatmetrodenver.org/", "org_phone"=>"303-534-2929", "org_image"=>"https://www.habitatmetrodenver.org/static/image/logo-white.png?185013110417"}, "organization_id"=>"1", "opportunity"=>{}}
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:7:in `index'
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 4.5ms | Allocations: 6459)
+
+
+  
+NoMethodError (undefined method `opportunities' for #<Organization:0x00007fe9221f7800>):
+  
+app/controllers/opportunities_controller.rb:10:in `index'
+Started GET "/organizations/1/opportunities" for ::1 at 2021-01-31 14:07:29 -0700
+Processing by OpportunitiesController#index as */*
+  Parameters: {"organization"=>{"org_name"=>"Habitat for Humanity", "org_link"=>"https://www.habitatmetrodenver.org/", "org_phone"=>"303-534-2929", "org_image"=>"https://www.habitatmetrodenver.org/static/image/logo-white.png?185013110417"}, "organization_id"=>"1", "opportunity"=>{}}
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:7:in `index'
+  [1m[36mOpportunity Load (0.8ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities" WHERE "opportunities"."organization_id" = $1[0m  [["organization_id", 1]]
+  ↳ app/controllers/opportunities_controller.rb:10:in `index'
+Completed 200 OK in 59ms (Views: 26.9ms | ActiveRecord: 7.4ms | Allocations: 12664)
+
+
+Started GET "/organizations/1/opportunities/1" for ::1 at 2021-01-31 14:15:47 -0700
+Processing by OpportunitiesController#show as */*
+  Parameters: {"organization"=>{"org_name"=>"Habitat for Humanity", "org_link"=>"https://www.habitatmetrodenver.org/", "org_phone"=>"303-534-2929", "org_image"=>"https://www.habitatmetrodenver.org/static/image/logo-white.png?185013110417"}, "organization_id"=>"1", "id"=>"1", "opportunity"=>{}}
+  [1m[36mOpportunity Load (0.7ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities" WHERE "opportunities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:47:in `set_opportunity'
+  [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:14:in `show'
+Completed 404 Not Found in 26ms (ActiveRecord: 9.9ms | Allocations: 8690)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Opportunity without an ID):
+  
+app/controllers/opportunities_controller.rb:16:in `show'
+Started GET "/organizations/1/opportunities/1" for ::1 at 2021-01-31 14:17:13 -0700
+Processing by OpportunitiesController#show as */*
+  Parameters: {"organization"=>{"org_name"=>"Habitat for Humanity", "org_link"=>"https://www.habitatmetrodenver.org/", "org_phone"=>"303-534-2929", "org_image"=>"https://www.habitatmetrodenver.org/static/image/logo-white.png?185013110417"}, "organization_id"=>"1", "id"=>"1", "opportunity"=>{}}
+  [1m[36mOpportunity Load (0.2ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities" WHERE "opportunities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:47:in `set_opportunity'
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:14:in `show'
+Completed 404 Not Found in 27ms (ActiveRecord: 11.9ms | Allocations: 8887)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Opportunity without an ID):
+  
+app/controllers/opportunities_controller.rb:16:in `show'
+Started GET "/organizations/1/opportunities/1" for ::1 at 2021-01-31 14:17:58 -0700
+Processing by OpportunitiesController#show as */*
+  Parameters: {"organization"=>{"org_name"=>"Habitat for Humanity", "org_link"=>"https://www.habitatmetrodenver.org/", "org_phone"=>"303-534-2929", "org_image"=>"https://www.habitatmetrodenver.org/static/image/logo-white.png?185013110417"}, "organization_id"=>"1", "id"=>"1", "opportunity"=>{}}
+  [1m[36mOpportunity Load (0.5ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities" WHERE "opportunities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:47:in `set_opportunity'
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:14:in `show'
+  [1m[36mOpportunity Load (0.2ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities" WHERE "opportunities"."organization_id" = $1 AND "opportunities"."id" = $2 LIMIT $3[0m  [["organization_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:16:in `show'
+Completed 200 OK in 42ms (Views: 0.4ms | ActiveRecord: 24.3ms | Allocations: 9579)
+
+
+Started POST "//organizations/1/opportunities" for ::1 at 2021-01-31 14:25:40 -0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OpportunitiesController#create as */*
+  Parameters: {"opportunity"=>{"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!"}, "organization_id"=>"1"}
+  [1m[36mOrganization Load (0.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:60:in `get_organization'
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 5.4ms | Allocations: 10737)
+
+
+  
+NoMethodError (undefined method `opportunity' for #<Organization:0x00007ff5a91d6c48>
+Did you mean?  opportunities):
+  
+app/controllers/opportunities_controller.rb:20:in `create'
+Started POST "//organizations/1/opportunities" for ::1 at 2021-01-31 14:26:12 -0700
+Processing by OpportunitiesController#create as */*
+  Parameters: {"opportunity"=>{"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!"}, "organization_id"=>"1"}
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:60:in `get_organization'
+  [1m[36mTRANSACTION (12.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/opportunities_controller.rb:23:in `create'
+  [1m[36mOpportunity Create (3.8ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "created_at", "updated_at", "organization_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["opp_name", "Construction Volunteer"], ["opp_description", "Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!"], ["created_at", "2021-01-31 21:26:12.641245"], ["updated_at", "2021-01-31 21:26:12.641245"], ["organization_id", 1]]
+  ↳ app/controllers/opportunities_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/opportunities_controller.rb:23:in `create'
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 23.1ms | Allocations: 12961)
+
+
+  
+ActiveRecord::NotNullViolation (PG::NotNullViolation: ERROR:  null value in column "user_id" of relation "opportunities" violates not-null constraint
+DETAIL:  Failing row contains (23, Construction Volunteer, Whether you're a group or an individual, construction volunteers..., null, 2021-01-31 21:26:12.641245, 2021-01-31 21:26:12.641245, null, 1, null).
+):
+  
+app/controllers/opportunities_controller.rb:23:in `create'
+Started POST "//organizations/1/opportunities" for ::1 at 2021-01-31 14:27:01 -0700
+Processing by OpportunitiesController#create as */*
+  Parameters: {"opportunity"=>{"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "user_id"=>1}, "organization_id"=>"1"}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:60:in `get_organization'
+[31mUnpermitted parameter: :user_id[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/opportunities_controller.rb:23:in `create'
+  [1m[36mOpportunity Create (1.1ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "created_at", "updated_at", "organization_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["opp_name", "Construction Volunteer"], ["opp_description", "Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!"], ["created_at", "2021-01-31 21:27:01.334636"], ["updated_at", "2021-01-31 21:27:01.334636"], ["organization_id", 1]]
+  ↳ app/controllers/opportunities_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (16.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/opportunities_controller.rb:23:in `create'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 18.4ms | Allocations: 2454)
+
+
+  
+ActiveRecord::NotNullViolation (PG::NotNullViolation: ERROR:  null value in column "user_id" of relation "opportunities" violates not-null constraint
+DETAIL:  Failing row contains (24, Construction Volunteer, Whether you're a group or an individual, construction volunteers..., null, 2021-01-31 21:27:01.334636, 2021-01-31 21:27:01.334636, null, 1, null).
+):
+  
+app/controllers/opportunities_controller.rb:23:in `create'
+Started POST "//organizations/1/opportunities" for ::1 at 2021-01-31 14:29:10 -0700
+Processing by OpportunitiesController#create as */*
+  Parameters: {"opportunity"=>{"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "user_id"=>1, "org_name"=>"Habitat for Humanity", "org_id"=>1}, "organization_id"=>"1"}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:60:in `get_organization'
+[31mUnpermitted parameters: :user_id, :org_name, :org_id[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/opportunities_controller.rb:23:in `create'
+  [1m[36mOpportunity Create (0.4ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "created_at", "updated_at", "organization_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["opp_name", "Construction Volunteer"], ["opp_description", "Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!"], ["created_at", "2021-01-31 21:29:10.802678"], ["updated_at", "2021-01-31 21:29:10.802678"], ["organization_id", 1]]
+  ↳ app/controllers/opportunities_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/opportunities_controller.rb:23:in `create'
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.9ms | Allocations: 2459)
+
+
+  
+ActiveRecord::NotNullViolation (PG::NotNullViolation: ERROR:  null value in column "user_id" of relation "opportunities" violates not-null constraint
+DETAIL:  Failing row contains (25, Construction Volunteer, Whether you're a group or an individual, construction volunteers..., null, 2021-01-31 21:29:10.802678, 2021-01-31 21:29:10.802678, null, 1, null).
+):
+  
+app/controllers/opportunities_controller.rb:23:in `create'
+Started POST "//organizations/1/opportunities" for ::1 at 2021-01-31 14:34:40 -0700
+Processing by OpportunitiesController#create as */*
+  Parameters: {"opportunity"=>{"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "user_id"=>1, "org_name"=>"Habitat for Humanity", "org_id"=>1}, "organization_id"=>"1"}
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:60:in `get_organization'
+[31mUnpermitted parameters: :user_id, :org_name, :org_id[0m
+Completed 422 Unprocessable Entity in 36ms (Views: 9.2ms | ActiveRecord: 5.8ms | Allocations: 10564)
+
+
+Started POST "//organizations/1/opportunities" for ::1 at 2021-01-31 14:35:11 -0700
+Processing by OpportunitiesController#create as */*
+  Parameters: {"opportunity"=>{"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "user_id"=>1}, "organization_id"=>"1"}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:60:in `get_organization'
+[31mUnpermitted parameter: :user_id[0m
+Completed 422 Unprocessable Entity in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 1029)
+
+
+Started POST "//organizations/1/opportunities" for ::1 at 2021-01-31 14:40:03 -0700
+Processing by OpportunitiesController#create as */*
+  Parameters: {"opportunity"=>{"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "user_id"=>1}, "organization_id"=>"1"}
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:62:in `get_organization'
+[31mUnpermitted parameter: :user_id[0m
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 15.9ms | Allocations: 10818)
+
+
+  
+NoMethodError (undefined method `respond_to' for #<OpportunitiesController:0x000000000077b0>
+Did you mean?  respond_to?):
+  
+app/controllers/opportunities_controller.rb:21:in `create'
+Started POST "//organizations/1/opportunities" for ::1 at 2021-01-31 14:40:56 -0700
+Processing by OpportunitiesController#create as */*
+  Parameters: {"opportunity"=>{"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "user_id"=>1}, "organization_id"=>"1"}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:62:in `get_organization'
+[31mUnpermitted parameter: :user_id[0m
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 6.4ms | Allocations: 9110)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1..2)):
+  
+app/controllers/opportunities_controller.rb:21:in `respond_to?'
+app/controllers/opportunities_controller.rb:21:in `create'
+Started POST "//organizations/1/opportunities" for ::1 at 2021-01-31 14:50:25 -0700
+Processing by OpportunitiesController#create as */*
+  Parameters: {"opportunity"=>{"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "user_id"=>1}, "organization_id"=>"1"}
+  [1m[36mOrganization Load (0.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:60:in `get_organization'
+[31mUnpermitted parameter: :user_id[0m
+Completed 422 Unprocessable Entity in 36ms (Views: 0.8ms | ActiveRecord: 10.5ms | Allocations: 10942)
+
+
+Started POST "/organ" for ::1 at 2021-01-31 14:50:59 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/organ"):
+  
+Started POST "/organizations/1/opportunities" for ::1 at 2021-01-31 14:51:20 -0700
+Processing by OpportunitiesController#create as */*
+  Parameters: {"opportunity"=>{"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "user_id"=>1}, "organization_id"=>"1"}
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:60:in `get_organization'
+[31mUnpermitted parameter: :user_id[0m
+Completed 422 Unprocessable Entity in 4ms (Views: 0.9ms | ActiveRecord: 0.3ms | Allocations: 1025)
+
+
+Started POST "/opportunities" for ::1 at 2021-01-31 14:51:35 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/opportunities"):
+  
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2984288589273181575)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeleteOrgName (20210131215320)
+  [1m[36mTRANSACTION (14.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.6ms)[0m  [1m[35mALTER TABLE "opportunities" DROP COLUMN "org_name"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210131215320"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (5.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (16.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2984288589273181575)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/organization/1/opportunities" for ::1 at 2021-01-31 14:58:39 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/organization/1/opportunities"):
+  
+Started POST "/organizations/1/opportunities" for ::1 at 2021-01-31 14:58:52 -0700
+Processing by OpportunitiesController#create as */*
+  Parameters: {"opportunity"=>{"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "user_id"=>1}, "organization_id"=>"1"}
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:60:in `get_organization'
+[31mUnpermitted parameter: :user_id[0m
+Completed 422 Unprocessable Entity in 69ms (Views: 3.2ms | ActiveRecord: 24.7ms | Allocations: 14770)
+
+
+Started POST "/organizations/1/opportunities" for ::1 at 2021-01-31 15:03:40 -0700
+Processing by OpportunitiesController#create as */*
+  Parameters: {"opportunity"=>{"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "user_id"=>1}, "organization_id"=>"1"}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:60:in `get_organization'
+[31mUnpermitted parameters: :opp_name, :opp_description, :user_id[0m
+Completed 422 Unprocessable Entity in 35ms (Views: 0.7ms | ActiveRecord: 6.6ms | Allocations: 8899)
+
+
+Started GET "/organizations/1/" for ::1 at 2021-01-31 15:04:02 -0700
+Processing by OrganizationsController#show as */*
+  Parameters: {"opportunity"=>{"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "user_id"=>1}, "id"=>"1", "organization"=>{}}
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:44:in `set_organization'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 664)
+
+
+Started GET "/organizations/1/opportunities" for ::1 at 2021-01-31 15:04:20 -0700
+Processing by OpportunitiesController#index as */*
+  Parameters: {"opportunity"=>{"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "user_id"=>1}, "organization_id"=>"1"}
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:60:in `get_organization'
+  [1m[36mOpportunity Load (0.4ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities" WHERE "opportunities"."organization_id" = $1[0m  [["organization_id", 1]]
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 23ms (Views: 4.4ms | ActiveRecord: 0.7ms | Allocations: 3958)
+
+
+Started POST "/organizations/1/opportunities" for ::1 at 2021-01-31 15:04:33 -0700
+Processing by OpportunitiesController#create as */*
+  Parameters: {"opportunity"=>{"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "user_id"=>1}, "organization_id"=>"1"}
+  [1m[36mOrganization Load (16.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:60:in `get_organization'
+[31mUnpermitted parameters: :opp_name, :opp_description, :user_id[0m
+Completed 422 Unprocessable Entity in 19ms (Views: 0.6ms | ActiveRecord: 16.6ms | Allocations: 1021)
+
+
+Started POST "/organizations/1/opportunities" for ::1 at 2021-01-31 15:05:17 -0700
+Processing by OpportunitiesController#create as */*
+  Parameters: {"orgainization"=>{"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "user_id"=>1}, "organization_id"=>"1", "opportunity"=>{}}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:60:in `get_organization'
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.2ms | Allocations: 582)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: opportunity
+Did you mean?  opportunity
+               orgainization
+               organization_id
+               controller):
+  
+app/controllers/opportunities_controller.rb:52:in `opportunity_params'
+app/controllers/opportunities_controller.rb:21:in `create'
+Started POST "/organizations/1/opportunities" for ::1 at 2021-01-31 15:06:19 -0700
+Processing by OpportunitiesController#create as */*
+  Parameters: {"opportunity"=>{"organization"=>{"id"=>1}, "opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "user_id"=>1}, "organization_id"=>"1"}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:60:in `get_organization'
+[31mUnpermitted parameters: :organization, :opp_name, :opp_description, :user_id[0m
+Completed 422 Unprocessable Entity in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 998)
+
+
+Started POST "/organizations/1/opportunities" for ::1 at 2021-01-31 15:11:17 -0700
+Processing by OpportunitiesController#create as */*
+  Parameters: {"opportunity"=>{"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "user_id"=>1, "organization_id"=>1}, "organization_id"=>"1"}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:60:in `get_organization'
+[31mUnpermitted parameters: :opp_name, :opp_description, :user_id, :organization_id[0m
+Completed 422 Unprocessable Entity in 8ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 1004)
+
+
+Started POST "/organizations/1/opportunities" for ::1 at 2021-01-31 15:11:26 -0700
+Processing by OpportunitiesController#create as */*
+  Parameters: {"opportunity"=>{"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "user_id"=>1, "org_id"=>1}, "organization_id"=>"1"}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:60:in `get_organization'
+[31mUnpermitted parameters: :opp_name, :opp_description, :user_id, :org_id[0m
+Completed 422 Unprocessable Entity in 13ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 1001)
+
+
+Started POST "/organizations/1/opportunities" for ::1 at 2021-01-31 15:12:21 -0700
+Processing by OpportunitiesController#create as */*
+  Parameters: {"opportunity"=>{"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "opp_image"=>"", "user_id"=>1, "organization_id"=>1}, "organization_id"=>"1"}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:60:in `get_organization'
+[31mUnpermitted parameters: :opp_name, :opp_description, :opp_image, :user_id, :organization_id[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 1003)
+
+
+Started POST "/organizations/1/opportunities" for ::1 at 2021-01-31 15:12:59 -0700
+Processing by OpportunitiesController#create as */*
+  Parameters: {"opportunity"=>{"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "opp_image"=>"", "user_id"=>1, "organization_id"=>[1]}, "organization_id"=>"1"}
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:60:in `get_organization'
+[31mUnpermitted parameters: :opp_name, :opp_description, :opp_image, :user_id, :organization_id[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.6ms | ActiveRecord: 0.1ms | Allocations: 1003)
+
+
+Started POST "/organizations/1/opportunities" for ::1 at 2021-01-31 15:13:07 -0700
+Processing by OpportunitiesController#create as */*
+  Parameters: {"opportunity"=>{"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "opp_image"=>"", "user_id"=>1, "organization_id"=>"1"}, "organization_id"=>"1"}
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:60:in `get_organization'
+[31mUnpermitted parameters: :opp_name, :opp_description, :opp_image, :user_id, :organization_id[0m
+Completed 422 Unprocessable Entity in 19ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 1003)
+
+
+Started GET "/organizations/1/opportunities" for ::1 at 2021-01-31 15:30:10 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OpportunitiesController#index as */*
+  Parameters: {"sensei"=>{"name"=>"John Kreese", "image_url"=>"https://i.pinimg.com/originals/98/60/73/9860734188ab14fcbb16e72f5dd2ad86.jpg", "wise_quote"=>"We do not train to be merciful here. Mercy is for the weak. Here, in the streets, in competition: A man confronts you, he is the enemy.", "dojo_id"=>12}, "organization_id"=>"1", "opportunity"=>{}}
+  [1m[36mOrganization Load (1.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:60:in `get_organization'
+  [1m[36mOpportunity Load (0.5ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities" WHERE "opportunities"."organization_id" = $1[0m  [["organization_id", 1]]
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 63ms (Views: 14.3ms | ActiveRecord: 23.7ms | Allocations: 14789)
+
+
+Started GET "/organizations/1/opportunities" for ::1 at 2021-01-31 15:33:33 -0700
+Processing by OpportunitiesController#index as */*
+  Parameters: {"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "opp_image"=>"", "user_id"=>1, "organization_id"=>"1", "opportunity"=>{"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "opp_image"=>"", "user_id"=>1}}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:60:in `get_organization'
+  [1m[36mOpportunity Load (0.3ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities" WHERE "opportunities"."organization_id" = $1[0m  [["organization_id", 1]]
+  ↳ app/controllers/opportunities_controller.rb:8:in `index'
+Completed 200 OK in 28ms (Views: 15.2ms | ActiveRecord: 22.4ms | Allocations: 9130)
+
+
+Started POST "/organizations/1/opportunities" for ::1 at 2021-01-31 15:33:39 -0700
+Processing by OpportunitiesController#create as */*
+  Parameters: {"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "opp_image"=>"", "user_id"=>1, "organization_id"=>"1", "opportunity"=>{"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "opp_image"=>"", "user_id"=>1}}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:60:in `get_organization'
+[31mUnpermitted parameters: :opp_name, :opp_description, :opp_image, :user_id[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/opportunities_controller.rb:23:in `create'
+  [1m[36mOpportunity Create (3.4ms)[0m  [1m[32mINSERT INTO "opportunities" ("created_at", "updated_at", "organization_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2021-01-31 22:33:40.017848"], ["updated_at", "2021-01-31 22:33:40.017848"], ["organization_id", 1]]
+  ↳ app/controllers/opportunities_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/opportunities_controller.rb:23:in `create'
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 3.9ms | Allocations: 2450)
+
+
+  
+ActiveRecord::NotNullViolation (PG::NotNullViolation: ERROR:  null value in column "user_id" of relation "opportunities" violates not-null constraint
+DETAIL:  Failing row contains (26, null, null, null, 2021-01-31 22:33:40.017848, 2021-01-31 22:33:40.017848, 1, null).
+):
+  
+app/controllers/opportunities_controller.rb:23:in `create'
+Started POST "/organizations/1/opportunities" for ::1 at 2021-01-31 15:37:46 -0700
+Processing by OpportunitiesController#create as */*
+  Parameters: {"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "opp_image"=>"", "user_id"=>1, "organization_id"=>"1", "opportunity"=>{"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "opp_image"=>"", "user_id"=>1}}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:61:in `get_organization'
+[31mUnpermitted parameters: :opp_name, :opp_description, :opp_image[0m
+[31mUnpermitted parameters: :opp_name, :opp_description, :opp_image[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:23:in `create'
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 12.6ms | Allocations: 15101)
+
+
+  
+NoMethodError (undefined method `user=' for #<Opportunity:0x00007fadbd2a0fe0>
+Did you mean?  user_id=):
+  
+app/controllers/opportunities_controller.rb:23:in `create'
+Started POST "/organizations/1/opportunities" for ::1 at 2021-01-31 15:38:44 -0700
+Processing by OpportunitiesController#create as */*
+  Parameters: {"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "opp_image"=>"", "user_id"=>1, "organization_id"=>"1", "opportunity"=>{"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "opp_image"=>"", "user_id"=>1}}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:61:in `get_organization'
+[31mUnpermitted parameters: :opp_name, :opp_description, :opp_image[0m
+[31mUnpermitted parameters: :opp_name, :opp_description, :opp_image[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (14.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/opportunities_controller.rb:24:in `create'
+  [1m[36mOpportunity Create (3.6ms)[0m  [1m[32mINSERT INTO "opportunities" ("created_at", "updated_at", "organization_id", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2021-01-31 22:38:44.337181"], ["updated_at", "2021-01-31 22:38:44.337181"], ["organization_id", 1], ["user_id", 1]]
+  ↳ app/controllers/opportunities_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/opportunities_controller.rb:24:in `create'
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 28.5ms | Allocations: 15396)
+
+
+  
+NoMethodError (undefined method `opportunity_url' for #<OpportunitiesController:0x000000000075d0>):
+  
+app/controllers/opportunities_controller.rb:25:in `create'
+Started POST "/organizations/1/opportunities" for ::1 at 2021-01-31 15:41:51 -0700
+Processing by OpportunitiesController#create as */*
+  Parameters: {"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "opp_image"=>"", "user_id"=>1, "organization_id"=>"1", "opportunity"=>{"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "opp_image"=>"", "user_id"=>1}}
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:61:in `get_organization'
+  [1m[36mUser Load (16.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/opportunities_controller.rb:24:in `create'
+  [1m[36mOpportunity Create (0.3ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["opp_name", "Construction Volunteer"], ["opp_description", "Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!"], ["opp_image", ""], ["created_at", "2021-01-31 22:41:51.560766"], ["updated_at", "2021-01-31 22:41:51.560766"], ["organization_id", 1], ["user_id", 1]]
+  ↳ app/controllers/opportunities_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/opportunities_controller.rb:24:in `create'
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 27.2ms | Allocations: 15408)
+
+
+  
+NoMethodError (undefined method `opportunity_url' for #<OpportunitiesController:0x000000000082c8>):
+  
+app/controllers/opportunities_controller.rb:25:in `create'
+Started POST "/organizations/1/opportunities" for ::1 at 2021-01-31 15:43:09 -0700
+Processing by OpportunitiesController#create as */*
+  Parameters: {"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "opp_image"=>"", "user_id"=>1, "organization_id"=>"1", "opportunity"=>{"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "opp_image"=>"", "user_id"=>1}}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:61:in `get_organization'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/opportunities_controller.rb:24:in `create'
+  [1m[36mOpportunity Create (0.4ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["opp_name", "Construction Volunteer"], ["opp_description", "Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!"], ["opp_image", ""], ["created_at", "2021-01-31 22:43:09.913112"], ["updated_at", "2021-01-31 22:43:09.913112"], ["organization_id", 1], ["user_id", 1]]
+  ↳ app/controllers/opportunities_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/opportunities_controller.rb:24:in `create'
+Completed 201 Created in 69ms (Views: 0.4ms | ActiveRecord: 28.4ms | Allocations: 14354)
+
+
+Started GET "/auth/verify" for ::1 at 2021-02-01 08:56:56 -0700
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 261)
+
+
+Started GET "/organizations" for ::1 at 2021-02-01 08:57:03 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-02-01 08:57:03 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/opportunities"):
+  
+  [1m[36mOrganization Load (16.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 104ms (Views: 10.5ms | ActiveRecord: 81.4ms | Allocations: 35930)
+
+
+Started GET "/auth/verify" for ::1 at 2021-02-01 09:18:59 -0700
+Started GET "/opportunities" for ::1 at 2021-02-01 09:18:59 -0700
+Started GET "/organizations" for ::1 at 2021-02-01 09:18:59 -0700
+Processing by AuthenticationController#verify as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/opportunities"):
+  
+Processing by OrganizationsController#index as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 9ms (Views: 0.1ms | Allocations: 6610)
+
+
+  [1m[36mOrganization Load (4.0ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 10.6ms | Allocations: 18509)
+
+
+Started GET "/opportunities" for ::1 at 2021-02-01 09:20:07 -0700
+Started GET "/auth/verify" for ::1 at 2021-02-01 09:20:07 -0700
+Started GET "/organizations" for ::1 at 2021-02-01 09:20:07 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/opportunities"):
+  
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Processing by OrganizationsController#index as HTML
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 197)
+
+
+  [1m[36mOrganization Load (0.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.6ms | Allocations: 16756)
+
+
