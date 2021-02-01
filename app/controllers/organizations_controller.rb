@@ -10,7 +10,7 @@ class OrganizationsController < ApplicationController
 
   # GET /organizations/1
   def show
-    render json: @organization
+    render json: @organization, include: :opportunities
   end
 
   # POST /organizations

@@ -3849,3 +3849,1356 @@ Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocati
 Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.6ms | Allocations: 16756)
 
 
+Started GET "/organizations" for ::1 at 2021-02-01 09:35:41 -0700
+Started GET "/opportunities" for ::1 at 2021-02-01 09:35:41 -0700
+Started GET "/auth/verify" for ::1 at 2021-02-01 09:35:41 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OrganizationsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/opportunities"):
+  
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 15ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 7198)
+
+
+  [1m[36mOrganization Load (15.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 51ms (Views: 12.3ms | ActiveRecord: 19.3ms | Allocations: 20195)
+
+
+Started GET "/opportunities" for ::1 at 2021-02-01 09:39:00 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/opportunities"):
+  
+Started GET "/auth/verify" for ::1 at 2021-02-01 09:39:00 -0700
+Started GET "/organizations" for ::1 at 2021-02-01 09:39:00 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 216)
+
+
+Processing by OrganizationsController#index as HTML
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms | Allocations: 3469)
+
+
+Started GET "/organizations" for ::1 at 2021-02-01 09:40:41 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-02-01 09:40:41 -0700
+Started GET "/auth/verify" for ::1 at 2021-02-01 09:40:41 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/opportunities"):
+  
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 377)
+
+
+  [1m[36mOrganization Load (0.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.6ms | Allocations: 20029)
+
+
+Started GET "/organizations" for ::1 at 2021-02-01 09:42:04 -0700
+Started GET "/auth/verify" for ::1 at 2021-02-01 09:42:04 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-02-01 09:42:04 -0700
+Processing by AuthenticationController#verify as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/opportunities"):
+  
+  [1m[36mOrganization Load (1.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 1.8ms | Allocations: 8475)
+
+
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 15ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 8536)
+
+
+Started GET "/organizations" for ::1 at 2021-02-01 09:44:05 -0700
+Started GET "/auth/verify" for ::1 at 2021-02-01 09:44:05 -0700
+Started GET "/opportunities" for ::1 at 2021-02-01 09:44:05 -0700
+Processing by OrganizationsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 191)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/opportunities"):
+  
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 19.7ms | ActiveRecord: 0.4ms | Allocations: 17188)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (72.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__development"[0m
+  [1m[35m (50.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__test"[0m
+  [1m[35m (227.9ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__development" ENCODING = 'unicode'[0m
+  [1m[35m (92.7ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (26.4ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.3ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (18.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210131215320)[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141),
+(20210128230413);
+
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-02-01 16:44:49.843984"], ["updated_at", "2021-02-01 16:44:49.843984"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c7e43c9afa25e56b2f5969ee99eb94961f50af2b"], ["created_at", "2021-02-01 16:44:49.855626"], ["updated_at", "2021-02-01 16:44:49.855626"]]
+  [1m[36mTRANSACTION (16.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (19.6ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210131215320)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141),
+(20210128230413);
+
+[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-02-01 16:44:49.954063"], ["updated_at", "2021-02-01 16:44:49.954063"]]
+  [1m[36mTRANSACTION (16.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (1.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-02-01 16:44:49.976849"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c7e43c9afa25e56b2f5969ee99eb94961f50af2b"], ["created_at", "2021-02-01 16:44:49.982496"], ["updated_at", "2021-02-01 16:44:49.982496"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."first_name" = $1 LIMIT $2[0m  [["first_name", "admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."last_name" = $1 LIMIT $2[0m  [["last_name", "admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@email.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (14.5ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/opportunities" for ::1 at 2021-02-01 09:44:59 -0700
+Started GET "/organizations" for ::1 at 2021-02-01 09:44:59 -0700
+Started GET "/auth/verify" for ::1 at 2021-02-01 09:44:59 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/opportunities"):
+  
+Processing by OrganizationsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 422)
+
+
+  [1m[36mOrganization Load (5.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 37ms (Views: 16.9ms | ActiveRecord: 14.6ms | Allocations: 22506)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (51.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__development"[0m
+  [1m[35m (45.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__test"[0m
+  [1m[35m (91.0ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__development" ENCODING = 'unicode'[0m
+  [1m[35m (92.8ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (18.2ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210131215320)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141),
+(20210128230413);
+
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-02-01 16:45:33.151622"], ["updated_at", "2021-02-01 16:45:33.151622"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (16.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c7e43c9afa25e56b2f5969ee99eb94961f50af2b"], ["created_at", "2021-02-01 16:45:33.158823"], ["updated_at", "2021-02-01 16:45:33.158823"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (19.5ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210131215320)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141),
+(20210128230413);
+
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-02-01 16:45:33.250311"], ["updated_at", "2021-02-01 16:45:33.250311"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-02-01 16:45:33.255275"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (15.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c7e43c9afa25e56b2f5969ee99eb94961f50af2b"], ["created_at", "2021-02-01 16:45:33.259386"], ["updated_at", "2021-02-01 16:45:33.259386"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."first_name" = $1 LIMIT $2[0m  [["first_name", "admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."last_name" = $1 LIMIT $2[0m  [["last_name", "admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@email.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (50.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__development"[0m
+  [1m[35m (27.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__test"[0m
+  [1m[35m (98.3ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__development" ENCODING = 'unicode'[0m
+  [1m[35m (113.0ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (15.8ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (18.6ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210131215320)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141),
+(20210128230413);
+
+[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (12.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-02-01 16:46:29.813725"], ["updated_at", "2021-02-01 16:46:29.813725"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c7e43c9afa25e56b2f5969ee99eb94961f50af2b"], ["created_at", "2021-02-01 16:46:29.833071"], ["updated_at", "2021-02-01 16:46:29.833071"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (22.2ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210131215320)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141),
+(20210128230413);
+
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-02-01 16:46:29.907111"], ["updated_at", "2021-02-01 16:46:29.907111"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-02-01 16:46:29.928062"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c7e43c9afa25e56b2f5969ee99eb94961f50af2b"], ["created_at", "2021-02-01 16:46:29.932183"], ["updated_at", "2021-02-01 16:46:29.932183"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."first_name" = $1 LIMIT $2[0m  [["first_name", "admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."last_name" = $1 LIMIT $2[0m  [["last_name", "admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@email.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (16.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (48.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__development"[0m
+  [1m[35m (44.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__test"[0m
+  [1m[35m (72.9ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__development" ENCODING = 'unicode'[0m
+  [1m[35m (71.0ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (17.7ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210131215320)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141),
+(20210128230413);
+
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (16.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-02-01 16:47:25.708829"], ["updated_at", "2021-02-01 16:47:25.708829"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c7e43c9afa25e56b2f5969ee99eb94961f50af2b"], ["created_at", "2021-02-01 16:47:25.734249"], ["updated_at", "2021-02-01 16:47:25.734249"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (21.6ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210131215320)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141),
+(20210128230413);
+
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-02-01 16:47:25.808118"], ["updated_at", "2021-02-01 16:47:25.808118"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-02-01 16:47:25.829764"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c7e43c9afa25e56b2f5969ee99eb94961f50af2b"], ["created_at", "2021-02-01 16:47:25.835940"], ["updated_at", "2021-02-01 16:47:25.835940"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (15.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."first_name" = $1 LIMIT $2[0m  [["first_name", "admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."last_name" = $1 LIMIT $2[0m  [["last_name", "admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "admin"], ["last_name", "admin"], ["email", "admin@email.com"], ["password_digest", "$2a$12$1GCpfLht16a66U5TGKui/uwsU/CFNbuf.bwHL0IMjphN/iQz/vdpS"], ["created_at", "2021-02-01 16:47:26.136906"], ["updated_at", "2021-02-01 16:47:26.136906"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.6ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Habitat for Humanity"], ["org_link", "https://www.habitatmetrodenver.org/"], ["org_phone", 303], ["org_image", "https://www.habitatmetrodenver.org/static/image/logo-white.png?185013110417"], ["created_at", "2021-02-01 16:47:26.152868"], ["updated_at", "2021-02-01 16:47:26.152868"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Saint Francis Center"], ["org_link", "http://www.sfcdenver.org/"], ["org_phone", 303], ["org_image", "http://www.sfcdenver.org/wp-content/uploads/2017/02/stfrancis_logo.png"], ["created_at", "2021-02-01 16:47:26.156850"], ["updated_at", "2021-02-01 16:47:26.156850"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (16.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.3ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Extreme Community Makeover"], ["org_link", "https://www.extremecommunitymakeover.org/"], ["org_phone", 720], ["org_image", "https://extremecommunitymakeover.org/wp-content/uploads/2015/08/ECMLogoWebsite.gif"], ["created_at", "2021-02-01 16:47:26.160893"], ["updated_at", "2021-02-01 16:47:26.160893"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Denver Dumb Friends League"], ["org_link", "https://www.ddfl.org/"], ["org_phone", 303], ["org_image", "https://www.ddfl.org/wp-content/themes/ddfl/img/DFL-logo-w.png"], ["created_at", "2021-02-01 16:47:26.181038"], ["updated_at", "2021-02-01 16:47:26.181038"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Luvin Arms Animal Sanctuary"], ["org_link", "https://www.luvinarms.org/"], ["org_phone", 720], ["org_image", "https://www.luvinarms.org/wp-content/uploads/2021/01/Circle-Ahimsa-Final.png"], ["created_at", "2021-02-01 16:47:26.184819"], ["updated_at", "2021-02-01 16:47:26.184819"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Colorado Pet Pantry"], ["org_link", "https://www.coloradopetpantry.org/"], ["org_phone", 720], ["org_image", "https://www.coloradopetpantry.org/wp-content/uploads/2017/06/colorado-pet-pantry-logo-1.png"], ["created_at", "2021-02-01 16:47:26.188278"], ["updated_at", "2021-02-01 16:47:26.188278"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "The Wild Animal Sanctuary"], ["org_link", "https://www.wildanimalsanctuary.org/"], ["org_phone", 303], ["org_image", "https://static.wixstatic.com/media/a16ed6_1b0a4b9aafe84b7a94918d3d3d319581~mv2.png/v1/fill/w_261,h_80,al_c,q_85,usm_0.66_1.00_0.01/NEW-LOGO-with-URL.webp"], ["created_at", "2021-02-01 16:47:26.191490"], ["updated_at", "2021-02-01 16:47:26.191490"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (52.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__development"[0m
+  [1m[35m (45.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Pitch_In__test"[0m
+  [1m[35m (97.2ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__development" ENCODING = 'unicode'[0m
+  [1m[35m (95.0ms)[0m  [1m[35mCREATE DATABASE "Pitch_In__test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210131215320)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141),
+(20210128230413);
+
+[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-02-01 16:49:07.798360"], ["updated_at", "2021-02-01 16:49:07.798360"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c7e43c9afa25e56b2f5969ee99eb94961f50af2b"], ["created_at", "2021-02-01 16:49:07.807075"], ["updated_at", "2021-02-01 16:49:07.807075"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "opportunities" CASCADE[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "opportunities" ("id" bigserial primary key, "opp_name" character varying, "opp_description" character varying, "opp_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "organization_id" bigint NOT NULL, "user_id" bigint NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_organization_id" ON "opportunities" ("organization_id")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE INDEX "index_opportunities_on_user_id" ON "opportunities" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "organizations" CASCADE[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" bigserial primary key, "org_name" character varying, "org_link" character varying, "org_phone" integer, "org_image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (17.9ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_1670e79d43"
+FOREIGN KEY ("organization_id")
+  REFERENCES "organizations" ("id")
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "opportunities" ADD CONSTRAINT "fk_rails_7a1e18e277"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210131215320)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210128193304),
+(20210128193338),
+(20210128193410),
+(20210128211414),
+(20210128230141),
+(20210128230413);
+
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-02-01 16:49:07.895646"], ["updated_at", "2021-02-01 16:49:07.895646"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2021-02-01 16:49:07.900827"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c7e43c9afa25e56b2f5969ee99eb94961f50af2b"], ["created_at", "2021-02-01 16:49:07.906379"], ["updated_at", "2021-02-01 16:49:07.906379"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (16.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."first_name" = $1 LIMIT $2[0m  [["first_name", "admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."last_name" = $1 LIMIT $2[0m  [["last_name", "admin"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "admin"], ["last_name", "admin"], ["email", "admin@email.com"], ["password_digest", "$2a$12$NGrABPrNl.palnVaC82xue4/bGQL.6BJuljY.HLr37fyBRxtJ624W"], ["created_at", "2021-02-01 16:49:08.233812"], ["updated_at", "2021-02-01 16:49:08.233812"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.6ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Habitat for Humanity"], ["org_link", "https://www.habitatmetrodenver.org/"], ["org_phone", 303], ["org_image", "https://www.habitatmetrodenver.org/static/image/logo-white.png?185013110417"], ["created_at", "2021-02-01 16:49:08.247715"], ["updated_at", "2021-02-01 16:49:08.247715"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.3ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Saint Francis Center"], ["org_link", "http://www.sfcdenver.org/"], ["org_phone", 303], ["org_image", "http://www.sfcdenver.org/wp-content/uploads/2017/02/stfrancis_logo.png"], ["created_at", "2021-02-01 16:49:08.252099"], ["updated_at", "2021-02-01 16:49:08.252099"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.4ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Extreme Community Makeover"], ["org_link", "https://www.extremecommunitymakeover.org/"], ["org_phone", 720], ["org_image", "https://extremecommunitymakeover.org/wp-content/uploads/2015/08/ECMLogoWebsite.gif"], ["created_at", "2021-02-01 16:49:08.256222"], ["updated_at", "2021-02-01 16:49:08.256222"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (16.8ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Denver Dumb Friends League"], ["org_link", "https://www.ddfl.org/"], ["org_phone", 303], ["org_image", "https://www.ddfl.org/wp-content/themes/ddfl/img/DFL-logo-w.png"], ["created_at", "2021-02-01 16:49:08.261557"], ["updated_at", "2021-02-01 16:49:08.261557"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Luvin Arms Animal Sanctuary"], ["org_link", "https://www.luvinarms.org/"], ["org_phone", 720], ["org_image", "https://www.luvinarms.org/wp-content/uploads/2021/01/Circle-Ahimsa-Final.png"], ["created_at", "2021-02-01 16:49:08.282145"], ["updated_at", "2021-02-01 16:49:08.282145"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "Colorado Pet Pantry"], ["org_link", "https://www.coloradopetpantry.org/"], ["org_phone", 720], ["org_image", "https://www.coloradopetpantry.org/wp-content/uploads/2017/06/colorado-pet-pantry-logo-1.png"], ["created_at", "2021-02-01 16:49:08.285700"], ["updated_at", "2021-02-01 16:49:08.285700"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Create (0.2ms)[0m  [1m[32mINSERT INTO "organizations" ("org_name", "org_link", "org_phone", "org_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["org_name", "The Wild Animal Sanctuary"], ["org_link", "https://www.wildanimalsanctuary.org/"], ["org_phone", 303], ["org_image", "https://static.wixstatic.com/media/a16ed6_1b0a4b9aafe84b7a94918d3d3d319581~mv2.png/v1/fill/w_261,h_80,al_c,q_85,usm_0.66_1.00_0.01/NEW-LOGO-with-URL.webp"], ["created_at", "2021-02-01 16:49:08.289058"], ["updated_at", "2021-02-01 16:49:08.289058"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (18.1ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["opp_name", "Construction Volunteer"], ["opp_description", "Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!"], ["opp_image", ""], ["created_at", "2021-02-01 16:49:08.311634"], ["updated_at", "2021-02-01 16:49:08.311634"], ["organization_id", 1], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.3ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["opp_name", "Restore Volunteer"], ["opp_description", "Habitat ReStores support the mission by providing valuable funding to the programs.  It's retail with a mission!"], ["opp_image", ""], ["created_at", "2021-02-01 16:49:08.336136"], ["updated_at", "2021-02-01 16:49:08.336136"], ["organization_id", 1], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.3ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["opp_name", "Basic Services Volunteer"], ["opp_description", "Provide hands-on caring by participating in many critical on-site services like distributing mail, messages and hygiene items, sort and organize donations."], ["opp_image", ""], ["created_at", "2021-02-01 16:49:08.344835"], ["updated_at", "2021-02-01 16:49:08.344835"], ["organization_id", 3], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.4ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["opp_name", "Employment Services Client Navigator"], ["opp_description", "Help men and women develop skills, gain work experience and connect with full-time employment.  Help end the cycle of poverty and promote economic self-sufficiency."], ["opp_image", ""], ["created_at", "2021-02-01 16:49:08.351788"], ["updated_at", "2021-02-01 16:49:08.351788"], ["organization_id", 3], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.4ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["opp_name", "Intake Office Volunteer"], ["opp_description", "As the first point of contact for guests new to SFC, guide them through the sometimes confusing paperwork."], ["opp_image", ""], ["created_at", "2021-02-01 16:49:08.359800"], ["updated_at", "2021-02-01 16:49:08.359800"], ["organization_id", 3], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (16.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.4ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["opp_name", "Volunteer"], ["opp_description", "Work on exterior home and neighborhood improvement projects.  Adopt a block project or alley clean-up/graffiti removal project."], ["opp_image", ""], ["created_at", "2021-02-01 16:49:08.383685"], ["updated_at", "2021-02-01 16:49:08.383685"], ["organization_id", 2], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.3ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["opp_name", "General Volunteer"], ["opp_description", "Help with adoptions and animal care"], ["opp_image", ""], ["created_at", "2021-02-01 16:49:08.391332"], ["updated_at", "2021-02-01 16:49:08.391332"], ["organization_id", 4], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.2ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["opp_name", "Equine Volunteer"], ["opp_description", "Work with horses and other equines, mucking stalls and providing enrichment to the animals"], ["opp_image", ""], ["created_at", "2021-02-01 16:49:08.397616"], ["updated_at", "2021-02-01 16:49:08.397616"], ["organization_id", 4], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.2ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["opp_name", "Foster Volunteer"], ["opp_description", "Bring pets from the shelter into your home on a temporary basis to prepare them for adoption."], ["opp_image", ""], ["created_at", "2021-02-01 16:49:08.404218"], ["updated_at", "2021-02-01 16:49:08.404218"], ["organization_id", 4], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.2ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["opp_name", "Animal Care Volunteer"], ["opp_description", "Animal care shifts include cleaning resident living areas, replenishing feed and water, helping to keep other areas of the sanctuary clean and organized, and giving the animals some love and attention. Each task directly contributes to the absolute best quality of care for our residents!"], ["opp_image", ""], ["created_at", "2021-02-01 16:49:08.410468"], ["updated_at", "2021-02-01 16:49:08.410468"], ["organization_id", 5], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (16.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOpportunity Create (0.3ms)[0m  [1m[32mINSERT INTO "opportunities" ("opp_name", "opp_description", "opp_image", "created_at", "updated_at", "organization_id", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["opp_name", "General Volunteer"], ["opp_description", "Opportunities include cleaning the facility, office work and educational duties, fence building and habitat construction, fundraising working with animals, and always going on - or managing our cross-country rescue schedule."], ["opp_image", ""], ["created_at", "2021-02-01 16:49:08.433084"], ["updated_at", "2021-02-01 16:49:08.433084"], ["organization_id", 5], ["user_id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/opportunities" for ::1 at 2021-02-01 09:50:05 -0700
+Started GET "/organizations" for ::1 at 2021-02-01 09:50:05 -0700
+Started GET "/auth/verify" for ::1 at 2021-02-01 09:50:05 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OrganizationsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/opportunities"):
+  
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 14ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 7225)
+
+
+  [1m[36mOrganization Load (15.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 50ms (Views: 9.2ms | ActiveRecord: 19.9ms | Allocations: 23645)
+
+
+Started GET "/organizations" for ::1 at 2021-02-01 09:51:45 -0700
+Started GET "/opportunities" for ::1 at 2021-02-01 09:51:45 -0700
+Processing by OrganizationsController#index as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/opportunities"):
+  
+Started GET "/auth/verify" for ::1 at 2021-02-01 09:51:45 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 268)
+
+
+  [1m[36mOrganization Load (15.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 27ms (Views: 10.9ms | ActiveRecord: 15.5ms | Allocations: 22206)
+
+
+Started GET "/organizations" for ::1 at 2021-02-01 09:55:18 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-02-01 09:55:18 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/opportunities"):
+  
+  [1m[36mOrganization Load (1.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 1.1ms | Allocations: 8066)
+
+
+Started GET "/auth/verify" for ::1 at 2021-02-01 09:55:18 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 279)
+
+
+Started GET "/organizations" for ::1 at 2021-02-01 09:58:05 -0700
+Started GET "/opportunities" for ::1 at 2021-02-01 09:58:05 -0700
+Processing by OrganizationsController#index as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/opportunities"):
+  
+Started GET "/auth/verify" for ::1 at 2021-02-01 09:58:05 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mOrganization Load (1.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+Filter chain halted as :authorize_request rendered or redirected
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 929)
+
+
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 1.1ms | Allocations: 8584)
+
+
+Started GET "/organizations" for ::1 at 2021-02-01 10:02:07 -0700
+Started GET "/opportunities" for ::1 at 2021-02-01 10:02:07 -0700
+Processing by OrganizationsController#index as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/opportunities"):
+  
+  [1m[36mOrganization Load (10.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 9.7ms | ActiveRecord: 10.3ms | Allocations: 14220)
+
+
+Started GET "/organizations" for ::1 at 2021-02-01 10:02:10 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-02-01 10:02:10 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/opportunities"):
+  
+  [1m[36mOrganization Load (8.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 2.8ms | ActiveRecord: 8.5ms | Allocations: 7794)
+
+
+Started GET "/organizations" for ::1 at 2021-02-01 10:02:17 -0700
+Started GET "/opportunities" for ::1 at 2021-02-01 10:02:17 -0700
+Processing by OrganizationsController#index as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/opportunities"):
+  
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.3ms | Allocations: 13928)
+
+
+Started GET "/organizations" for ::1 at 2021-02-01 10:02:18 -0700
+Started GET "/opportunities" for ::1 at 2021-02-01 10:02:18 -0700
+Processing by OrganizationsController#index as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/opportunities"):
+  
+  [1m[36mOrganization Load (8.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 2.8ms | ActiveRecord: 8.2ms | Allocations: 7616)
+
+
+Started GET "/organizations" for ::1 at 2021-02-01 10:02:25 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/opportunities" for ::1 at 2021-02-01 10:02:25 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/opportunities"):
+  
+  [1m[36mOrganization Load (13.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 19ms (Views: 4.5ms | ActiveRecord: 13.7ms | Allocations: 8071)
+
+
+Started GET "/auth/verify" for ::1 at 2021-02-01 10:02:25 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 281)
+
+
+Started GET "/organizations" for ::1 at 2021-02-01 10:04:25 -0700
+Started GET "/opportunities" for ::1 at 2021-02-01 10:04:25 -0700
+Processing by OrganizationsController#index as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/opportunities"):
+  
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.4ms | Allocations: 7783)
+
+
+Started GET "/opportunities" for ::1 at 2021-02-01 10:04:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/opportunities"):
+  
+Started GET "/auth/verify" for ::1 at 2021-02-01 10:04:30 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Started GET "/organizations" for ::1 at 2021-02-01 10:04:30 -0700
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 193)
+
+
+Processing by OrganizationsController#index as HTML
+  [1m[36mOrganization Load (1.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 1.3ms | Allocations: 3677)
+
+
+Started GET "/organizations" for ::1 at 2021-02-01 10:04:53 -0700
+Started GET "/opportunities" for ::1 at 2021-02-01 10:04:53 -0700
+Processing by OrganizationsController#index as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/opportunities"):
+  
+Started GET "/auth/verify" for ::1 at 2021-02-01 10:04:53 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mOrganization Load (1.9ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 606)
+
+
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 1.9ms | Allocations: 9103)
+
+
+Started GET "/organizations" for ::1 at 2021-02-01 10:06:10 -0700
+Started GET "/orgaopportunities" for ::1 at 2021-02-01 10:06:10 -0700
+Processing by OrganizationsController#index as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/orgaopportunities"):
+  
+  [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.5ms | Allocations: 9481)
+
+
+Started GET "/organizations" for ::1 at 2021-02-01 10:06:13 -0700
+Started GET "/organizationsopportunities" for ::1 at 2021-02-01 10:06:13 -0700
+Processing by OrganizationsController#index as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/organizationsopportunities"):
+  
+  [1m[36mOrganization Load (0.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.6ms | Allocations: 16125)
+
+
+Started GET "/organizations" for ::1 at 2021-02-01 10:06:14 -0700
+Started GET "/organizations/opportunities" for ::1 at 2021-02-01 10:06:14 -0700
+Processing by OrganizationsController#index as HTML
+Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"opportunities"}
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 1681)
+
+
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:44:in `set_organization'
+Completed 404 Not Found in 11ms (ActiveRecord: 0.3ms | Allocations: 3451)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Organization with 'id'=opportunities):
+  
+app/controllers/organizations_controller.rb:44:in `set_organization'
+Started GET "/organizations" for ::1 at 2021-02-01 10:06:18 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/organizations/id/opportunities" for ::1 at 2021-02-01 10:06:18 -0700
+Processing by OpportunitiesController#index as HTML
+  Parameters: {"organization_id"=>"id"}
+  [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.5ms | Allocations: 2245)
+
+
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:61:in `get_organization'
+Completed 404 Not Found in 28ms (ActiveRecord: 4.8ms | Allocations: 4251)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Organization with 'id'=id):
+  
+app/controllers/opportunities_controller.rb:61:in `get_organization'
+Started GET "/organizations" for ::1 at 2021-02-01 10:06:49 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/organizations/$%7Bid%7D/opportunities" for ::1 at 2021-02-01 10:06:49 -0700
+Processing by OpportunitiesController#index as HTML
+  Parameters: {"organization_id"=>"${id}"}
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+  ↳ app/controllers/opportunities_controller.rb:61:in `get_organization'
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.3ms | Allocations: 2229)
+
+
+Completed 404 Not Found in 12ms (ActiveRecord: 0.2ms | Allocations: 1813)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Organization with 'id'=${id}):
+  
+app/controllers/opportunities_controller.rb:61:in `get_organization'
+Started GET "/organizations" for ::1 at 2021-02-01 10:06:54 -0700
+Started GET "/%60/organizations/$%7Bid%7D/opportunities%60" for ::1 at 2021-02-01 10:06:54 -0700
+Processing by OrganizationsController#index as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/%60/organizations/$%7Bid%7D/opportunities%60"):
+  
+  [1m[36mOrganization Load (13.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 25ms (Views: 11.2ms | ActiveRecord: 13.6ms | Allocations: 21160)
+
+
+Started GET "/organizations" for ::1 at 2021-02-01 10:07:09 -0700
+Started GET "/organizations/undefined/opportunities" for ::1 at 2021-02-01 10:07:09 -0700
+Processing by OrganizationsController#index as HTML
+Processing by OpportunitiesController#index as HTML
+  Parameters: {"organization_id"=>"undefined"}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 1616)
+
+
+  [1m[36mOrganization Load (1.9ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:61:in `get_organization'
+Completed 404 Not Found in 3ms (ActiveRecord: 1.9ms | Allocations: 2003)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Organization with 'id'=undefined):
+  
+app/controllers/opportunities_controller.rb:61:in `get_organization'
+Started GET "/auth/verify" for ::1 at 2021-02-01 10:10:21 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 191)
+
+
+Started GET "/organizations" for ::1 at 2021-02-01 10:10:25 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/organizations/undefined/opportunities" for ::1 at 2021-02-01 10:10:25 -0700
+Processing by OpportunitiesController#index as HTML
+  Parameters: {"organization_id"=>"undefined"}
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+  [1m[36mOrganization Load (0.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.4ms | Allocations: 1916)
+
+
+  ↳ app/controllers/opportunities_controller.rb:61:in `get_organization'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.7ms | Allocations: 2001)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Organization with 'id'=undefined):
+  
+app/controllers/opportunities_controller.rb:61:in `get_organization'
+Started GET "/organizations/undefined/opportunities" for ::1 at 2021-02-01 10:17:53 -0700
+Started GET "/organizations" for ::1 at 2021-02-01 10:17:53 -0700
+Processing by OpportunitiesController#index as HTML
+  Parameters: {"organization_id"=>"undefined"}
+Processing by OrganizationsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-02-01 10:17:53 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | Allocations: 191)
+
+
+  [1m[36mOrganization Load (1.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 84ms (Views: 83.2ms | ActiveRecord: 11.7ms | Allocations: 6061)
+
+
+  [1m[36mOrganization Load (3.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:61:in `get_organization'
+Completed 404 Not Found in 87ms (ActiveRecord: 14.2ms | Allocations: 7181)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Organization with 'id'=undefined):
+  
+app/controllers/opportunities_controller.rb:61:in `get_organization'
+Started GET "/auth/verify" for ::1 at 2021-02-01 10:18:01 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 191)
+
+
+Started GET "/organizations" for ::1 at 2021-02-01 10:21:38 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-02-01 10:21:38 -0700
+Processing by AuthenticationController#verify as HTML
+Started GET "/organizations/undefined/opportunities" for ::1 at 2021-02-01 10:21:38 -0700
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 209)
+
+
+Processing by OpportunitiesController#index as HTML
+  Parameters: {"organization_id"=>"undefined"}
+  [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.5ms | Allocations: 2863)
+
+
+  [1m[36mOrganization Load (3.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/opportunities_controller.rb:61:in `get_organization'
+Completed 404 Not Found in 19ms (ActiveRecord: 4.9ms | Allocations: 2095)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Organization with 'id'=undefined):
+  
+app/controllers/opportunities_controller.rb:61:in `get_organization'
+Started GET "/organizations/1" for ::1 at 2021-02-01 10:30:08 -0700
+Processing by OrganizationsController#show as */*
+  Parameters: {"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "opp_image"=>"", "user_id"=>1, "id"=>"1", "organization"=>{}}
+  [1m[36mOrganization Load (0.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:44:in `set_organization'
+Completed 200 OK in 42ms (Views: 0.5ms | ActiveRecord: 26.2ms | Allocations: 2773)
+
+
+Started GET "/organizations/6" for ::1 at 2021-02-01 10:30:15 -0700
+Processing by OrganizationsController#show as */*
+  Parameters: {"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "opp_image"=>"", "user_id"=>1, "id"=>"6", "organization"=>{}}
+  [1m[36mOrganization Load (0.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:44:in `set_organization'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.7ms | Allocations: 614)
+
+
+Started GET "/organizations/6" for ::1 at 2021-02-01 10:31:58 -0700
+Processing by OrganizationsController#show as */*
+  Parameters: {"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "opp_image"=>"", "user_id"=>1, "id"=>"6", "organization"=>{}}
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:44:in `set_organization'
+  [1m[36mOpportunity Load (0.6ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities" WHERE "opportunities"."organization_id" = $1[0m  [["organization_id", 6]]
+  ↳ app/controllers/organizations_controller.rb:13:in `show'
+Completed 200 OK in 23ms (Views: 11.5ms | ActiveRecord: 10.5ms | Allocations: 7095)
+
+
+Started GET "/organizations/1" for ::1 at 2021-02-01 10:32:16 -0700
+Processing by OrganizationsController#show as */*
+  Parameters: {"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "opp_image"=>"", "user_id"=>1, "id"=>"1", "organization"=>{}}
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:44:in `set_organization'
+  [1m[36mOpportunity Load (0.4ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities" WHERE "opportunities"."organization_id" = $1[0m  [["organization_id", 1]]
+  ↳ app/controllers/organizations_controller.rb:13:in `show'
+Completed 200 OK in 14ms (Views: 9.8ms | ActiveRecord: 2.7ms | Allocations: 5027)
+
+
+Started GET "/organizations/5" for ::1 at 2021-02-01 10:33:03 -0700
+Processing by OrganizationsController#show as */*
+  Parameters: {"opp_name"=>"Construction Volunteer", "opp_description"=>"Whether you're a group or an individual, construction volunteers make a tangible difference with each and every day they help build and repair homes.  No construction experience necessary!", "opp_image"=>"", "user_id"=>1, "id"=>"5", "organization"=>{}}
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:44:in `set_organization'
+  [1m[36mOpportunity Load (0.3ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities" WHERE "opportunities"."organization_id" = $1[0m  [["organization_id", 5]]
+  ↳ app/controllers/organizations_controller.rb:13:in `show'
+Completed 200 OK in 19ms (Views: 2.8ms | ActiveRecord: 0.6ms | Allocations: 1536)
+
+
+Started GET "/organizations" for ::1 at 2021-02-01 10:35:31 -0700
+Processing by OrganizationsController#index as HTML
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.2ms | Allocations: 1358)
+
+
+Started GET "/organization/4" for ::1 at 2021-02-01 10:47:42 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/organization/4"):
+  
+Started GET "/organizations" for ::1 at 2021-02-01 10:47:42 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-02-01 10:47:42 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | Allocations: 220)
+
+
+  [1m[36mOrganization Load (0.9ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 79ms (Views: 78.9ms | ActiveRecord: 45.1ms | Allocations: 20815)
+
+
+Started GET "/organization/4" for ::1 at 2021-02-01 10:47:55 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/organization/4"):
+  
+Started GET "/organization/5" for ::1 at 2021-02-01 10:48:14 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/organization/5"):
+  
+Started GET "/organizations/5" for ::1 at 2021-02-01 10:49:18 -0700
+Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"5"}
+Started GET "/organizations" for ::1 at 2021-02-01 10:49:18 -0700
+Processing by OrganizationsController#index as HTML
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:44:in `set_organization'
+  [1m[36mOpportunity Load (0.4ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities" WHERE "opportunities"."organization_id" = $1[0m  [["organization_id", 5]]
+  ↳ app/controllers/organizations_controller.rb:13:in `show'
+Completed 200 OK in 16ms (Views: 2.0ms | ActiveRecord: 0.7ms | Allocations: 2100)
+
+
+  [1m[36mOrganization Load (0.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 25ms (Views: 19.1ms | ActiveRecord: 5.6ms | Allocations: 5255)
+
+
+Started GET "/organizations/5" for ::1 at 2021-02-01 10:49:26 -0700
+Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"5"}
+Started GET "/organizations" for ::1 at 2021-02-01 10:49:26 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-02-01 10:49:26 -0700
+Processing by AuthenticationController#verify as HTML
+  [1m[36mOrganization Load (1.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  [1m[36mOrganization Load (1.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:44:in `set_organization'
+Filter chain halted as :authorize_request rendered or redirected
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 401 Unauthorized in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1197)
+
+
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 1.3ms | Allocations: 2634)
+
+
+  [1m[36mOpportunity Load (1.4ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities" WHERE "opportunities"."organization_id" = $1[0m  [["organization_id", 5]]
+  ↳ app/controllers/organizations_controller.rb:13:in `show'
+Completed 200 OK in 18ms (Views: 6.8ms | ActiveRecord: 4.4ms | Allocations: 4567)
+
+
+Started GET "/organizations/5" for ::1 at 2021-02-01 10:53:35 -0700
+Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"5"}
+Started GET "/organizations" for ::1 at 2021-02-01 10:53:35 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-02-01 10:53:35 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+  [1m[36mOrganization Load (1.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mOrganization Load (1.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 284)
+
+
+  ↳ app/controllers/organizations_controller.rb:44:in `set_organization'
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 1.5ms | Allocations: 2315)
+
+
+  [1m[36mOpportunity Load (0.3ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities" WHERE "opportunities"."organization_id" = $1[0m  [["organization_id", 5]]
+  ↳ app/controllers/organizations_controller.rb:13:in `show'
+Completed 200 OK in 27ms (Views: 17.5ms | ActiveRecord: 2.1ms | Allocations: 4520)
+
+
+Started GET "/organizations/5" for ::1 at 2021-02-01 10:53:49 -0700
+Started GET "/auth/verify" for ::1 at 2021-02-01 10:53:49 -0700
+Processing by OrganizationsController#show as HTML
+Processing by AuthenticationController#verify as HTML
+Started GET "/organizations" for ::1 at 2021-02-01 10:53:49 -0700
+  Parameters: {"id"=>"5"}
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 413)
+
+
+Processing by OrganizationsController#index as HTML
+  [1m[36mOrganization Load (1.0ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 1.0ms | Allocations: 1419)
+
+
+  [1m[36mOrganization Load (3.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:44:in `set_organization'
+  [1m[36mOpportunity Load (0.3ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities" WHERE "opportunities"."organization_id" = $1[0m  [["organization_id", 5]]
+  ↳ app/controllers/organizations_controller.rb:13:in `show'
+Completed 200 OK in 31ms (Views: 2.4ms | ActiveRecord: 3.8ms | Allocations: 3551)
+
+
+Started GET "/organizations/5" for ::1 at 2021-02-01 10:54:38 -0700
+Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:44:in `set_organization'
+  [1m[36mOpportunity Load (0.2ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities" WHERE "opportunities"."organization_id" = $1[0m  [["organization_id", 5]]
+  ↳ app/controllers/organizations_controller.rb:13:in `show'
+Completed 200 OK in 15ms (Views: 1.5ms | ActiveRecord: 0.4ms | Allocations: 1530)
+
+
+Started GET "/auth/verify" for ::1 at 2021-02-01 10:55:32 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 191)
+
+
+Started GET "/organizations" for ::1 at 2021-02-01 10:55:34 -0700
+Processing by OrganizationsController#index as HTML
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 1355)
+
+
+Started GET "/organizations/2" for ::1 at 2021-02-01 10:55:38 -0700
+Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:44:in `set_organization'
+  [1m[36mOpportunity Load (0.2ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities" WHERE "opportunities"."organization_id" = $1[0m  [["organization_id", 2]]
+  ↳ app/controllers/organizations_controller.rb:13:in `show'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 1418)
+
+
+Started GET "/organizations/2" for ::1 at 2021-02-01 11:39:17 -0700
+Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOrganization Load (0.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:44:in `set_organization'
+  [1m[36mOpportunity Load (0.6ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities" WHERE "opportunities"."organization_id" = $1[0m  [["organization_id", 2]]
+  ↳ app/controllers/organizations_controller.rb:13:in `show'
+Completed 200 OK in 19ms (Views: 1.7ms | ActiveRecord: 9.5ms | Allocations: 3524)
+
+
+Started GET "/auth/verify" for ::1 at 2021-02-01 11:39:26 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 191)
+
+
+Started GET "/organizations" for ::1 at 2021-02-01 11:39:29 -0700
+Processing by OrganizationsController#index as HTML
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 1356)
+
+
+Started GET "/organizations" for ::1 at 2021-02-01 12:35:58 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-02-01 12:35:58 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | Allocations: 191)
+
+
+  [1m[36mOrganization Load (1.0ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 46ms (Views: 45.7ms | ActiveRecord: 36.6ms | Allocations: 4264)
+
+
+Started GET "/organizations" for ::1 at 2021-02-01 12:41:47 -0700
+Processing by OrganizationsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2021-02-01 12:41:47 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | Allocations: 192)
+
+
+  [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 4.9ms | Allocations: 4285)
+
+
+Started GET "/organizations/4" for ::1 at 2021-02-01 12:44:10 -0700
+Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:44:in `set_organization'
+  [1m[36mOpportunity Load (1.4ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities" WHERE "opportunities"."organization_id" = $1[0m  [["organization_id", 4]]
+  ↳ app/controllers/organizations_controller.rb:13:in `show'
+Completed 200 OK in 13ms (Views: 1.9ms | ActiveRecord: 1.9ms | Allocations: 1673)
+
+
+Started GET "/organizations" for ::1 at 2021-02-01 12:44:40 -0700
+Processing by OrganizationsController#index as HTML
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1355)
+
+
+Started GET "/organizations/1" for ::1 at 2021-02-01 12:45:20 -0700
+Processing by OrganizationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/organizations_controller.rb:44:in `set_organization'
+  [1m[36mOpportunity Load (0.3ms)[0m  [1m[34mSELECT "opportunities".* FROM "opportunities" WHERE "opportunities"."organization_id" = $1[0m  [["organization_id", 1]]
+  ↳ app/controllers/organizations_controller.rb:13:in `show'
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.5ms | Allocations: 1530)
+
+
+Started GET "/auth/verify" for ::1 at 2021-02-01 12:49:10 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 191)
+
+
+Started GET "/auth/verify" for ::1 at 2021-02-01 12:49:27 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 191)
+
+
+Started GET "/organizations" for ::1 at 2021-02-01 12:54:55 -0700
+Processing by OrganizationsController#index as HTML
+  [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations"[0m
+  ↳ app/controllers/organizations_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 6.3ms | Allocations: 3432)
+
+
+Started GET "/auth/verify" for ::1 at 2021-02-01 12:58:58 -0700
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 191)
+
+
