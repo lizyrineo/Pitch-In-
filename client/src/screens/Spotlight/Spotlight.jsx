@@ -1,20 +1,22 @@
 import { useState } from 'react'
 import Layout from '../../shared/Layouts/Layout';
 import '/Spotlight.css';
-import Organization from './Organization/Organization';
-import CarouselComponent from './CarouselComponent/CarouselComponent'
+import Organizations from './screens/Organizations/Organizations';
+import CarouselComponent from './Carousel/CarouselComponent'
 
 
 export default function Spotlight(props) {
-  const [getOrganization, setOrganization] = useState('')
+  const [organizations, setOrganizations] = useState('')
   return (
     <div>
-      <Layout organization={props.organization}>
+      <Layout organizations={props.organizations}>
+        <div className='spotlight'>
         <h1>This month's spotlight</h1>
-        <h2 className="org_name">{organization.org_name}</h2>
-        <h4 className="org_link">{organization.org_link}</h4>
-        <h4 className="org_description">{organization.org_description}</h4>
-        <Carousel source={CarouselComponent} imageChange={true} intervalTime={3500} />
+        <h2 className="org_name">{organizations.org_name}</h2>
+        <h4 className="org_link">{organizations.org_link}</h4>
+        <h4 className="org_description">{organizations.org_description}</h4>
+          <Carousel source={CarouselComponent} imageChange={true} intervalTime={3500} />
+        </div>
       </Layout>
     </div>
   )

@@ -1,5 +1,11 @@
 import api from './api-config';
 
+export const getOneOrganization = async (id) => {
+  const resp = await api.get(`/organizations/${id}`);
+  return resp.data;
+}
+
+
 export const getAllOrganizations = async () => {
   const resp = await api.get('/organizations');
   return resp.data;

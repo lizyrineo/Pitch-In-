@@ -5,9 +5,9 @@ import MainContainer from "./containers/MainContainer";
 import Layout from "./shared/Layouts/Layout";
 import Login from "./screens/Login/Login";
 import Register from "./screens/Register/Register";
-import CarouselComponent from "./screens/Carousel/CarouselComponent";
-import Organizations from './screens/Organizations/Organizations'
-import About from "./screens/About/About";
+import Spotlight from "./screens/Spotlight/Spotlight";
+import TeamBuilding from './screens/TeamBuilding/TeamBuilding';
+
 import {
   loginUser,
   registerUser,
@@ -61,8 +61,8 @@ function App() {
           </Route>
 
           <Route exact path="/">
-            
-            <CarouselComponent />
+           <Spotlight /> 
+           <TeamBuilding /> 
           </Route>
           <Route path='/organizations'>
           <MainContainer />

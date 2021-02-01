@@ -1,4 +1,11 @@
+.carousel-container {
+  text-align: center;
+  width: 300px;
+  height: 300px;
+}
+
+
 .carousel .slide img  {
-height: 20px;
-width: 20px;
+height: 300px;
+width: 300px;
 }

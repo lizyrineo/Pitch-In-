@@ -1,6 +1,7 @@
 
 import { Link } from 'react-router-dom';
 import './Nav.css';
+import Spotlight from '../../screens/Spotlight/Spotlight'
 
 
 export default function Nav(props) {
@@ -29,28 +30,31 @@ export default function Nav(props) {
   return (
     <div>
       <header>
-      <div className='logo'>
-            <img src="https://i.imgur.com/o9YE92O.png"></img>
-       </div>  
+        
+        <div className='logo'>
+          <Link className="home-link" to="/">
+          <img src="https://i.imgur.com/o9YE92O.png"></img>
+          </Link>
+        </div>  
 
             {user ? <p>{user.username}</p> : null}
+ 
+          <div className='login'>
+            <Link to='/login'>Login</Link>
+          </div>
             
-            
-    
-            <div className='login'>
-              <Link to='/login'>Login</Link>
-            </div>
-            
-            <div className='register'>
-              <Link to='/register'>Register</Link>
-            </div>
+          <div className='register'>
+            <Link to='/register'>Register</Link>
+          </div>
 
+          <div className='orgs'>
             <Link to='/organizations'>Organizations</Link>
-            
-
-    </header>
+          </div>
+    
+      </header>
 
       {props.children}
+      
     </div>
   )
 }

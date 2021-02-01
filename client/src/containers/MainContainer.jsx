@@ -21,13 +21,13 @@ export default function MainContainer() {
     fetchOrganizations();
   }, []);
 
-  useEffect(() => {
-    const fetchOpportunity = async () => {
-      const opportunityData = await getAllOpportunities();
-      setOpportunities(opportunityData);
-    }
-    fetchOpportunity();
-  }, []);
+  // useEffect(() => {
+  //   const fetchOpportunity = async () => {
+  //     const opportunityData = await getAllOpportunities();
+  //     setOpportunities(opportunityData);
+  //   }
+  //   fetchOpportunity();
+  // }, []);
 
   const handleCreate = async (organizationData) => {
     const newOrganization = await (organizationData);
@@ -37,7 +37,7 @@ export default function MainContainer() {
 
   return (
     <Switch>
-      <Route path='/opportunities'>
+      <Route path='/organizations/:id/opportunities'>
         <Opportunities
           opportunities={opportunities}
         />
