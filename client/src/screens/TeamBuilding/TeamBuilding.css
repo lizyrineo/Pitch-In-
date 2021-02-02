@@ -1,6 +1,17 @@
 .team {
+  margin-left: 30px;
+  padding-left: 100px;
+  padding-right: 100px;
+  width: 40%;
+  height: 30%px;
   background-color: lightsalmon;
   font-family: 'Fraunces', serif;
+  text-align: justified
+}
+
+.spotlight img {
+  height: 280px;
+  width: 300px;
 }
 
 .org-name {

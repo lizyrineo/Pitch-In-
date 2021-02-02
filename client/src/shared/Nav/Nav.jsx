@@ -2,7 +2,7 @@
 import { Link } from 'react-router-dom';
 import './Nav.css';
 import Spotlight from '../../screens/Spotlight/Spotlight'
-
+import Organizations from '../../screens/Organizations/Organizations'
 
 export default function Nav(props) {
   const { user } = props;
@@ -35,6 +35,7 @@ export default function Nav(props) {
           <Link className="home-link" to="/">
           <img src="https://i.imgur.com/o9YE92O.png"></img>
           </Link>
+          <h2>Discover ways you can have an impact on your community</h2>
         </div>  
 
             {user ? <p>{user.username}</p> : null}
@@ -48,13 +49,14 @@ export default function Nav(props) {
           </div>
 
           <div className='orgs'>
-            <Link to='/organizations'>Organizations</Link>
+          {/* <Link to='/organizations'>Organizations</Link> */}
+          <Organizations />
           </div>
     
       </header>
 
       {props.children}
-      
+
     </div>
   )
 }

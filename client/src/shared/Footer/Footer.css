@@ -2,8 +2,11 @@
   background-color: lightsalmon;
   font-family: 'Fraunces', serif;
   height: 40vw;
-  margin-top: 10vw;
+  margin-top: 100vw;
+  position: sticky;
   text-align: center;
+  padding: 10px;
+  height: 50px;
 }
 .my-name {
   padding-top: 1vw;
@@ -11,6 +14,7 @@
 
 .social-icons {
   font-size: 2.9vw;
+  padding-bottom: -150px;
 }
 .facebook {
   margin-left: 1vw;

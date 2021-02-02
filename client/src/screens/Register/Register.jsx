@@ -24,6 +24,7 @@ export default function Register(props) {
       e.preventDefault();
       handleRegister(formData);
     }}>
+      <div className='register-form'>
       <h3>Register</h3>
       <label>First Name:
         <input
@@ -65,7 +66,8 @@ export default function Register(props) {
         />
       </label>
       <br />
-      <button>Submit</button>
+        <button>Submit</button>
+        </div>
     </form>
   )
 }

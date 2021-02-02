@@ -67,7 +67,7 @@ function App() {
           <Route path='/organizations'>
           <MainContainer />
           </Route>
-          <Route path="/About"></Route>
+          
         </Switch>
 
         </div>

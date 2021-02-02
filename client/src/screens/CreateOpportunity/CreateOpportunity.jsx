@@ -1,32 +1,40 @@
 import React, { useState } from 'react'
+import { useParams } from 'react-router-dom'
 
 export default function CreateOpportunity(props) {
   const [formData, setFormData] = useState({
-    name: ''
+    opp_name: '',
+    opp_description: ''
   })
   const { opp_name, opp_description } = formData;
   const {handleCreate} = props;
-
+  const { id } = useParams();
   const handleChange = (e) => {
-    const { opp_name, value } = e.target;
+    const { name, value } = e.target;
     setFormData(prevState => ({
       ...prevState,
-      [opp_name]: value
+      [name]: value
     }))
   }
 
   return (
     <form onSubmit={(e) => {
       e.preventDefault();
-      handleCreate(formData)
+      handleCreate(id, formData)
     }}>
       <h3>Create Opportunity</h3>
       <label>Name:
         <input
           type='text'
-          name='name'
+          name='opp_name'
           value={opp_name}
-          description='text'
+          onChange={handleChange}
+        />
+      </label>
+      <label>Description:
+        <input
+          type='text'
+          name='opp_description'
           value={opp_description}
           onChange={handleChange}
         />

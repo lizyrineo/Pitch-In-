@@ -6,3 +6,15 @@ export const getAllOpportunities = async (id) => {
   return resp.data;
 
 }
+
+export const postOpportunity = async (id, formData) => {
+  const resp = await api.post(`/organizations/${id}/opportunities`, {opportunity:formData});
+  console.log(resp)
+  return resp.data;
+
+}
+
+export const deleteOpportunity = async (id) => {
+  const resp = await api.delete(`/organizations/id/opportunities/${id}`)
+  return resp
+}

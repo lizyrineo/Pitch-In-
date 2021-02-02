@@ -26,7 +26,7 @@ export default function EditOpportunity(props) {
     const { name, value } = e.target;
     setFormData(prevState => ({
       ...prevState,
-      [opp_name]: value
+      [name]: value
     }))
   }
 

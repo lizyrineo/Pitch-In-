@@ -5,11 +5,9 @@ export default function Layout(props) {
   
   return (
     <div className='layout'>
-      <Nav />
-      
+      <Nav user={props.user} />
       {props.children}
-      
-      <Footer user={props.user} handleLogout={props.handleLogout} />
+      <Footer />
     </div>
   )
 }
