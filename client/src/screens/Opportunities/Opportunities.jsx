@@ -37,7 +37,7 @@ export default function Opportunities(props) {
         <React.Fragment key={opportunity.id}>
           <p>{opportunity.opp_name}</p>
           <Link to={`/opportunities/${opportunity.id}/select`}><button>Select</button></Link>
-          <Link to='/editOpportunity'><button>Edit</button></Link>
+          <Link to={`/organizations/opportunities/${opportunity.id}/edit`}><button>Edit</button></Link>
           <button onClick={()=>filterOpportunity(opportunity.id)}>Delete</button>
           </React.Fragment>
       ))}

@@ -1,28 +1,28 @@
 import React, { useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
+import { getOneOpportunity } from '../../services/opportunities';
 
 export default function EditOpportunity(props) {
   const [formData, setFormData] = useState({
-    name: '',
-    description: ''
+    opp_name: '',
+    opp_description: ''
   })
   const { opp_name, opp_description, opp_image } = formData;
-  const { opportunities } = props;
+  const { opportunities, handleChange } = props;
   const { id } = useParams();
-  const { handleCreate } = props;
 
   useEffect(() => {
-    const prefillFormData = () => {
-      const opportunityItem = opportunities.find((opportunityItem) => {
-        return opportunityItem.id === id
-      })
+    const prefillFormData = async () => {
+      const opportunity = await getOneOpportunity(id)   
       setFormData({
-        name: opportunityItem.name
+        opp_name: opportunity.opp_name,
+        opp_description: opportunity.opp_description
       })
     }
-  })
+    prefillFormData()
+  },[])
 
-  const handleChange = (e) => {
+  const handleOppChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
       ...prevState,
@@ -33,35 +33,34 @@ export default function EditOpportunity(props) {
   return (
     <form onSubmit={(e) => {
       e.preventDefault();
-      handleCreate(formData)
+      handleChange(id, formData)
     }}>
       <h3>Edit Opportunity</h3>
       <label>Name:
         <input
           type='text'
-          name='name'
+          name='opp_name'
           value={opp_name}
-          onChange={handleChange}
+          onChange={handleOppChange}
         />
       </label>
       <br />
       <label>Description:
-        <input
-          type='text'
-          opp_description='opp_description'
+        <textarea
+          name='opp_description'
           value={opp_description}
-          onChange={handleChange}
+          onChange={handleOppChange}
         />
       </label>
       <br />
-      <label>Image:
+      {/* <label>Image:
         <input
           type='text'
           opp_description='opp_image'
           value={opp_image}
           onChange={handleChange}
         />
-      </label>
+      </label> */}
       <button>Submit</button>
     </form>
   )

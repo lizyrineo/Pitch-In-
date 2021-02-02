@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 
-export default function CreateOpportunity(props) {
+export default function CreateOpportunity(props){
   const [formData, setFormData] = useState({
     opp_name: '',
     opp_description: ''
