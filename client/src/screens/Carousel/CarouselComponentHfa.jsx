@@ -17,9 +17,9 @@ function CarouselComponentHfa() {
         showThumbs={false}
       >
           
-        <div>
-          <img src='https://i.imgur.com/Eglh1ND.jpg?2' />
-        </div>
+        
+          <img src='https://i.imgur.com/Eglh1ND.jpg?4' />
+        
         <div>
           <img src="https://i.imgur.com/cW3tMxL.jpg?1" />
         </div>
