@@ -152,8 +152,29 @@ I would like to add a scheduling component where the user can select a date for 
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+> I was pretty excited with getting the carousel to work.  I used react-responsive-carousel.  There were challenges for sure but I was able to read through the docs and get create what I had envisioned.  
+
+```
+  <Carousel
+        
+        autoPlay interval="4000"
+        showArrows={false}
+        autoPlay axis="horizontal"
+        infiniteLoop
+        showThumbs={false}
+      >
+    <div>
+      <img src='https://i.imgur.com/ba4JPGZ.jpg?2' />
+    </div>
+    <div>
+      <img src="https://i.imgur.com/ZAwKxe5.jpg" />
+    </div>
+    <div>
+      <img src="https://i.imgur.com/HI12yoZ.jpg?2" />
+    </div>
+    </Carousel>
+```
 
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
+> I had so many issues that I cannot isolate just one.  But with patience and help from others I worked through them all.
