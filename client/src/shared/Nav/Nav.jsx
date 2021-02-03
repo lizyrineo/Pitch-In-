@@ -30,12 +30,13 @@ export default function Nav(props) {
   return (
     <div>
       <header>
-        
-        <div className='logo'>
+        <div className='all-nav'>
           <Link className="home-link" to="/">
-          <img src="https://i.imgur.com/o9YE92O.png"></img>
+          <img className='logo' src="https://i.imgur.com/FkA0Zdp.png"></img>
           </Link>
-          <h2>Discover ways you can have an impact on your community</h2>
+          <div className='text'>
+              <h2>Discover ways you can have an impact on your community</h2>
+          </div>
         </div>  
 
             {user ? <p>{user.username}</p> : null}
@@ -43,16 +44,14 @@ export default function Nav(props) {
           <div className='login'>
             <Link to='/login'>Login</Link>
           </div>
-            
+          
           <div className='register'>
             <Link to='/register'>Register</Link>
           </div>
-
+         
           <div className='orgs'>
-          {/* <Link to='/organizations'>Organizations</Link> */}
           <Organizations />
-          </div>
-    
+        </div>
       </header>
 
       {props.children}

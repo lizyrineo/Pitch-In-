@@ -6,9 +6,12 @@ export default function Layout(props) {
   
   return (
     <div className='layout'>
-      <Nav user={props.user} />
+      <div className='nav'>
+        <Nav user={props.user} />
+      </div>
       {props.children}
-      <Footer />
+        <Footer />
+        
     </div>
   )
 }

@@ -1,4 +1,6 @@
 .layout {
-  background-image: 'https://i.imgur.com/pxOAeb3.jpg';
-  
+  background-image: url('https://i.imgur.com/YPqJVde.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: rgba(141, 79, 227, 0.67);
 }

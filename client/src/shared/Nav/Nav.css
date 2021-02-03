@@ -1,23 +1,36 @@
 .all-nav {
-  background-color: rgba(250, 155, 104, 0.837);
+  background-color: rgba(141, 79, 227, 0.67);
   font-family: 'Fraunces', serif;
-  height: 30px;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: fixed;
+  height: 4.95vw;
+  width: 100%;
+  display: inline-block;
   top: 0;
   width: 100vw;
-  border-bottom: 2px solid rgba(250, 155, 104, 0.995);
+
 }
 
 .logo {
-  text-align: left;
+  display: inline-block;
+  margin-top: -100;
+  padding-top: 0;
+  height: 170px;
+  width: 200px;
+  }
+
+
+.text {
+  float: right;
 }
 .login {
-  text-align: left;
+  float: right;
+}
+
+.reg-container{
+  width: 90px;
 }
 .register {
-  text-align: left;
+  float: right;
+}
+.orgs {
+  text-align: center;
 }
