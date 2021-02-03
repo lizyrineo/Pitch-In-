@@ -1,4 +1,5 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
+import './EditOpportunity.css';
 import { useParams } from 'react-router-dom'
 import { getOneOpportunity } from '../../services/opportunities';
 
@@ -35,6 +36,7 @@ export default function EditOpportunity(props) {
       e.preventDefault();
       handleChange(id, formData)
     }}>
+      <div className='edit-opp'>
       <h3>Edit Opportunity</h3>
       <label>Name:
         <input
@@ -47,6 +49,8 @@ export default function EditOpportunity(props) {
       <br />
       <label>Description:
         <textarea
+            rows='5'
+            columns='50'
           name='opp_description'
           value={opp_description}
           onChange={handleOppChange}
@@ -61,7 +65,8 @@ export default function EditOpportunity(props) {
           onChange={handleChange}
         />
       </label> */}
-      <button>Submit</button>
+        <button>Submit</button>
+        </div>
     </form>
   )
 }

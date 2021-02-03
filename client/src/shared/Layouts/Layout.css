@@ -1,6 +1,7 @@
 .layout {
   background-image: url('https://i.imgur.com/YPqJVde.jpg');
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-color: rgba(141, 79, 227, 0.67);
+  font-family: 'Fraunces', serif;
 }

@@ -1,34 +1,37 @@
 .all-nav {
   background-color: rgba(141, 79, 227, 0.67);
-  font-family: 'Fraunces', serif;
-  height: 4.95vw;
+  font-family: "Fraunces", serif;
+  height: 10vw;
   width: 100%;
   display: inline-block;
   top: 0;
   width: 100vw;
-
 }
 
 .logo {
-  display: inline-block;
-  margin-top: -100;
+  float: left;
+  margin-top: -50;
   padding-top: 0;
-  height: 170px;
-  width: 200px;
-  }
-
+  height: auto;
+  width: 10vw;
+  /* object-fit: cover; */
+}
 
 .text {
-  float: right;
+  color:rgba(0, 0, 1, 0.495);
+  margin-top: 55px;
+  margin-left: 10px;
+  float: left;
 }
 .login {
+  margin-top: 63px;
+  margin-right: 25px;
   float: right;
 }
 
-.reg-container{
-  width: 90px;
-}
 .register {
+  margin-top: 63px;
+  margin-right: 25px;
   float: right;
 }
 .orgs {

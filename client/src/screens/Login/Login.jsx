@@ -27,7 +27,7 @@ export default function Login(props) {
         }}
       >
         <div className='login-form'>
-        <h3>Login</h3>
+        <button>Login</button>
         <label>
           Email:
           <input

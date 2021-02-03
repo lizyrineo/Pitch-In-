@@ -29,30 +29,36 @@ export default function Nav(props) {
   );
   return (
     <div>
-      <header>
+      
         <div className='all-nav'>
           <Link className="home-link" to="/">
-          <img className='logo' src="https://i.imgur.com/FkA0Zdp.png"></img>
+          <img className='logo' src="https://i.imgur.com/JyarWfe.png"></img>
           </Link>
           <div className='text'>
               <h2>Discover ways you can have an impact on your community</h2>
           </div>
-        </div>  
+        
 
             {user ? <p>{user.username}</p> : null}
  
-          <div className='login'>
+        <div className='login'>
+          <button>
             <Link to='/login'>Login</Link>
+            </button>
           </div>
           
-          <div className='register'>
+        
+        <div className='register'>
+        <button>
             <Link to='/register'>Register</Link>
+            </button>
           </div>
+          </div>  
          
           <div className='orgs'>
           <Organizations />
         </div>
-      </header>
+      
 
       {props.children}
 

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { getAllOrganizations } from "../../services/organizations";
+import './Organizations.css'
 
 export default function Organizations(props) {
   const [organizations, setOrganizations] = useState([]);
@@ -21,7 +22,7 @@ export default function Organizations(props) {
     history.push(`/organizations/${e.target.value}/opportunities`);
   }
   return (
-    <div>
+    <div className='org-dropdown'>
       <select defaultValue='default' onChange={selectItem}>
         <option disabled value='default'>Organizations</option>
         {organizations.map((organization) => (
