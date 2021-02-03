@@ -19,7 +19,7 @@ export default function Login(props) {
   };
 
   return (
-    <div className="login">
+    // <div className="login">
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -27,7 +27,7 @@ export default function Login(props) {
         }}
       >
         <div className='login-form'>
-        <button>Login</button>
+        <h3>Login</h3>
         <label>
           Email:
           <input
@@ -47,12 +47,12 @@ export default function Login(props) {
             onChange={handleChange}
           />
           </label>
-          <button>Submit</button>
+          <button className='submit'>Submit</button>
           </div>
         <br />
         
         
       </form>
-    </div>
+    // </div>
   );
 }

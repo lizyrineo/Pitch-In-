@@ -1,5 +1,5 @@
 .all-nav {
-  background-color: rgba(141, 79, 227, 0.67);
+  background-color: rgba(245, 160, 121, 0.67);
   font-family: "Fraunces", serif;
   height: 10vw;
   width: 100%;
@@ -18,7 +18,7 @@
 }
 
 .text {
-  color:rgba(0, 0, 1, 0.495);
+  color:rgba(0, 0, 1, 0.6);
   margin-top: 55px;
   margin-left: 10px;
   float: left;
@@ -35,5 +35,7 @@
   float: right;
 }
 .orgs {
+
   text-align: center;
+  
 }

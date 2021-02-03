@@ -34,6 +34,7 @@ export default function Opportunities(props) {
       {organization.opportunities.map((opportunity) => (
         <React.Fragment key={opportunity.id}>
           <p>{opportunity.opp_name}</p>
+          <p>{opportunity.opp_description}</p>
           {/* <Link to={`/opportunities/${opportunity.id}/select`}><button>Select</button></Link> */}
           <div className="edit">
             <Link to={`/organizations/opportunities/${opportunity.id}/edit`}>

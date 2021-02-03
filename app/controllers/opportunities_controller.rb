@@ -1,6 +1,7 @@
 class OpportunitiesController < ApplicationController
   before_action :set_opportunity, only: [:show, :update, :destroy]
-  before_action :get_organization
+  before_action :get_organization, except: [:destroy, :show, :update]
+  before_action :authorize_request, only: [:create, :update, :destroy]
   # GET /opportunities
   def index
     # @opportunities = Opportunity.all
@@ -12,7 +13,7 @@ class OpportunitiesController < ApplicationController
   # GET /opportunities/1
   def show
     
-    render json: @organization.opportunities.find(params[:id])
+    render json: @opportunity
   end
 
   # POST /opportunities
@@ -20,7 +21,7 @@ class OpportunitiesController < ApplicationController
     # @opportunity = @organization.opportunity.build()
     @opportunity = Opportunity.new(opportunity_params)
     @opportunity.organization = @organization
-    @opportunity.user = User.find(opportunity_params[:user_id])
+    @opportunity.user = @current_user
     if @opportunity.save
       render json: @opportunity, status: :created
     else

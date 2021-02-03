@@ -2,7 +2,8 @@
   margin-left: 35vw;
   width: 500px;
   height: 600px;
-  background-color: rgba(141, 79, 227, 0.67);
+  border-radius: 20px;
+  background-color: rgba(141, 79, 227, 0.90);
 }
 .edit {
   margin: 10px;
